@@ -54,6 +54,14 @@ def create_session() -> requests.Session:
     """
     session = requests.Session()
 
+    # Some networks silently stall requests carrying the default
+    # "python-requests/x.x" User-Agent (looks like a bot). Sending a
+    # normal browser-style header avoids that.
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+    })
+
     # Define retry behaviour using urllib3's Retry utility
     retry_strategy = Retry(
         total=Config.MAX_RETRIES,           # Maximum number of retry attempts
