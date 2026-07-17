@@ -66,6 +66,37 @@ def to_float(x):
         return None
 
 
+def normalize_date(date_str: str) -> str:
+    """
+    Different pipeline runs have produced different date formats
+    (YYYY-MM-DD on one day, DD/MM/YYYY on another) -- this was caught
+    because it silently broke "latest price" sorting: comparing these
+    as raw strings puts them in the wrong order.
+
+    This converts any recognized format into YYYY-MM-DD so dates sort
+    and compare correctly regardless of which format a given file used.
+    If the format isn't recognized, the original string is returned
+    unchanged (and will sort separately, which is safer than silently
+    mixing it in wrong).
+    """
+    date_str = date_str.strip()
+    if not date_str:
+        return date_str
+
+    # Already YYYY-MM-DD
+    if len(date_str) == 10 and date_str[4] == '-' and date_str[7] == '-':
+        return date_str
+
+    # DD/MM/YYYY -> YYYY-MM-DD
+    if '/' in date_str:
+        parts = date_str.split('/')
+        if len(parts) == 3 and len(parts[2]) == 4:
+            day, month, year = parts
+            return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+    return date_str
+
+
 def find_common_variety(rows: list[dict], commodity: str) -> str:
     """
     Different varieties of the same commodity (e.g. 'Rashi' vs 'Sippegotu'
@@ -103,7 +134,7 @@ def find_reliable_markets(rows: list[dict], commodity: str, variety: str, thresh
         if variety and row.get("variety", "").strip().lower() != variety.strip().lower():
             continue
         market = row.get("market", "Unknown")
-        date = row.get("arrival_date", "Unknown")
+        date = normalize_date(row.get("arrival_date", "Unknown"))
         market_dates[market].add(date)
         all_dates.add(date)
 
@@ -140,7 +171,7 @@ def build_price_history(rows: list[dict], commodity: str, variety: str, markets:
         market = row.get("market", "Unknown")
         if market not in markets:
             continue
-        date = row.get("arrival_date", "Unknown")
+        date = normalize_date(row.get("arrival_date", "Unknown"))
         price = to_float(row.get("modal_price"))
         if price is not None:
             daily_prices[(market, date)].append(price)
