@@ -10,7 +10,6 @@
 # ── Data Files ────────────────────────────────────────────────────────────────
 # Daily CSV files are generated at runtime — no need to track them in git.
 # Keep the data/ directory itself (via .gitkeep) but ignore its CSV contents.
-data/*.csv
 
 # ── Log Files ─────────────────────────────────────────────────────────────────
 # Log files are generated at runtime — ignore them in git.

@@ -1,0 +1,7 @@
+{
+  "pilot_crop": "Arecanut(Betelnut/Supari)",
+  "pilot_variety": null,
+  "reliability_threshold_pct": 70,
+  "notes": "Pilot crop chosen based on Phase 2 report - 10 markets reporting on 16/07/2026, including markets near Shivamogga (Shimoga APMC, Thirthahalli). Threshold means a market must report this crop on at least 70% of available days to be trusted in the recommendation. pilot_variety is null (auto-detect) because Arecanut varieties (Rashi, Sippegotu, Chali, etc.) have very different prices - comparing across varieties gave a misleading 369% fake price gap. Set pilot_variety to a specific value (e.g. 'Rashi') to lock it once we confirm which variety is most relevant to local farmers."
+}
+
