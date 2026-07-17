@@ -1,0 +1,69 @@
+============================================================
+                   Krishi Market Advisor
+                          Phase 2
+                  Data Reliability Report
+============================================================
+Generated At         : 2026-07-17 10:19:33
+Files Analysed       : 1
+Total Records        : 392
+Date Range           : 2026-07-16 to 2026-07-16
+------------------------------------------------------------
+Top Commodities
+Commodity                 | Records  | Markets | Pilot Score
+------------------------------------------------------------
+Arecanut(Betelnut/Supari) | 20       | 10      | 0.9077
+Beans                     | 14       | 14      | 0.9053
+Green Chilli              | 14       | 14      | 0.9053
+Maize                     | 13       | 13      | 0.8664
+Brinjal                   | 13       | 12      | 0.8433
+------------------------------------------------------------
+Top Reporting Mandis
+Mandi                     | Reporting Days | Reliability %
+------------------------------------------------------------
+APMC THIRTHAHALLI         | 1              | 100.0%
+Arasikere APMC            | 1              | 100.0%
+Bagalkot APMC             | 1              | 100.0%
+Bagepalli APMC            | 1              | 100.0%
+Bailahongal APMC          | 1              | 100.0%
+------------------------------------------------------------
+Recommended Pilot Crop : Arecanut(Betelnut/Supari)
+
+Reason
+
+• Highest Pilot Score : 0.9077
+
+• Reporting Markets : 10
+
+• Total Records : 20
+
+• Data Completeness : 100%
+
+• Reporting Consistency : 100%
+------------------------------------------------------------
+Phase 3 Preview
+
+Selected Crop
+Arecanut(Betelnut/Supari)
+
+Next Step
+
+Compare today's prices for Arecanut(Betelnut/Supari)
+across all Karnataka mandis and recommend the
+best market offering the highest modal price.
+
+Trend Analysis
+
+Not available until multiple days of
+historical data are collected.
+
+------------------------------------------------------------
+Project Status
+
+✓ Phase 1 Completed
+✓ Phase 2 Completed
+→ Ready for Phase 3:
+Market Comparison & Recommendation Engine
+
+------------------------------------------------------------
+Phase 2 Completed Successfully
+============================================================

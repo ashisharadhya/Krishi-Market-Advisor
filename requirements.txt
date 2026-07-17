@@ -1,0 +1,23 @@
+# requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+# Python package dependencies for Krishi Market Advisor — Phase 1
+#
+# Install all dependencies with:
+#   pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# HTTP requests — for connecting to the data.gov.in OGD API and Agmarknet portal
+requests>=2.31.0
+
+# Data manipulation — for DataFrame operations (filter, clean, deduplicate, save CSV)
+pandas>=2.0.0
+
+# Environment variable loading — reads API key from the .env file
+python-dotenv>=1.0.0
+
+# urllib3 is a dependency of requests and provides the Retry utility
+urllib3>=2.0.0
+
+# HTML parsing — required by pandas.read_html() to parse Agmarknet portal tables
+# Used by the fallback scraper when the OGD API is unresponsive
+lxml>=4.9.0

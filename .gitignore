@@ -1,0 +1,41 @@
+# .gitignore
+# ─────────────────────────────────────────────────────────────────────────────
+# Files and directories to EXCLUDE from git version control.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secret Files ──────────────────────────────────────────────────────────────
+# NEVER commit your API key to git!
+.env
+
+# ── Data Files ────────────────────────────────────────────────────────────────
+# Daily CSV files are generated at runtime — no need to track them in git.
+# Keep the data/ directory itself (via .gitkeep) but ignore its CSV contents.
+data/*.csv
+
+# ── Log Files ─────────────────────────────────────────────────────────────────
+# Log files are generated at runtime — ignore them in git.
+logs/*.log
+logs/*.log.*
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── OS Files ──────────────────────────────────────────────────────────────────
+.DS_Store          # macOS
+Thumbs.db          # Windows

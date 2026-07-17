@@ -1,0 +1,11 @@
+Selected Crop           : Arecanut(Betelnut/Supari)
+Selected Variety        : Rashi
+Recommended Market      : Sagar APMC
+Markets Compared        : 5
+Highest Price           : 52689.00
+Lowest Price            : 46581.00
+Average Price           : 50200.40
+Estimated Extra Earnings: 2488.60
+Historical CSV Files    : 1
+Trend Status            : Not Available
+Recommendation Summary  : Insufficient data to determine price trend. Sell based on current prices.
