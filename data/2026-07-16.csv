@@ -1,0 +1,393 @@
+state,district,market,commodity_group,commodity,variety,arrivals,unit_of_arrivals,min_price,max_price,modal_price,unit_of_price,arrival_date
+Karnataka,Unknown,Ballari APMC,Cereals,Bajra(Pearl Millet/Cumbu),Hybrid,13.8,Metric Tonnes,2232.0,2709.0,2569.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Lingasugur APMC,Cereals,Bajra(Pearl Millet/Cumbu),Hybrid,24.0,Metric Tonnes,2600.0,2600.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ballari APMC,Cereals,Jowar(Sorghum),Yellow,1.1,Metric Tonnes,1766.0,3321.0,2659.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Cereals,Jowar(Sorghum),Jowar ( White),2.0,Metric Tonnes,1900.0,3700.0,2450.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Cereals,Jowar(Sorghum),Jowar ( White),10.0,Metric Tonnes,3500.0,5300.0,4900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Cereals,Jowar(Sorghum),Jowar ( White),10.0,Metric Tonnes,2500.0,5600.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Laxmeshwar APMC,Cereals,Jowar(Sorghum),Jowar ( White),1.2000000000000002,Metric Tonnes,3739.0,3739.0,3739.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Raichur APMC,Cereals,Jowar(Sorghum),Jowar ( White),1.8,Metric Tonnes,2729.0,2729.0,2729.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Cereals,Jowar(Sorghum),Jowar ( White),0.1,Metric Tonnes,4203.0,4203.0,4203.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,APMC THIRTHAHALLI,Cereals,Maize,Hybrid/Local,26.700000000000003,Metric Tonnes,2435.0,2435.0,2435.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Cereals,Maize,Hybrid/Local,62.0,Metric Tonnes,2389.0,2579.0,2576.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Cereals,Maize,Local,370.20000000000005,Metric Tonnes,2450.0,2610.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Cereals,Maize,Local,1.4000000000000001,Metric Tonnes,2500.0,2500.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,H.B. Halli APMC,Cereals,Maize,Hybrid/Local,187.8,Metric Tonnes,2400.0,2250.0,2250.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Haliyala APMC,Cereals,Maize,Hybrid/Local,1.3,Metric Tonnes,2500.0,2500.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hanagal APMC,Cereals,Maize,Local,197.20000000000002,Metric Tonnes,2370.0,2470.0,2370.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Cereals,Maize,Local,415.20000000000005,Metric Tonnes,2000.0,2580.0,2485.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hoovinahadagali APMC,Cereals,Maize,Hybrid/Local,145.0,Metric Tonnes,2350.0,2410.0,2378.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hungund APMC,Cereals,Maize,Hybrid/Local,2.0,Metric Tonnes,1900.0,1900.0,1900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Nippani APMC,Cereals,Maize,Local,177.8,Metric Tonnes,2000.0,2010.0,2010.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shikaripura APMC,Cereals,Maize,Local,1510.6000000000001,Metric Tonnes,2000.0,2300.0,2105.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Cereals,Maize,Hybrid/Local,6.5,Metric Tonnes,2532.0,2532.0,2532.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Cereals,Paddy(Common),1001,25.8,Metric Tonnes,2350.0,2350.0,2350.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gangavathi APMC,Cereals,Paddy(Common),Paddy RNR new,200.8,Metric Tonnes,2960.0,2960.0,2960.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gangavathi APMC,Cereals,Paddy(Common),Sona Masuri (OLD),666.6,Metric Tonnes,3240.0,3567.0,3360.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gangavathi APMC,Cereals,Paddy(Common),I.R. 64,83.80000000000001,Metric Tonnes,1933.0,2080.0,2080.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hanagal APMC,Cereals,Paddy(Common),Paddy,146.0,Metric Tonnes,2180.0,2300.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Harihara APMC,Cereals,Paddy(Common),Paddy RNR new,446.8,Metric Tonnes,2200.0,2730.0,2465.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hoovinahadagali APMC,Cereals,Paddy(Common),Paddy,129.4,Metric Tonnes,3280.0,3280.0,3280.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Manvi APMC,Cereals,Paddy(Common),Sona Masuri (OLD),61.800000000000004,Metric Tonnes,3290.0,3300.0,3295.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shikaripura APMC,Cereals,Paddy(Common),Paddy,393.40000000000003,Metric Tonnes,2700.0,3000.0,2885.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sindhanur APMC,Cereals,Paddy(Common),Paddy RNR Old,1665.6000000000001,Metric Tonnes,2280.0,4005.0,3059.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Srirangapattana APMC,Cereals,Paddy(Common),1001,1144.5,Metric Tonnes,2228.0,2400.0,2300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Cereals,Ragi(Finger Millet),Local,30.0,Metric Tonnes,3000.0,3200.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,H.B. Halli APMC,Cereals,Ragi(Finger Millet),Feeds (Poultry Quality),49.6,Metric Tonnes,3200.0,3200.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,HarappanaHalli APMC,Cereals,Ragi(Finger Millet),Local,20.0,Metric Tonnes,3400.0,3400.0,3400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Tarikere APMC,Cereals,Ragi(Finger Millet),Local,10.100000000000001,Metric Tonnes,4000.0,4000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhadravathi APMC,Cereals,Rice,Broken Rice,20.0,Metric Tonnes,2200.0,2200.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhadravathi APMC,Cereals,Rice,Medium,42.900000000000006,Metric Tonnes,2500.0,3000.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Cereals,Rice,CR 1009 (Coarse) Boiled,12.5,Metric Tonnes,4800.0,5600.0,5100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Cereals,Rice,Broken Rice,12.5,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Cereals,Rice,Other,31.0,Metric Tonnes,4400.0,6180.0,5200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gangavathi APMC,Cereals,Rice,Other,579.9,Metric Tonnes,2300.0,2960.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hanagal APMC,Cereals,Rice,CR 1009 (Coarse) Boiled,25.8,Metric Tonnes,2200.0,2200.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Cereals,Rice,Fine,1.0,Metric Tonnes,4200.0,5500.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Cereals,Rice,Coarse,1.0,Metric Tonnes,3200.0,4300.0,3550.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Cereals,Rice,Broken Rice,1.5,Metric Tonnes,2200.0,3300.0,2350.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Manvi APMC,Cereals,Rice,Other,97.4,Metric Tonnes,2600.0,2600.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Cereals,Wheat,Local,16.0,Metric Tonnes,2875.0,3490.0,2875.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Cereals,Wheat,Mexican,1.2000000000000002,Metric Tonnes,2400.0,2510.0,2482.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Cereals,Wheat,Mill Quality,1.6,Metric Tonnes,3800.0,4280.0,4050.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Cereals,Wheat,Red,10.0,Metric Tonnes,2500.0,3475.0,3100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hiriyur APMC,Cereals,Wheat,Medium,2.6,Metric Tonnes,3801.0,3801.0,3801.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Cereals,Wheat,Sharbati,1.0,Metric Tonnes,2250.0,3100.0,2650.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Manvi APMC,Cereals,Wheat,Other,144.8,Metric Tonnes,2830.0,2830.0,2830.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Cereals,Wheat,Sona,3.5,Metric Tonnes,2340.0,3300.0,2820.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,APMC THIRTHAHALLI,Drug and Narcotics,Arecanut(Betelnut/Supari),Gorabalu,1.9000000000000001,Metric Tonnes,31500.0,31500.0,31500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,APMC THIRTHAHALLI,Drug and Narcotics,Arecanut(Betelnut/Supari),Rashi,0.30000000000000004,Metric Tonnes,47647.0,47647.0,47647.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhadravathi APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Other,3.7,Metric Tonnes,26900.0,26900.0,26900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhadravathi APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Sippegotu,11.700000000000001,Metric Tonnes,11000.0,11000.0,11000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channagiri APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Rashi,45.300000000000004,Metric Tonnes,49249.0,53100.0,51585.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Holalkere APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Other,47.1,Metric Tonnes,22661.0,26200.0,24912.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Holalkere APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Sippegotu,2.0,Metric Tonnes,12500.0,12500.0,12500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Sippegotu,3.7,Metric Tonnes,11200.0,11200.0,11200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnavar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Hosa Chali,1.8,Metric Tonnes,37000.0,39000.0,38000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnavar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Hale Chali,1.6,Metric Tonnes,40000.0,42000.0,41000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Chali,15.9,Metric Tonnes,34699.0,41629.0,40146.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Kempugotu,0.4,Metric Tonnes,36000.0,39219.0,37799.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Rashi,7.7,Metric Tonnes,38000.0,53470.0,52689.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Cqca,0.5,Metric Tonnes,16099.0,31499.0,30022.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Bilegotu,1.6,Metric Tonnes,22099.0,33101.0,29899.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Sippegotu,4.2,Metric Tonnes,10759.0,22599.0,21599.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shikaripura APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Rashi,1.7000000000000002,Metric Tonnes,46581.0,46581.0,46581.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sulya APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),New Variety,15.3,Metric Tonnes,39000.0,47500.0,43000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sulya APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Cqca,90.30000000000001,Metric Tonnes,20000.0,34000.0,27000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Tiptur APMC,Drug and Narcotics,Arecanut(Betelnut/Supari),Rashi,1.3,Metric Tonnes,52500.0,52500.0,52500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bailahongal APMC,Fibre Crops,Cotton,N-44,54.6,Metric Tonnes,7600.0,8900.0,8575.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Raichur APMC,Fibre Crops,Cotton,H4,237.4,Metric Tonnes,8500.0,9231.0,8930.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Fibre Crops,Cotton,Bunny,12.200000000000001,Metric Tonnes,8093.0,9740.0,9478.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kustagi APMC,Forest Products,Neem Seed,Neem Seed,271.8,Metric Tonnes,900.0,1800.0,1434.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Apple,Apple,133.3,Metric Tonnes,11000.0,20000.0,18000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Apple,Apple,0.6000000000000001,Metric Tonnes,10000.0,20000.0,15000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Apple,Apple,0.2,Metric Tonnes,5000.0,7000.0,6000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Banana,Pachha Bale,54.6,Metric Tonnes,600.0,3000.0,1800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Banana,Nendra Bale,4.800000000000001,Metric Tonnes,1000.0,2900.0,1950.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Banana,Elakki Bale,77.7,Metric Tonnes,1000.0,7000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Banana,Nauti Bale,0.5,Metric Tonnes,700.0,2500.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Fruits,Banana,Elakki Bale,5.1000000000000005,Metric Tonnes,3000.0,6000.0,5300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Fruits,Banana,Pachha Bale,0.6000000000000001,Metric Tonnes,1700.0,2500.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Banana,Elakki Bale,4.0,Metric Tonnes,2800.0,5200.0,4200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Banana,Pachha Bale,3.0,Metric Tonnes,1200.0,3400.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Chikoos(Sapota),Sapota,2.1,Metric Tonnes,2500.0,4000.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Chikoos(Sapota),Sapota,0.1,Metric Tonnes,1000.0,3000.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Grapes,Espani,7.0,Metric Tonnes,3000.0,5000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Grapes,Black,3.0,Metric Tonnes,2500.0,3500.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Karbuja(Musk Melon),Karbhuja,92.0,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Karbuja(Musk Melon),Karbhuja,0.2,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Karbuja(Musk Melon),Karbhuja,0.2,Metric Tonnes,6000.0,8000.0,7000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Lime,Lime,0.2,Metric Tonnes,900.0,2200.0,1100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Fruits,Lime,Lime,0.1,Metric Tonnes,3500.0,4500.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Mango,Neelam,4.800000000000001,Metric Tonnes,2500.0,4500.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Mango,Mango,0.8,Metric Tonnes,2000.0,4000.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Mousambi(Sweet Lime),Mousambi,166.0,Metric Tonnes,3200.0,4500.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Mousambi(Sweet Lime),Mousambi,0.4,Metric Tonnes,4000.0,5000.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Orange,Nagpuri,0.2,Metric Tonnes,4000.0,6000.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Papaya,Papaya,27.0,Metric Tonnes,100.0,1800.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Papaya,Papaya,0.4,Metric Tonnes,500.0,1000.0,800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Papaya,Papaya,0.2,Metric Tonnes,5000.0,8000.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Pineapple,Pine Apple,35.0,Metric Tonnes,2500.0,3500.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Pineapple,Pine Apple,0.5,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Pineapple,Pine Apple,0.2,Metric Tonnes,5000.0,7000.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Pomegranate,Pomogranate,234.0,Metric Tonnes,9000.0,18000.0,14000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Pomegranate,Pomogranate,0.5,Metric Tonnes,5000.0,6000.0,5500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Pomegranate,Pomogranate,0.2,Metric Tonnes,2000.0,6000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Fruits,Water Melon,Water Melon,95.0,Metric Tonnes,800.0,1600.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Fruits,Water Melon,Water Melon,0.4,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Fruits,Water Melon,Water Melon,0.2,Metric Tonnes,3000.0,7000.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,"Live Stock,Poultry,Fisheries",Goat,Goat,100.0,Nos,1000.0,15000.0,9000.0,Rs./Unit,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,"Live Stock,Poultry,Fisheries",Sheep,Sheep Medium,974.0,Nos,3000.0,25000.0,10000.0,Rs./Unit,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Oil Seeds,Copra,Milling Copra,2.4000000000000004,Metric Tonnes,18000.0,18000.0,18000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Tiptur APMC,Oil Seeds,Copra,Copra,186.10000000000002,Metric Tonnes,30000.0,31725.0,31000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hiriyur APMC,Oil Seeds,Ground Nut Seed,Ground Nut Seed,81.0,Metric Tonnes,10500.0,14301.0,12854.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Oil Seeds,Groundnut,Gejje,19.8,Metric Tonnes,6092.0,8919.0,8502.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gangavathi APMC,Oil Seeds,Groundnut,Other,13.600000000000001,Metric Tonnes,8000.0,8000.0,8000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Laxmeshwar APMC,Oil Seeds,Groundnut,Gejje,0.2,Metric Tonnes,7679.0,7679.0,7679.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Raichur APMC,Oil Seeds,Groundnut,Shelled (Bunch),7.0,Metric Tonnes,5449.0,7525.0,6455.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Oil Seeds,"Sesamum(Sesame,Gingelly,Til)",White,0.2,Metric Tonnes,12800.0,12800.0,12800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Oil Seeds,"Sesamum(Sesame,Gingelly,Til)",White,2.0,Metric Tonnes,7500.0,12000.0,10000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Oil Seeds,Soyabean,Soyabeen,1.6,Metric Tonnes,7050.0,7400.0,7200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhalki APMC,Oil Seeds,Soyabean,Soyabeen,14.4,Metric Tonnes,6102.0,7200.0,6988.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Oil Seeds,Soyabean,Yellow,17.2,Metric Tonnes,6011.0,7368.0,7241.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Oil Seeds,Soyabean,Soyabeen,1.0,Metric Tonnes,6000.0,6800.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Oil Seeds,Sunflower/Sunflower Seed,Sunflower,3.5,Metric Tonnes,7651.0,8121.0,8121.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ballari APMC,Oil Seeds,Sunflower/Sunflower Seed,Sunflower,3.8000000000000003,Metric Tonnes,6369.0,8268.0,7899.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Others,Bunch Beans,Bunch Beans,87.0,Nos,4000.0,5000.0,4500.0,Rs./Unit,2026-07-16
+Karnataka,Unknown,Davangere APMC,Others,Bunch Beans,Bunch Beans,20.0,Nos,700.0,2300.0,1600.0,Rs./Unit,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Others,Bunch Beans,Bunch Beans,2.0,Nos,3000.0,4000.0,3500.0,Rs./Unit,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Others,Gur(Jaggery),Other,2.0,Metric Tonnes,2400.0,4300.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Srirangapattana APMC,Others,Gur(Jaggery),Kurikatu,17.6,Metric Tonnes,3700.0,4100.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ballari APMC,Pulses,Alasande Gram,Alasande Gram,0.2,Metric Tonnes,4109.0,6219.0,5164.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Pulses,Beans,Beans (Whole),1.7000000000000002,Metric Tonnes,4000.0,6000.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Pulses,Beans,Beans (Whole),0.7000000000000001,Metric Tonnes,6000.0,7500.0,7300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Pulses,Beans,Beans (Whole),10.600000000000001,Metric Tonnes,4500.0,5000.0,4700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chikkamagaluru APMC,Pulses,Beans,Beans (Whole),8.8,Metric Tonnes,6000.0,7000.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Pulses,Beans,Beans (Whole),1.2000000000000002,Metric Tonnes,4000.0,6000.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Pulses,Beans,Beans (Whole),2.5,Metric Tonnes,1700.0,4000.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Pulses,Beans,Beans (Whole),0.30000000000000004,Metric Tonnes,6000.0,7000.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Pulses,Beans,Beans (Whole),0.30000000000000004,Metric Tonnes,3000.0,4000.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Pulses,Beans,Beans (Whole),1.0,Metric Tonnes,3300.0,3300.0,3300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Pulses,Beans,Beans (Whole),3.0,Metric Tonnes,4000.0,4500.0,4300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Pulses,Beans,Beans (Whole),0.2,Metric Tonnes,1100.0,1800.0,1450.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Malur APMC,Pulses,Beans,Beans (Whole),27.200000000000003,Metric Tonnes,6500.0,8000.0,7000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Pulses,Beans,Beans (Whole),0.8,Metric Tonnes,4000.0,6000.0,5200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Pulses,Beans,Beans (Whole),1.8,Metric Tonnes,6000.0,8000.0,7000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),0.2,Metric Tonnes,4749.0,5069.0,4856.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bailahongal APMC,Pulses,Bengal Gram(Gram)(Whole),Jawari/Local,27.3,Metric Tonnes,5800.0,6350.0,6248.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhalki APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),8.6,Metric Tonnes,5251.0,6151.0,6000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Pulses,Bengal Gram(Gram)(Whole),Jawari/Local,35.5,Metric Tonnes,3589.0,6421.0,5936.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),15.0,Metric Tonnes,5000.0,6200.0,5800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kustagi APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),25.0,Metric Tonnes,4850.0,4850.0,4850.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Laxmeshwar APMC,Pulses,Bengal Gram(Gram)(Whole),Jawari/Local,0.4,Metric Tonnes,6136.0,6136.0,6136.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Raichur APMC,Pulses,Bengal Gram(Gram)(Whole),Jawari/Local,0.2,Metric Tonnes,5106.0,5106.0,5106.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sindhanur APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),75.2,Metric Tonnes,5850.0,5900.0,5892.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Pulses,Bengal Gram(Gram)(Whole),Average (Whole),53.300000000000004,Metric Tonnes,5283.0,6200.0,5741.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Pulses,Black Gram Dal(Urd Dal),Black Gram Dal,5.1000000000000005,Metric Tonnes,10900.0,14000.0,12100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Pulses,Black Gram Dal(Urd Dal),Black Gram Dal,15.700000000000001,Metric Tonnes,12384.0,15122.0,15122.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Pulses,Black Gram(Urd Beans)(Whole),Black Gram (Whole),8.8,Metric Tonnes,5466.0,8769.0,7674.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Pulses,Black Gram(Urd Beans)(Whole),Black Gram (Whole),4.0,Metric Tonnes,4500.0,7000.0,6200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sindhanur APMC,Pulses,Black Gram(Urd Beans)(Whole),Black Gram (Whole),12.0,Metric Tonnes,9590.0,9590.0,9590.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Pulses,Cowpea(Lobia/Karamani),Cowpea (Whole),0.1,Metric Tonnes,3130.0,3130.0,3130.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,H.B. Halli APMC,Pulses,Cowpea(Lobia/Karamani),Cowpea (Whole),18.2,Metric Tonnes,7500.0,7500.0,7500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kustagi APMC,Pulses,Cowpea(Lobia/Karamani),Cowpea (Whole),15.0,Metric Tonnes,6900.0,6900.0,6900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Pulses,Green Gram Dal(Moong Dal),Green Gram Dal,8.8,Metric Tonnes,8300.0,8900.0,8800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Pulses,Green Gram(Moong)(Whole),Ordinary (Split),7.2,Metric Tonnes,8400.0,9100.0,9100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Pulses,Green Gram(Moong)(Whole),Green (Whole),0.2,Metric Tonnes,3000.0,3555.0,3278.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Pulses,Green Gram(Moong)(Whole),Local,2.7,Metric Tonnes,4050.0,5888.0,4995.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hiriyur APMC,Pulses,Green Gram(Moong)(Whole),Green (Whole),4.2,Metric Tonnes,8600.0,8750.0,8675.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Pulses,Green Gram(Moong)(Whole),Green (Whole),4.0,Metric Tonnes,4800.0,7200.0,6200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ballari APMC,Pulses,Kulthi(Horse Gram),Horse gram (Whole),0.1,Metric Tonnes,4546.0,4546.0,4546.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hanagal APMC,Pulses,Kulthi(Horse Gram),Horse gram (Whole),3.6,Metric Tonnes,4900.0,4900.0,4900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Pulses,Red gram split/Arhar dal/Tur dal,Arhar Dal(Tur),124.60000000000001,Metric Tonnes,10860.0,15873.0,14851.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagalkot APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),0.1,Metric Tonnes,4001.0,4001.0,4001.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ballari APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),0.6000000000000001,Metric Tonnes,2909.0,8011.0,6717.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Basava Kalayana APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),4.2,Metric Tonnes,8152.0,8300.0,8200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bhalki APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),9.3,Metric Tonnes,7000.0,8501.0,8296.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bidar APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),86.60000000000001,Metric Tonnes,3536.0,8571.0,8279.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),45.0,Metric Tonnes,7500.0,8600.0,8000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Lingasugur APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),146.4,Metric Tonnes,7800.0,7800.0,7800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Raichur APMC,Pulses,Red gram/Arhar/Tur(whole),Red,16.8,Metric Tonnes,6089.0,8129.0,7969.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Vijayapura APMC,Pulses,Red gram/Arhar/Tur(whole),Arhar (Whole),82.60000000000001,Metric Tonnes,6896.0,7800.0,7500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Yadgir APMC,Pulses,Red gram/Arhar/Tur(whole),Red,105.2,Metric Tonnes,3011.0,8462.0,7822.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,APMC THIRTHAHALLI,Spices,Black pepper,Other,23.900000000000002,Metric Tonnes,30550.0,60000.0,60000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Spices,Black pepper,Other,2.7,Metric Tonnes,69200.0,69200.0,69200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gonikappal APMC,Spices,Black pepper,Black Pepper,1.1,Metric Tonnes,36000.0,68500.0,36000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sagar APMC,Spices,Black pepper,Other,0.1,Metric Tonnes,61899.0,66799.0,65819.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sulya APMC,Spices,Black pepper,Black Pepper,0.30000000000000004,Metric Tonnes,32000.0,67000.0,50000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Arasikere APMC,Spices,Coconut,Medium,2500.0,Metric Tonnes,19950.0,19950.0,19950.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channagiri APMC,Spices,Coconut,Small,3248.0,Metric Tonnes,14770.0,14770.0,14770.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Hiriyur APMC,Spices,Coconut,Small,3921.5,Metric Tonnes,17000.0,17000.0,17000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Spices,Coconut,Small,7318.5,Metric Tonnes,13000.0,14000.0,13800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Srirangapattana APMC,Spices,Coconut,Small,2000.0,Metric Tonnes,19500.0,19500.0,19500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Sulya APMC,Spices,Coconut,Small,3000.0,Metric Tonnes,18000.0,25000.0,21500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Tarikere APMC,Spices,Coconut,Small,6508.5,Metric Tonnes,16500.0,29210.0,24761.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,APMC THIRTHAHALLI,Spices,Ginger(Dry),Dry,61.300000000000004,Metric Tonnes,14469.0,14469.0,14469.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Spices,Turmeric,Local,5.6000000000000005,Metric Tonnes,12932.0,12932.0,12932.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Nippani APMC,Spices,Turmeric,Turmeric,6.300000000000001,Metric Tonnes,15000.0,15000.0,15000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Alsandikai,Alsandikai,7.6000000000000005,Metric Tonnes,3300.0,3500.0,3400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Alsandikai,Alsandikai,0.4,Metric Tonnes,3000.0,3500.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Banana - Green,Banana - Green,10.0,Metric Tonnes,2000.0,2300.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Beetroot,Beetroot,0.9,Metric Tonnes,2500.0,3000.0,2700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Beetroot,Beetroot,0.8,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Beetroot,Beetroot,14.8,Metric Tonnes,2400.0,2800.0,2700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Beetroot,Beetroot,0.9,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Beetroot,Beetroot,2.0,Metric Tonnes,1000.0,2900.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Beetroot,Beetroot,0.30000000000000004,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Vegetables,Beetroot,Beetroot,2.3000000000000003,Metric Tonnes,2800.0,2800.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Beetroot,Beetroot,2.0,Metric Tonnes,1500.0,2000.0,1800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Beetroot,Beetroot,0.5,Metric Tonnes,3000.0,3500.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Beetroot,Beetroot,0.7000000000000001,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Bitter gourd,Bitter Gourd,0.5,Metric Tonnes,2500.0,3200.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Bitter gourd,Bitter Gourd,9.1,Metric Tonnes,2500.0,2800.0,2700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Bitter gourd,Bitter Gourd,2.0,Metric Tonnes,800.0,3000.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Bitter gourd,Bitter Gourd,0.2,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Bitter gourd,Bitter Gourd,0.5,Metric Tonnes,3000.0,4000.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Bitter gourd,Bitter Gourd,0.2,Metric Tonnes,3000.0,4000.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Bottle gourd,Bottle Gourd,7.9,Metric Tonnes,1800.0,2100.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Bottle gourd,Bottle Gourd,1.5,Metric Tonnes,900.0,1900.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Bottle gourd,Bottle Gourd,0.2,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Bottle gourd,Bottle Gourd,0.8,Metric Tonnes,1000.0,1600.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Brinjal,Brinjal,2.3000000000000003,Metric Tonnes,1400.0,2900.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Brinjal,Brinjal,0.4,Metric Tonnes,2000.0,2500.0,2300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Brinjal,Brinjal,15.700000000000001,Metric Tonnes,2300.0,2600.0,2400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Brinjal,Brinjal,0.2,Metric Tonnes,3600.0,4100.0,3800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Brinjal,Brinjal,0.9,Metric Tonnes,1500.0,3000.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Brinjal,Round/Long,2.5,Metric Tonnes,800.0,2500.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Brinjal,Brinjal,0.30000000000000004,Metric Tonnes,2000.0,2400.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Brinjal,Round,0.4,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Brinjal,Brinjal,2.5,Metric Tonnes,1300.0,1500.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Brinjal,Brinjal,0.30000000000000004,Metric Tonnes,1000.0,2500.0,1750.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Brinjal,Brinjal,0.8,Metric Tonnes,3000.0,4000.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Brinjal,Round,0.7000000000000001,Metric Tonnes,1600.0,2200.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Brinjal,Brinjal,2.4000000000000004,Metric Tonnes,1600.0,2000.0,1800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Cabbage,Cabbage,1.0,Metric Tonnes,1200.0,1500.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Cabbage,Cabbage,0.30000000000000004,Metric Tonnes,500.0,1000.0,800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Cabbage,Cabbage,21.8,Metric Tonnes,1400.0,1600.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Cabbage,Cabbage,2.0,Metric Tonnes,700.0,2500.0,1700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Cabbage,Cabbage,0.6000000000000001,Metric Tonnes,800.0,1500.0,1300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Cabbage,Cabbage,2.5,Metric Tonnes,800.0,1000.0,900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Cabbage,Cabbage,1.2000000000000002,Metric Tonnes,1200.0,2000.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Cabbage,Cabbage,1.5,Metric Tonnes,600.0,800.0,700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Capsicum,Capsicum,0.8,Metric Tonnes,3000.0,3700.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Capsicum,Capsicum,15.8,Metric Tonnes,5000.0,6000.0,5500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Capsicum,Capsicum,0.9,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Capsicum,Capsicum,1.0,Metric Tonnes,2500.0,4200.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Capsicum,Capsicum,0.5,Metric Tonnes,3000.0,5000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Capsicum,Capsicum,0.5,Metric Tonnes,6000.0,8200.0,7000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Capsicum,Capsicum,0.30000000000000004,Metric Tonnes,6000.0,8000.0,7000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Carrot,Carrot,1.0,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Carrot,Carrot,1.0,Metric Tonnes,2500.0,3700.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Carrot,Carrot,27.700000000000003,Metric Tonnes,4500.0,5500.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Carrot,Carrot,1.2000000000000002,Metric Tonnes,2000.0,4000.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Carrot,Carrot,3.0,Metric Tonnes,900.0,3200.0,2300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Carrot,Carrot,0.4,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Malur APMC,Vegetables,Carrot,Carrot,4.0,Metric Tonnes,4500.0,5500.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Carrot,Carrot,0.5,Metric Tonnes,4000.0,6000.0,5200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Carrot,Carrot,5.5,Metric Tonnes,3000.0,4000.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Cauliflower,Cauliflower,2.0,Metric Tonnes,300.0,1200.0,900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Cauliflower,Local,0.4,Metric Tonnes,1000.0,1500.0,1100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Cauliflower,Cauliflower,7.800000000000001,Metric Tonnes,2100.0,2600.0,2400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chikkamagaluru APMC,Vegetables,Cauliflower,Local,1.0,Metric Tonnes,1700.0,1700.0,1700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Cauliflower,Cauliflower,1.6,Metric Tonnes,800.0,2100.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Cauliflower,Local,0.2,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Cauliflower,Cauliflower,2.5,Metric Tonnes,2500.0,3000.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Cauliflower,Cauliflower,1.0,Metric Tonnes,2000.0,3200.0,2400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Cauliflower,Cauliflower,0.30000000000000004,Metric Tonnes,2000.0,2500.0,2250.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Chapparad Avare,Chapparada Avarekai,6.9,Metric Tonnes,3400.0,3700.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Chapparad Avare,Chapparada Avarekai,0.2,Metric Tonnes,1500.0,2200.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Chilly Capsicum,Chilly Capsicum,0.5,Metric Tonnes,2000.0,3700.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Chilly Capsicum,Chilly Capsicum,0.8,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Chilly Capsicum,Chilly Capsicum,0.4,Metric Tonnes,5000.0,7000.0,6500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Cowpea(Veg),Cowpea (Veg),2.0,Metric Tonnes,3000.0,3500.0,3300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Cucumbar(Kheera),Cucumbar,2.5,Metric Tonnes,1000.0,1900.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Cucumbar(Kheera),Cucumbar,1.0,Metric Tonnes,1500.0,2500.0,2100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Cucumbar(Kheera),Cucumbar,14.8,Metric Tonnes,2500.0,3000.0,2900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Cucumbar(Kheera),Cucumbar,1.1,Metric Tonnes,1400.0,2200.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Cucumbar(Kheera),Cucumbar,4.0,Metric Tonnes,400.0,600.0,500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Cucumbar(Kheera),Cucumbar,2.5,Metric Tonnes,1000.0,2800.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Cucumbar(Kheera),Cucumbar,1.0,Metric Tonnes,600.0,1000.0,800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Cucumbar(Kheera),Cucumbar,1.5,Metric Tonnes,1500.0,2000.0,1800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Cucumbar(Kheera),Cucumbar,3.2,Metric Tonnes,2000.0,2400.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Cucumbar(Kheera),Cucumbar,3.3000000000000003,Metric Tonnes,1500.0,2000.0,1750.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Drumstick,Drumstick,1.9000000000000001,Metric Tonnes,3000.0,4000.0,3400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Drumstick,Drumstick,11.200000000000001,Metric Tonnes,4000.0,5500.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chikkamagaluru APMC,Vegetables,Drumstick,Drumstick,0.30000000000000004,Metric Tonnes,5000.0,5000.0,5000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Drumstick,Drumstick,1.2000000000000002,Metric Tonnes,1000.0,3700.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Drumstick,Drumstick,0.7000000000000001,Metric Tonnes,4400.0,6000.0,5500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Drumstick,Drumstick,1.2000000000000002,Metric Tonnes,4000.0,5000.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Garlic,Garlic,0.2,Metric Tonnes,11000.0,18000.0,15000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Ginger(Green),Green Ginger,0.8,Metric Tonnes,9000.0,10300.0,10000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Ginger(Green),Green Ginger,8.700000000000001,Metric Tonnes,13000.0,15000.0,14000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Ginger(Green),Green Ginger,0.30000000000000004,Metric Tonnes,14000.0,18000.0,16000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Ginger(Green),Green Ginger,0.6000000000000001,Metric Tonnes,14400.0,16000.0,15000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Green Avare(W),Green Avare (W),2.8000000000000003,Metric Tonnes,3000.0,3500.0,3400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Green Avare(W),Green Avare (W),0.5,Metric Tonnes,2800.0,3300.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Green Chilli,Green Chilly,2.7,Metric Tonnes,3500.0,5000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Green Chilli,Green Chilly,1.5,Metric Tonnes,1000.0,3500.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Green Chilli,Green Chilly,27.3,Metric Tonnes,3500.0,3700.0,3600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Green Chilli,Green Chilly,0.2,Metric Tonnes,3500.0,4100.0,3900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chikkamagaluru APMC,Vegetables,Green Chilli,Green Chilly,7.5,Metric Tonnes,1400.0,1600.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Green Chilli,Green Chilly,1.3,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Green Chilli,Green Chilly,4.0,Metric Tonnes,1000.0,2300.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Green Chilli,Green Chilly,0.4,Metric Tonnes,3500.0,4500.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Green Chilli,Green Chilly,0.2,Metric Tonnes,3500.0,4500.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Vegetables,Green Chilli,Green Chilly,3.6,Metric Tonnes,2600.0,2600.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Green Chilli,Green Chilly,2.5,Metric Tonnes,1000.0,1200.0,1100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Green Chilli,Green Chilly,0.8,Metric Tonnes,2000.0,4000.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Green Chilli,Green Chilly,1.2000000000000002,Metric Tonnes,3000.0,5000.0,4000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Green Chilli,Green Chilly,2.0,Metric Tonnes,1600.0,4000.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Knool Khol,Knool Khol,0.7000000000000001,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Knool Khol,Knool Khol,14.0,Metric Tonnes,2600.0,3000.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Knool Khol,Knool Khol,0.9,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Knool Khol,Knool Khol,1.5,Metric Tonnes,1300.0,3800.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Knool Khol,Knool Khol,0.2,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Knool Khol,Knool Khol,1.0,Metric Tonnes,4000.0,5000.0,4400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Knool Khol,Knool Khol,1.2000000000000002,Metric Tonnes,4000.0,5000.0,4500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Ladies Finger,Ladies Finger,17.8,Metric Tonnes,2400.0,2700.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Ladies Finger,Ladies Finger,0.5,Metric Tonnes,2300.0,2700.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Ladies Finger,Ladies Finger,1.0,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Ladies Finger,Ladies Finger,2.0,Metric Tonnes,1000.0,3000.0,2400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Ladies Finger,Ladies Finger,0.2,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Ladies Finger,Ladies Finger,2.5,Metric Tonnes,1500.0,2000.0,1800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Ladies Finger,Ladies Finger,0.30000000000000004,Metric Tonnes,1700.0,2300.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Ladies Finger,Ladies Finger,0.8,Metric Tonnes,2000.0,3000.0,2400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Ladies Finger,Ladies Finger,0.6000000000000001,Metric Tonnes,1500.0,2000.0,1750.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Onion,Onion,1.8,Metric Tonnes,2000.0,2800.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Onion,Onion,0.4,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Onion,Onion,5.0,Metric Tonnes,2600.0,3600.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Peas Wet,Peas Wet,8.0,Metric Tonnes,17000.0,18000.0,17500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Potato,Local,1.1,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Potato,Potato,4.0,Metric Tonnes,800.0,2000.0,1000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Potato,Local,2.0,Metric Tonnes,2200.0,3000.0,2600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Potato,Potato,0.4,Metric Tonnes,1000.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Potato,Potato,20.0,Metric Tonnes,800.0,1400.0,1200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Potato,Local,2.0,Metric Tonnes,1700.0,2200.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Raddish,Raddish,1.2000000000000002,Metric Tonnes,2000.0,3000.0,2300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Raddish,Raddish,0.4,Metric Tonnes,500.0,1200.0,900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Raddish,Raddish,11.0,Metric Tonnes,2000.0,2300.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Raddish,Raddish,1.0,Metric Tonnes,1000.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Raddish,Raddish,2.0,Metric Tonnes,700.0,2500.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Raddish,Raddish,0.30000000000000004,Metric Tonnes,2500.0,3500.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Raddish,Raddish,0.7000000000000001,Metric Tonnes,2400.0,4000.0,3200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Raddish,Raddish,3.2,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),1.8,Metric Tonnes,2000.0,2500.0,2100.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),0.8,Metric Tonnes,2000.0,2700.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),6.9,Metric Tonnes,2700.0,2900.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),0.30000000000000004,Metric Tonnes,2500.0,2900.0,2700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chintamani APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),0.7000000000000001,Metric Tonnes,1500.0,3000.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),2.0,Metric Tonnes,1000.0,2700.0,1700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),0.2,Metric Tonnes,1500.0,2500.0,2000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Honnali APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),3.0,Metric Tonnes,2000.0,2400.0,2200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),0.8,Metric Tonnes,2800.0,4000.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Ridgeguard(Tori),Ridgeguard(Tori),4.0,Metric Tonnes,2500.0,3000.0,2750.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Seemebadnekai,Seemebadanekai,9.0,Metric Tonnes,1400.0,1600.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Seemebadnekai,Seemebadanekai,1.5,Metric Tonnes,1200.0,3600.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Seemebadnekai,Seemebadanekai,0.8,Metric Tonnes,2400.0,3500.0,3000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Snakeguard,Snakeguard,2.0,Metric Tonnes,1500.0,2000.0,1700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Snakeguard,Snakeguard,5.2,Metric Tonnes,1400.0,1500.0,1450.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Snakeguard,Snakeguard,0.6000000000000001,Metric Tonnes,2800.0,3600.0,3300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Suvarna Gadde,Suvarnagadde,5.0,Metric Tonnes,3700.0,3900.0,3800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Suvarna Gadde,Suvarnagadde,0.4,Metric Tonnes,800.0,2000.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Sweet Potato,Sweet Potato,5.0,Metric Tonnes,2400.0,2600.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Sweet Potato,Sweet Potato,0.4,Metric Tonnes,700.0,2000.0,1200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Sweet Pumpkin,Sweet Pumpkin,6.0,Metric Tonnes,900.0,1100.0,1000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Sweet Pumpkin,Sweet Pumpkin,1.5,Metric Tonnes,700.0,1300.0,1000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Sweet Pumpkin,Sweet Pumpkin,0.1,Metric Tonnes,600.0,1200.0,900.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Thondekai,Thondekai,6.0,Metric Tonnes,2500.0,2800.0,2700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Thondekai,Thondekai,0.5,Metric Tonnes,1600.0,3500.0,2800.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Thondekai,Thondekai,0.2,Metric Tonnes,2000.0,3000.0,2500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Thondekai,Thondekai,0.2,Metric Tonnes,3000.0,4000.0,3500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bagepalli APMC,Vegetables,Tomato,Tomato,240.0,Metric Tonnes,230.0,2300.0,1700.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Bangarpet APMC,Vegetables,Tomato,Tomato,2.5,Metric Tonnes,700.0,1500.0,1000.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,Tomato,Tomato,41.400000000000006,Metric Tonnes,1500.0,1700.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Channapatna APMC,Vegetables,Tomato,Tomato,4.2,Metric Tonnes,850.0,1750.0,1250.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Chikkamagaluru APMC,Vegetables,Tomato,Tomato,68.2,Metric Tonnes,1200.0,1700.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Davangere APMC,Vegetables,Tomato,Tomato,4.0,Metric Tonnes,900.0,3000.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Doddaballapur APMC,Vegetables,Tomato,Tomato,2.0,Metric Tonnes,1000.0,1800.0,1500.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gauribidanur APMC,Vegetables,Tomato,Tomato,1.5,Metric Tonnes,800.0,1800.0,1300.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Gundlupet APMC,Vegetables,Tomato,Tomato,5.7,Metric Tonnes,1400.0,1500.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Kalaburagi APMC,Vegetables,Tomato,Tomato,6.0,Metric Tonnes,1000.0,1800.0,1400.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Ramanagara APMC,Vegetables,Tomato,Tomato,4.2,Metric Tonnes,1200.0,2000.0,1600.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,Shimoga APMC,Vegetables,Tomato,Tomato,22.5,Metric Tonnes,800.0,1600.0,1200.0,Rs./Quintal,2026-07-16
+Karnataka,Unknown,"Binny Mill (F&V), Bengaluru APMC",Vegetables,White Pumpkin,White Pumpkin,7.0,Metric Tonnes,1700.0,1900.0,1800.0,Rs./Quintal,2026-07-16
