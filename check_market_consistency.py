@@ -23,6 +23,36 @@ import os
 from collections import defaultdict
 
 
+def normalize_date(date_str: str) -> str:
+    """
+    Different pipeline runs / collaborators have produced different date
+    formats (YYYY-MM-DD on some days, DD/MM/YYYY on others) -- this was
+    caught because it silently broke date comparisons: the same day
+    could appear twice under two different string formats, making the
+    tool think there was more spread/inconsistency than actually exists.
+
+    This converts any recognized format into YYYY-MM-DD so dates compare
+    correctly regardless of which format a given file used. If the
+    format isn't recognized, the original string is returned unchanged.
+    """
+    date_str = date_str.strip()
+    if not date_str:
+        return date_str
+
+    # Already YYYY-MM-DD
+    if len(date_str) == 10 and date_str[4] == '-' and date_str[7] == '-':
+        return date_str
+
+    # DD/MM/YYYY -> YYYY-MM-DD
+    if '/' in date_str:
+        parts = date_str.split('/')
+        if len(parts) == 3 and len(parts[2]) == 4:
+            day, month, year = parts
+            return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+    return date_str
+
+
 def load_all_csvs(folder: str) -> list[dict]:
     rows = []
     csv_files = sorted(glob.glob(os.path.join(folder, "*.csv")))
@@ -53,7 +83,7 @@ def check_consistency(rows: list[dict], commodity: str) -> None:
         if row.get("commodity", "").strip().lower() != commodity.strip().lower():
             continue
         market = row.get("market", "Unknown")
-        date = row.get("arrival_date", "Unknown")
+        date = normalize_date(row.get("arrival_date", "Unknown"))
         price = row.get("modal_price", "")
         market_dates[market].add(date)
         market_prices[market].append((date, price))
