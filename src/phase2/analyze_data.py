@@ -90,7 +90,30 @@ def run_analysis_pipeline() -> None:
 
     # Standardize dates for min/max calculation
     # We parse and sort to find the correct chronological start and end dates
-    dates_series = pd.to_datetime(merged_df["arrival_date"], errors="coerce").dropna()
+    #
+    # IMPORTANT FIX: the raw arrival_date column mixes formats across
+    # different collaborators' pipelines -- some rows are "YYYY-MM-DD",
+    # others are "DD/MM/YYYY". Letting pandas auto-detect this (the
+    # default dayfirst=False) silently mis-parses or drops the
+    # DD/MM/YYYY rows as NaT, which shrank a real 3-day window down to
+    # 2 days and produced an impossible "150% reporting consistency".
+    # Normalizing every date string to YYYY-MM-DD first, before parsing,
+    # avoids the ambiguity entirely.
+    def _normalize_date_string(date_str):
+        if pd.isna(date_str):
+            return date_str
+        date_str = str(date_str).strip()
+        if len(date_str) == 10 and date_str[4] == '-' and date_str[7] == '-':
+            return date_str
+        if '/' in date_str:
+            parts = date_str.split('/')
+            if len(parts) == 3 and len(parts[2]) == 4:
+                day, month, year = parts
+                return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+        return date_str
+
+    normalized_dates = merged_df["arrival_date"].apply(_normalize_date_string)
+    dates_series = pd.to_datetime(normalized_dates, format="%Y-%m-%d", errors="coerce").dropna()
     
     if dates_series.empty:
         # Fallback to simple string min/max if parsing fails completely
