@@ -97,7 +97,7 @@ def normalize_date(date_str: str) -> str:
     return date_str
 
 
-def find_common_variety(rows: list[dict], commodity: str) -> str:
+def find_common_variety(rows: list[dict], commodity: str, threshold_pct: float = 70) -> str:
     """
     Different varieties of the same commodity (e.g. 'Rashi' vs 'Sippegotu'
     arecanut) can have wildly different prices for reasons that have
@@ -105,21 +105,46 @@ def find_common_variety(rows: list[dict], commodity: str) -> str:
     products. Comparing markets on raw commodity price alone silently
     mixes these together and produces a misleading gap.
 
-    This finds whichever variety is reported by the MOST markets, so the
-    comparison stays apples-to-apples by default.
+    IMPORTANT: picking the variety with the most total mentions across
+    all days can pick a variety that no single market reports
+    CONSISTENTLY -- e.g. 5 different markets each mentioning it once,
+    versus 2 markets mentioning a different variety every single day.
+    That produced a real bug: "0 reliable markets" even though reliable
+    markets existed, just under a different variety.
+
+    So instead: for each variety, check how many markets report it
+    reliably (>= threshold_pct of days), and pick the variety with the
+    most RELIABLE markets, not the most total mentions.
     """
-    variety_markets = defaultdict(set)
+    variety_dates = defaultdict(lambda: defaultdict(set))  # variety -> market -> set(dates)
+    all_dates_by_variety = defaultdict(set)
+
     for row in rows:
         if row.get("commodity", "").strip().lower() != commodity.strip().lower():
             continue
         variety = row.get("variety", "Unknown").strip()
         market = row.get("market", "Unknown")
-        variety_markets[variety].add(market)
+        date = normalize_date(row.get("arrival_date", "Unknown"))
+        variety_dates[variety][market].add(date)
+        all_dates_by_variety[variety].add(date)
 
-    if not variety_markets:
+    if not variety_dates:
         return None
 
-    best_variety = max(variety_markets.items(), key=lambda x: len(x[1]))[0]
+    best_variety = None
+    best_reliable_count = -1
+    for variety, market_dates in variety_dates.items():
+        total_days = len(all_dates_by_variety[variety])
+        if total_days == 0:
+            continue
+        reliable_count = sum(
+            1 for dates in market_dates.values()
+            if (len(dates) / total_days) * 100 >= threshold_pct
+        )
+        if reliable_count > best_reliable_count:
+            best_reliable_count = reliable_count
+            best_variety = variety
+
     return best_variety
 
 
@@ -257,7 +282,7 @@ def main():
         variety = configured_variety
         print(f"Using configured variety: {variety}")
     else:
-        variety = find_common_variety(rows, commodity)
+        variety = find_common_variety(rows, commodity, threshold)
         print(f"No variety set in config - auto-selected '{variety}' "
               f"(the variety reported by the most markets, for a fair comparison)")
 
