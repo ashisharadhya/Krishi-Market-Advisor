@@ -1,11 +1,10 @@
 {
     "pilot_crop": "Arecanut(Betelnut/Supari)",
-    "pilot_variety": "Rashi",
     "pilot_markets": [
         "APMC THIRTHAHALLI",
-        "Bhadravathi APMC",
-        "Channagiri APMC"
+        "Haliyala APMC",
+        "Shikaripura APMC"
     ],
-    "analysis_date": "2026-07-17 10:19:33",
-    "total_files": 1
+    "analysis_date": "2026-07-19 15:01:28",
+    "total_files": 4
 }

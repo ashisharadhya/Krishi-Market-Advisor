@@ -175,11 +175,22 @@ def generate_reports(
     lines.append(f"Compare today's prices for {pilot_crop}")
     lines.append("across all Karnataka mandis and recommend the")
     lines.append("best market offering the highest modal price.")
-    lines.append("")
+    # Calculate total days in range
+    try:
+        start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+        end_dt = datetime.strptime(end_date, "%Y-%m-%d")
+        total_days = (end_dt - start_dt).days + 1
+    except Exception:
+        total_days = total_files
+
     lines.append("Trend Analysis")
     lines.append("")
-    lines.append("Not available until multiple days of")
-    lines.append("historical data are collected.")
+    if total_days > 1:
+        lines.append("Available")
+        lines.append("Historical data is sufficient to compare price movement across days.")
+    else:
+        lines.append("Not available until multiple days of")
+        lines.append("historical data are collected.")
     lines.append("")
     lines.append("------------------------------------------------------------")
     

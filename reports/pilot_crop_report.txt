@@ -3,42 +3,42 @@
                           Phase 2
                   Data Reliability Report
 ============================================================
-Generated At         : 2026-07-17 10:19:33
-Files Analysed       : 1
-Total Records        : 392
-Date Range           : 2026-07-16 to 2026-07-16
+Generated At         : 2026-07-19 15:01:28
+Files Analysed       : 4
+Total Records        : 1,110
+Date Range           : 2026-07-16 to 2026-07-19
 ------------------------------------------------------------
 Top Commodities
 Commodity                 | Records  | Markets | Pilot Score
 ------------------------------------------------------------
-Arecanut(Betelnut/Supari) | 20       | 10      | 0.9077
-Beans                     | 14       | 14      | 0.9053
-Green Chilli              | 14       | 14      | 0.9053
-Maize                     | 13       | 13      | 0.8664
-Brinjal                   | 13       | 12      | 0.8433
+Arecanut(Betelnut/Supari) | 57       | 22      | 0.8065
+Maize                     | 34       | 23      | 0.7533
+Tomato                    | 38       | 21      | 0.7341
+Green Chilli              | 36       | 20      | 0.7244
+Beans                     | 35       | 19      | 0.7076
 ------------------------------------------------------------
 Top Reporting Mandis
 Mandi                     | Reporting Days | Reliability %
 ------------------------------------------------------------
-APMC THIRTHAHALLI         | 1              | 100.0%
-Arasikere APMC            | 1              | 100.0%
-Bagalkot APMC             | 1              | 100.0%
-Bagepalli APMC            | 1              | 100.0%
-Bailahongal APMC          | 1              | 100.0%
+Hiriyur APMC              | 4              | 100.0%
+Ramanagara APMC           | 4              | 100.0%
+APMC THIRTHAHALLI         | 3              | 75.0%
+Bagepalli APMC            | 3              | 75.0%
+Bangarpet APMC            | 3              | 75.0%
 ------------------------------------------------------------
 Recommended Pilot Crop : Arecanut(Betelnut/Supari)
 
 Reason
 
-• Highest Pilot Score : 0.9077
+• Highest Pilot Score : 0.8065
 
-• Reporting Markets : 10
+• Reporting Markets : 22
 
-• Total Records : 20
+• Total Records : 57
 
-• Data Completeness : 100%
+• Data Completeness : 35.0877%
 
-• Reporting Consistency : 100%
+• Reporting Consistency : 75%
 ------------------------------------------------------------
 Phase 3 Preview
 
@@ -50,11 +50,10 @@ Next Step
 Compare today's prices for Arecanut(Betelnut/Supari)
 across all Karnataka mandis and recommend the
 best market offering the highest modal price.
-
 Trend Analysis
 
-Not available until multiple days of
-historical data are collected.
+Available
+Historical data is sufficient to compare price movement across days.
 
 ------------------------------------------------------------
 Project Status

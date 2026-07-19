@@ -31,6 +31,28 @@ sys.stdout.reconfigure(encoding='utf-8')
 logger = logging.getLogger("krishi")
 
 
+def normalize_date(date_str: str) -> str:
+    """
+    Convert any recognized format (YYYY-MM-DD or DD/MM/YYYY) into YYYY-MM-DD.
+    """
+    date_str = str(date_str).strip()
+    if not date_str or date_str.lower() == 'nan':
+        return date_str
+
+    # Already YYYY-MM-DD
+    if len(date_str) == 10 and date_str[4] == '-' and date_str[7] == '-':
+        return date_str
+
+    # DD/MM/YYYY -> YYYY-MM-DD
+    if '/' in date_str:
+        parts = date_str.split('/')
+        if len(parts) == 3 and len(parts[2]) == 4:
+            day, month, year = parts
+            return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+    return date_str
+
+
 def run_analysis_pipeline() -> None:
     """
     Perform the complete Phase 2 analysis workflow:
@@ -87,6 +109,9 @@ def run_analysis_pipeline() -> None:
     if "arrival_date" not in merged_df.columns:
         logger.error("Data error: merged dataset is missing 'arrival_date' column.")
         sys.exit(1)
+
+    # Standardize dates using the normalize_date helper before converting to datetime
+    merged_df["arrival_date"] = merged_df["arrival_date"].astype(str).apply(normalize_date)
 
     # Standardize dates for min/max calculation
     # We parse and sort to find the correct chronological start and end dates
