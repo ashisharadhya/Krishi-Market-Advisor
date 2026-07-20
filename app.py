@@ -1,6 +1,6 @@
 """
 Krishi Market Advisor 🌾
-Farmer-First Personalised Dashboard with Farmer Profile, Guest Mode & Agricultural Weather
+Farmer-First Personalised Dashboard with Smart Fallback for Niche Crops
 """
 
 import sys
@@ -54,7 +54,7 @@ DISTRICT_WEATHER = {
 
 # ── Session State Management (Profile & Guest Mode) ─────────────────────────
 if "user_mode" not in st.session_state:
-    st.session_state["user_mode"] = "guest"  # default guest mode
+    st.session_state["user_mode"] = "guest"
 if "farmer_name" not in st.session_state:
     st.session_state["farmer_name"] = "ರೈತ ಮಿತ್ರ (Farmer Friend)"
 if "farmer_district" not in st.session_state:
@@ -72,7 +72,6 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
     }
 
-    /* Welcome Header Banner */
     .welcome-card {
         background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 70%, #40916c 100%);
         border-radius: 20px;
@@ -104,7 +103,6 @@ st.markdown("""
         color: #e8f5e9;
     }
 
-    /* Agricultural Weather Card */
     .weather-card {
         background: linear-gradient(135deg, #fefae0 0%, #faedcd 100%);
         border: 1.5px solid #e9c46a;
@@ -141,7 +139,6 @@ st.markdown("""
         color: #1b4332;
     }
 
-    /* Spotlight Card */
     .spotlight-card {
         background: #ffffff;
         border-radius: 20px;
@@ -191,7 +188,6 @@ st.markdown("""
         color: #2d6a4f;
     }
 
-    /* Badges */
     .badge-gemini {
         background: #e8f5e9;
         color: #1b4332;
@@ -215,7 +211,6 @@ st.markdown("""
         margin-bottom: 1rem;
     }
 
-    /* Profit Card */
     .profit-card-green {
         background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
         border: 2px solid #22c55e;
@@ -258,7 +253,6 @@ default_idx = available_commodities.index(default_crop) if default_crop in avail
 st.sidebar.image("https://img.icons8.com/color/96/wheat.png", width=70)
 st.sidebar.title("👤 Farmer Profile & Settings")
 
-# Guest Mode vs Profile Login Toggle
 auth_mode = st.sidebar.radio(
     "Access Mode",
     options=["🚀 Guest Mode (Quick Access)", "👤 Farmer Profile Sign-In"],
@@ -304,7 +298,8 @@ threshold = st.sidebar.slider(
     min_value=30,
     max_value=100,
     value=70,
-    step=5
+    step=5,
+    help="Default 70% requires mandis to report consistently. Lower for seasonal/niche crops."
 )
 
 lang_choice = st.sidebar.radio(
@@ -336,16 +331,31 @@ else:
 today_date_str = datetime.now().strftime("%d %B %Y")
 
 
-# ── Load Recommendation Data ──────────────────────────────────────────────────
+# ── Load Recommendation Data with Smart Fallback for Niche Crops ───────────────
+effective_threshold = float(threshold)
 rec_result = get_market_recommendation(
     folder=data_folder,
     commodity=selected_commodity,
     variety=selected_variety,
-    threshold_pct=float(threshold)
+    threshold_pct=effective_threshold
 )
 
+# Smart Fallback: If 70% yields no markets, automatically check at 30% for sparse/niche crops!
+using_fallback_threshold = False
 if rec_result.get("status") != "success":
-    st.warning(f"⚠️ {rec_result.get('message', 'No market recommendation available.')}")
+    fallback_result = get_market_recommendation(
+        folder=data_folder,
+        commodity=selected_commodity,
+        variety=selected_variety,
+        threshold_pct=30.0
+    )
+    if fallback_result.get("status") == "success":
+        rec_result = fallback_result
+        using_fallback_threshold = True
+
+if rec_result.get("status") != "success":
+    st.warning(f"⚠️ {rec_result.get('message', 'No market data available for this crop.')}")
+    st.info("Try fetching fresh government data using the sidebar button.")
     st.stop()
 
 rec = rec_result["recommendation"]
@@ -400,6 +410,10 @@ st.markdown(f"""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
+
+if using_fallback_threshold:
+    st.info(f"ℹ️ **Smart Data Fallback**: '{selected_commodity}' is reported less frequently across Karnataka mandis. Automatically showing all reporting mandis (reliability threshold relaxed to 30%).")
 
 
 # ── 3. Today's Recommendation Spotlight Card ──────────────────────────────────
@@ -471,7 +485,7 @@ with tab1:
                     folder=data_folder,
                     commodity=selected_commodity,
                     variety=selected_variety,
-                    threshold_pct=float(threshold),
+                    threshold_pct=30.0 if using_fallback_threshold else float(threshold),
                     lang="en"
                 )
                 badge_class = "badge-gemini" if res_en["mode"] == "gemini_ai" else "badge-fallback"
@@ -491,7 +505,7 @@ with tab1:
                     folder=data_folder,
                     commodity=selected_commodity,
                     variety=selected_variety,
-                    threshold_pct=float(threshold),
+                    threshold_pct=30.0 if using_fallback_threshold else float(threshold),
                     lang="kn"
                 )
                 badge_class = "badge-gemini" if res_kn["mode"] == "gemini_ai" else "badge-fallback"
@@ -510,7 +524,7 @@ with tab1:
                 folder=data_folder,
                 commodity=selected_commodity,
                 variety=selected_variety,
-                threshold_pct=float(threshold),
+                threshold_pct=30.0 if using_fallback_threshold else float(threshold),
                 lang=target_lang
             )
             badge_class = "badge-gemini" if res["mode"] == "gemini_ai" else "badge-fallback"
@@ -543,7 +557,7 @@ with tab2:
     col_calc1, col_calc2 = st.columns(2)
 
     with col_calc1:
-        farmer_district = user_district  # Uses selected home district
+        farmer_district = user_district
 
         crop_quantity = st.number_input(
             "📦 Crop Quantity to Sell (in Quintals)",
