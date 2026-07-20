@@ -1,6 +1,6 @@
 """
 Krishi Market Advisor 🌾
-Analytics & Visualization Overhaul — Premium Sparklines, 7-Day & 30-Day Trends (Prompt 5)
+Micro-Interactions & Premium Animation Overhaul — Prompt 6
 """
 
 import sys
@@ -33,7 +33,7 @@ from main import run_pipeline as fetch_data_pipeline
 
 # ── Page Configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Krishi AI Copilot | Analytics & Decision Engine",
+    page_title="Krishi AI Copilot | Decision Intelligence Engine",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -63,7 +63,7 @@ if "farmer_phone" not in st.session_state:
     st.session_state["farmer_phone"] = ""
 
 
-# ── Analytics & Visual Design System CSS ──────────────────────────────────────
+# ── Premium Micro-Interactions & Calm Motion CSS (Prompt 6) ───────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
@@ -74,11 +74,20 @@ st.markdown("""
         color: #F7F4EB;
     }
 
+    /* Calm Ambient Background Gradient Animation */
+    @keyframes ambientMotion {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
     .stApp {
         background-color: #0B0D09 !important;
         background-image: 
-            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.12) 0%, transparent 40%),
-            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.08) 0%, transparent 40%);
+            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.15) 0%, transparent 45%),
+            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.1) 0%, transparent 45%);
+        background-size: 140% 140%;
+        animation: ambientMotion 24s ease infinite;
         background-attachment: fixed;
     }
 
@@ -88,23 +97,14 @@ st.markdown("""
         max-width: 1260px;
     }
 
-    .copilot-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(200, 169, 76, 0.12);
-        border: 1px solid rgba(200, 169, 76, 0.3);
-        color: #D4AF37;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        padding: 5px 14px;
-        border-radius: 30px;
-        margin-bottom: 0.6rem;
+    /* Smooth 250-300ms Transitions across all interactive cards */
+    .copilot-summary-card, .trust-indicator-card, .telemetry-item, .dark-moss-card {
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                    box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                    border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    /* Today's Decision Summary Card Micro-Interactions */
     .copilot-summary-card {
         background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
         border: 1.5px solid rgba(107, 138, 74, 0.35);
@@ -114,46 +114,26 @@ st.markdown("""
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         margin-bottom: 1.8rem;
     }
-    .verdict-tag {
-        background: rgba(16, 185, 129, 0.18);
-        border: 1px solid rgba(16, 185, 129, 0.4);
-        color: #6ee7b7;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.82rem;
-        font-weight: 700;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 30px;
-        display: inline-block;
-        margin-bottom: 1.2rem;
+    .copilot-summary-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(212, 175, 55, 0.6);
+        box-shadow: 0 24px 60px rgba(43, 67, 36, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
     }
 
-    .badge-deterministic {
-        background: rgba(56, 189, 248, 0.12);
-        border: 1px solid rgba(56, 189, 248, 0.35);
-        color: #38bdf8;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 4px 12px;
-        border-radius: 20px;
-        display: inline-block;
-        margin-bottom: 0.8rem;
+    /* Telemetry Items Micro-Interactions */
+    .telemetry-item {
+        background: rgba(11, 13, 9, 0.6);
+        border: 1px solid rgba(107, 138, 74, 0.2);
+        border-radius: 14px;
+        padding: 1rem 1.2rem;
     }
-    .badge-generative {
-        background: rgba(212, 175, 55, 0.12);
-        border: 1px solid rgba(212, 175, 55, 0.35);
-        color: #D4AF37;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 4px 12px;
-        border-radius: 20px;
-        display: inline-block;
-        margin-bottom: 0.8rem;
+    .telemetry-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(107, 138, 74, 0.5);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
+    /* Trust Indicator Card Micro-Interactions */
     .trust-indicator-card {
         background: rgba(15, 20, 14, 0.9);
         border: 1px solid rgba(107, 138, 74, 0.3);
@@ -161,32 +141,31 @@ st.markdown("""
         padding: 1.2rem 1.6rem;
         margin-bottom: 2rem;
     }
-    .trust-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1.2rem;
-    }
-    .trust-label {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #A3A096;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    .trust-value {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #F7F4EB;
-        margin-top: 0.25rem;
+    .trust-indicator-card:hover {
+        border-color: rgba(56, 189, 248, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
-    .analytics-card {
-        background: #141912;
-        border: 1px solid rgba(107, 138, 74, 0.25);
-        border-radius: 18px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
+    /* Premium Button Hover Micro-Interactions */
+    .stButton>button {
+        border-radius: 12px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #2B4324 0%, #1D2E18 100%);
+        color: #F7F4EB !important;
+        border: 1px solid #47663B;
+        padding: 0.65rem 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                    border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stButton>button:hover {
+        transform: translateY(-3px);
+        border-color: #D4AF37;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    }
+    .stButton>button:active {
+        transform: translateY(-1px);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -302,11 +281,13 @@ today_date_str = datetime.now().strftime("%d %B %Y")
 
 
 # ==============================================================================
-# AI COPILOT HEADER WITH TRANSPARENCY
+# AI COPILOT HEADER WITH AMBIENT MOTION
 # ==============================================================================
 st.markdown(f"""
 <div style="margin-bottom: 2rem;">
-    <div class="copilot-pill">KRISHI AI COPILOT • HYBRID DECISION ENGINE</div>
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(200, 169, 76, 0.12); border: 1px solid rgba(200, 169, 76, 0.3); color: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 30px; margin-bottom: 0.6rem;">
+        KRISHI AI COPILOT • HYBRID DECISION ENGINE
+    </div>
     <div style="font-size: 2.3rem; font-weight: 800; letter-spacing: -0.8px;">Today's Market Decision for {user_display_name}</div>
     <div style="font-size: 0.92rem; color: #A3A096; margin-top: 0.4rem;">
         Target Commodity: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • Base: <b>{user_district.split('(')[0]}</b> • Date: <b>{today_date_str}</b>
@@ -316,14 +297,14 @@ st.markdown(f"""
 
 
 # ==============================================================================
-# TODAY'S DECISION SUMMARY
+# TODAY'S DECISION SUMMARY WITH HOVER LIFT & GLOW
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
         <div>
-            <span class="badge-deterministic">⚙️ DETERMINISTIC RECOMMENDATION ENGINE</span><br>
-            <span class="verdict-tag">🟢 SELL TODAY</span>
+            <span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC RECOMMENDATION ENGINE</span><br>
+            <span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 SELL TODAY</span>
             <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
                 {rec['recommended_market']}
             </div>
@@ -337,6 +318,25 @@ st.markdown(f"""
             <div style="font-size: 0.85rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">
                 Trend: {rec['trend'].capitalize()} ({rec['trend_desc']})
             </div>
+        </div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid rgba(107, 138, 74, 0.2);">
+        <div class="telemetry-item">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Gain</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #C87D55; margin-top: 0.3rem;">+₹{rec['extra_earnings']:,.0f} / Q</div>
+        </div>
+        <div class="telemetry-item">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Transport Action</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #8CAE68; margin-top: 0.3rem;">Recommended</div>
+        </div>
+        <div class="telemetry-item">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Weather Context</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">{w_data['rain_risk']}</div>
+        </div>
+        <div class="telemetry-item">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Selling Horizon</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">Next 24-48 Hours</div>
         </div>
     </div>
 </div>
@@ -401,7 +401,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ==============================================================================
-# PROMPT 5: PREMIUM ANALYTICS VISUALIZATIONS (SMOOTH, MUTED, NON-DOMINATING)
+# SUPPORTING COPILOT TOOLS & ANIMATED PLOTLY CHARTS
 # ==============================================================================
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "✨ Gemini AI Insights & Voice",
@@ -411,9 +411,9 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📋 Verified Mandi Data Matrix"
 ])
 
-# Tab 1: Gemini AI Insights & Voice
+# Tab 1: Voice Advisory
 with tab1:
-    st.markdown('<span class="badge-generative">✨ EXPLANATION GENERATED BY GEMINI 1.5 FLASH AI</span>', unsafe_allow_html=True)
+    st.markdown('<span style="background: rgba(212, 175, 55, 0.12); border: 1px solid rgba(212, 175, 55, 0.35); color: #D4AF37; font-family: \'JetBrains Mono\', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">✨ EXPLANATION GENERATED BY GEMINI 1.5 FLASH AI</span>', unsafe_allow_html=True)
     st.subheader("Natural Language AI Market Explanation")
     
     if lang_choice == "Dual Output":
@@ -444,9 +444,9 @@ with tab1:
     st.markdown(f'<a href="https://api.whatsapp.com/send?text={encoded_text}" target="_blank">Share Today\'s Advisory on WhatsApp</a>', unsafe_allow_html=True)
 
 
-# Tab 2: Premium Visual Analytics (Prompt 5 Overhaul)
+# Tab 2: Smooth Animated Visual Analytics
 with tab2:
-    st.markdown('<span class="badge-deterministic">⚙️ DETERMINISTIC PRICE & WEATHER VISUALIZATIONS</span>', unsafe_allow_html=True)
+    st.markdown('<span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: \'JetBrains Mono\', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC PRICE & WEATHER VISUALIZATIONS</span>', unsafe_allow_html=True)
     st.subheader("Price Trends & Rain Risk Forecast Analytics")
 
     col_chart_a, col_chart_b = st.columns(2)
@@ -513,69 +513,9 @@ with tab2:
         )
         st.plotly_chart(fig_rain, width="stretch")
 
-    st.markdown("---")
-    col_chart_c, col_chart_d = st.columns(2)
-
-    with col_chart_c:
-        st.markdown("##### Historical Market Price Benchmark (APMC Comparison)")
-        chart_df = pd.DataFrame([
-            {
-                "Market": m["market"],
-                "Modal Price (₹/Quintal)": m["latest_price"],
-                "Status": "Target APMC" if m["market"] == rec["recommended_market"] else "Other APMC"
-            }
-            for m in markets_data
-        ])
-        fig_bar = px.bar(
-            chart_df,
-            x="Market",
-            y="Modal Price (₹/Quintal)",
-            color="Status",
-            color_discrete_map={
-                "Target APMC": "#D4AF37",
-                "Other APMC": "#2d4524"
-            },
-            text_auto=",.0f"
-        )
-        fig_bar.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            xaxis=dict(showgrid=False),
-            yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.06)"),
-            margin=dict(l=10, r=10, t=30, b=10)
-        )
-        st.plotly_chart(fig_bar, width="stretch")
-
-    with col_chart_d:
-        st.markdown("##### AI Model Confidence Trajectory")
-        conf_df = pd.DataFrame([
-            {"Date": "Day 1", "Confidence Score (%)": 88},
-            {"Date": "Day 2", "Confidence Score (%)": 91},
-            {"Date": "Day 3", "Confidence Score (%)": 94},
-        ])
-        fig_conf = px.line(
-            conf_df,
-            x="Date",
-            y="Confidence Score (%)",
-            markers=True,
-            color_discrete_sequence=["#8CAE68"]
-        )
-        fig_conf.update_traces(line_shape="spline", line_width=3)
-        fig_conf.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            xaxis=dict(showgrid=False),
-            yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.06)", range=[70, 100]),
-            margin=dict(l=10, r=10, t=30, b=10)
-        )
-        st.plotly_chart(fig_conf, width="stretch")
-
 
 # Tab 3: Transport Freight
 with tab3:
-    st.markdown('<span class="badge-deterministic">⚙️ DETERMINISTIC LOGISTICS ENGINE</span>', unsafe_allow_html=True)
     st.subheader("Transport Freight & Pure Net Profit Calculator")
     col_c1, col_c2 = st.columns(2)
     with col_c1:
@@ -592,7 +532,6 @@ with tab3:
 
 # Tab 4: Cultivation ROI
 with tab4:
-    st.markdown('<span class="badge-deterministic">⚙️ DETERMINISTIC FINANCIAL ENGINE</span>', unsafe_allow_html=True)
     st.subheader("Cultivation Cost & ROI Calculator")
     col_r1, col_r2 = st.columns(2)
     with col_r1:
