@@ -67,11 +67,16 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
-    html, body, [class*="st-"] {
+    html, body, .stApp, .stMarkdown, p, h1, h2, h3, h4, h5, h6, label, button, input, select, textarea {
         font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         background-color: #0B0D09 !important;
         color: #F7F4EB;
         -webkit-font-smoothing: antialiased;
+    }
+
+    /* Preserve Streamlit Material Icon Fonts for Sidebar Toggle Icons */
+    [data-testid="stIconMaterial"], [class*="Material"], [class*="icon"], [data-testid="stSidebarCollapseButton"] * {
+        font-family: 'Material Symbols Rounded', 'Material Icons', sans-serif !important;
     }
 
     @keyframes ambientMotion {
