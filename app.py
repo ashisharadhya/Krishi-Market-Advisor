@@ -1,15 +1,14 @@
 """
 Krishi Market Advisor 🌾
-Micro-Interactions & Premium Animation Overhaul — Prompt 6
+Production-Ready Enterprise Decision Intelligence Engine — Pixel-Perfect Principal Design Audit (Prompt 7)
 """
 
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import urllib.parse
 
 # Add project root to sys.path
@@ -33,7 +32,7 @@ from main import run_pipeline as fetch_data_pipeline
 
 # ── Page Configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Krishi AI Copilot | Decision Intelligence Engine",
+    page_title="Krishi AI Copilot | Enterprise Decision Platform",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -52,7 +51,7 @@ DISTRICT_WEATHER = {
     "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant", "humidity": "72%", "wind": "13 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market trading weather."}
 }
 
-# ── Session State ─────────────────────────────────────────────────────────────
+# ── Session State Management ─────────────────────────────────────────────────
 if "user_mode" not in st.session_state:
     st.session_state["user_mode"] = "guest"
 if "farmer_name" not in st.session_state:
@@ -63,18 +62,20 @@ if "farmer_phone" not in st.session_state:
     st.session_state["farmer_phone"] = ""
 
 
-# ── Premium Micro-Interactions & Calm Motion CSS (Prompt 6) ───────────────────
+# ── Principal Enterprise Design System (Pixel-Perfect Execution) ────────────
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
+    /* Global Forest Soil Canvas */
     html, body, [class*="st-"] {
         font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         background-color: #0B0D09 !important;
         color: #F7F4EB;
+        -webkit-font-smoothing: antialiased;
     }
 
-    /* Calm Ambient Background Gradient Animation */
+    /* Ambient Background Motion */
     @keyframes ambientMotion {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
@@ -84,34 +85,35 @@ st.markdown("""
     .stApp {
         background-color: #0B0D09 !important;
         background-image: 
-            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.15) 0%, transparent 45%),
-            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.1) 0%, transparent 45%);
+            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.16) 0%, transparent 45%),
+            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.12) 0%, transparent 45%);
         background-size: 140% 140%;
         animation: ambientMotion 24s ease infinite;
         background-attachment: fixed;
     }
 
+    /* Pixel-Perfect Whitespace & Layout Rhythms */
     .block-container {
-        padding-top: 2.2rem !important;
+        padding-top: 2.4rem !important;
         padding-bottom: 5rem !important;
         max-width: 1260px;
     }
 
-    /* Smooth 250-300ms Transitions across all interactive cards */
+    /* Micro-Interactions Standards */
     .copilot-summary-card, .trust-indicator-card, .telemetry-item, .dark-moss-card {
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                     box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                     border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Today's Decision Summary Card Micro-Interactions */
+    /* Hero AI Copilot Summary Card */
     .copilot-summary-card {
         background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
         border: 1.5px solid rgba(107, 138, 74, 0.35);
         border-radius: 22px;
-        padding: 2.5rem;
+        padding: 2.6rem;
         color: #F7F4EB;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
         margin-bottom: 1.8rem;
     }
     .copilot-summary-card:hover {
@@ -120,12 +122,12 @@ st.markdown("""
         box-shadow: 0 24px 60px rgba(43, 67, 36, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
     }
 
-    /* Telemetry Items Micro-Interactions */
+    /* Telemetry Items */
     .telemetry-item {
-        background: rgba(11, 13, 9, 0.6);
-        border: 1px solid rgba(107, 138, 74, 0.2);
+        background: rgba(11, 13, 9, 0.65);
+        border: 1px solid rgba(107, 138, 74, 0.22);
         border-radius: 14px;
-        padding: 1rem 1.2rem;
+        padding: 1.1rem 1.3rem;
     }
     .telemetry-item:hover {
         transform: translateY(-2px);
@@ -133,27 +135,50 @@ st.markdown("""
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    /* Trust Indicator Card Micro-Interactions */
+    /* Trust Telemetry Grid */
     .trust-indicator-card {
-        background: rgba(15, 20, 14, 0.9);
+        background: rgba(15, 20, 14, 0.92);
         border: 1px solid rgba(107, 138, 74, 0.3);
-        border-radius: 16px;
-        padding: 1.2rem 1.6rem;
-        margin-bottom: 2rem;
+        border-radius: 18px;
+        padding: 1.3rem 1.8rem;
+        margin-bottom: 2.2rem;
     }
     .trust-indicator-card:hover {
         border-color: rgba(56, 189, 248, 0.5);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
-    /* Premium Button Hover Micro-Interactions */
+    /* Enterprise Custom Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 12px;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(107, 138, 74, 0.25);
+        padding-bottom: 8px;
+    }
+    .stTabs [data-baseweb="tab"] {
+        height: 48px;
+        background-color: #141912;
+        border-radius: 12px;
+        border: 1px solid rgba(107, 138, 74, 0.22);
+        color: #A3A096;
+        font-weight: 600;
+        padding: 0 24px;
+    }
+    .stTabs [aria-selected="true"] {
+        background-color: #2B4324 !important;
+        border-color: #47663B !important;
+        color: #F7F4EB !important;
+        box-shadow: 0 4px 15px rgba(43, 67, 36, 0.4);
+    }
+
+    /* Button Polish */
     .stButton>button {
         border-radius: 12px;
         font-weight: 700;
         background: linear-gradient(135deg, #2B4324 0%, #1D2E18 100%);
         color: #F7F4EB !important;
         border: 1px solid #47663B;
-        padding: 0.65rem 1.5rem;
+        padding: 0.65rem 1.6rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
                     box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -163,9 +188,6 @@ st.markdown("""
         transform: translateY(-3px);
         border-color: #D4AF37;
         box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-    }
-    .stButton>button:active {
-        transform: translateY(-1px);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -281,15 +303,15 @@ today_date_str = datetime.now().strftime("%d %B %Y")
 
 
 # ==============================================================================
-# AI COPILOT HEADER WITH AMBIENT MOTION
+# HIERARCHY LEVEL 1: HERO INTELLIGENCE PANEL
 # ==============================================================================
 st.markdown(f"""
-<div style="margin-bottom: 2rem;">
+<div style="margin-bottom: 2.2rem;">
     <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(200, 169, 76, 0.12); border: 1px solid rgba(200, 169, 76, 0.3); color: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 30px; margin-bottom: 0.6rem;">
         KRISHI AI COPILOT • HYBRID DECISION ENGINE
     </div>
-    <div style="font-size: 2.3rem; font-weight: 800; letter-spacing: -0.8px;">Today's Market Decision for {user_display_name}</div>
-    <div style="font-size: 0.92rem; color: #A3A096; margin-top: 0.4rem;">
+    <div style="font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px;">Today's Market Decision for {user_display_name}</div>
+    <div style="font-size: 0.95rem; color: #A3A096; margin-top: 0.4rem;">
         Target Commodity: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • Base: <b>{user_district.split('(')[0]}</b> • Date: <b>{today_date_str}</b>
     </div>
 </div>
@@ -297,7 +319,7 @@ st.markdown(f"""
 
 
 # ==============================================================================
-# TODAY'S DECISION SUMMARY WITH HOVER LIFT & GLOW
+# HIERARCHY LEVEL 2: TODAY'S DECISION SUMMARY (DOMINANT HERO CARD)
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
@@ -305,23 +327,23 @@ st.markdown(f"""
         <div>
             <span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC RECOMMENDATION ENGINE</span><br>
             <span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 SELL TODAY</span>
-            <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
+            <div style="font-size: 2.7rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
                 {rec['recommended_market']}
             </div>
-            <div style="font-size: 3.6rem; font-weight: 800; color: #F7F4EB; margin-top: 0.2rem; line-height: 1;">
+            <div style="font-size: 3.8rem; font-weight: 800; color: #F7F4EB; margin-top: 0.2rem; line-height: 1;">
                 ₹{rec['highest_price']:,.0f} <span style="font-size: 1.4rem; color: #A3A096; font-weight: 600;">/ Quintal</span>
             </div>
         </div>
-        <div style="text-align: right; background: rgba(11, 13, 9, 0.6); padding: 1.2rem 1.6rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
+        <div style="text-align: right; background: rgba(11, 13, 9, 0.65); padding: 1.3rem 1.8rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
             <div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">MODEL CONFIDENCE</div>
-            <div style="font-size: 2.5rem; font-weight: 800; color: #D4AF37;">94%</div>
+            <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37;">94%</div>
             <div style="font-size: 0.85rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">
                 Trend: {rec['trend'].capitalize()} ({rec['trend_desc']})
             </div>
         </div>
     </div>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid rgba(107, 138, 74, 0.2);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25);">
         <div class="telemetry-item">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Gain</div>
             <div style="font-size: 1.3rem; font-weight: 800; color: #C87D55; margin-top: 0.3rem;">+₹{rec['extra_earnings']:,.0f} / Q</div>
@@ -342,7 +364,10 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# TRUST INDICATORS
+
+# ==============================================================================
+# TRUST TELEMETRY INDICATORS
+# ==============================================================================
 st.markdown(f"""
 <div class="trust-indicator-card">
     <div class="trust-grid">
@@ -444,7 +469,7 @@ with tab1:
     st.markdown(f'<a href="https://api.whatsapp.com/send?text={encoded_text}" target="_blank">Share Today\'s Advisory on WhatsApp</a>', unsafe_allow_html=True)
 
 
-# Tab 2: Smooth Animated Visual Analytics
+# Tab 2: Visual Analytics
 with tab2:
     st.markdown('<span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: \'JetBrains Mono\', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC PRICE & WEATHER VISUALIZATIONS</span>', unsafe_allow_html=True)
     st.subheader("Price Trends & Rain Risk Forecast Analytics")
