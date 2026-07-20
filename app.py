@@ -319,13 +319,13 @@ today_date_str = datetime.now().strftime("%d %B %Y")
 # ==============================================================================
 st.markdown(f"""
 <div style="margin-bottom: 2.2rem;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(200, 169, 76, 0.12); border: 1px solid rgba(200, 169, 76, 0.3); color: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 30px; margin-bottom: 0.6rem;">
-        KRISHI AI COPILOT • HYBRID DECISION ENGINE
-    </div>
-    <div style="font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px;">Today's Market Decision for {user_display_name}</div>
-    <div style="font-size: 0.95rem; color: #A3A096; margin-top: 0.4rem;">
-        Target Commodity: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • Base: <b>{user_district.split('(')[0]}</b> • Date: <b>{today_date_str}</b>
-    </div>
+<div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(200, 169, 76, 0.12); border: 1px solid rgba(200, 169, 76, 0.3); color: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 30px; margin-bottom: 0.6rem;">
+KRISHI AI COPILOT • HYBRID DECISION ENGINE
+</div>
+<div style="font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px;">Today's Market Decision for {user_display_name}</div>
+<div style="font-size: 0.95rem; color: #A3A096; margin-top: 0.4rem;">
+Target Commodity: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • Base: <b>{user_district.split('(')[0]}</b> • Date: <b>{today_date_str}</b>
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -335,44 +335,44 @@ st.markdown(f"""
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
-        <div>
-            <span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC RECOMMENDATION ENGINE</span><br>
-            <span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 SELL TODAY</span>
-            <div style="font-size: 2.7rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
-                {rec['recommended_market']}
-            </div>
-            <div style="font-size: 3.8rem; font-weight: 800; color: #F7F4EB; margin-top: 0.2rem; line-height: 1;">
-                ₹{rec['highest_price']:,.0f} <span style="font-size: 1.4rem; color: #A3A096; font-weight: 600;">/ Quintal</span>
-            </div>
-        </div>
-        <div style="text-align: right; background: rgba(11, 13, 9, 0.65); padding: 1.3rem 1.8rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
-            <div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">MODEL CONFIDENCE</div>
-            <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37;">94%</div>
-            <div style="font-size: 0.85rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">
-                Trend: {rec['trend'].capitalize()} ({rec['trend_desc']})
-            </div>
-        </div>
-    </div>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25);">
-        <div class="telemetry-item">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Gain</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #C87D55; margin-top: 0.3rem;">+₹{rec['extra_earnings']:,.0f} / Q</div>
-        </div>
-        <div class="telemetry-item">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Transport Action</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #8CAE68; margin-top: 0.3rem;">Recommended</div>
-        </div>
-        <div class="telemetry-item">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Weather Context</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">{w_data['rain_risk']}</div>
-        </div>
-        <div class="telemetry-item">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Selling Horizon</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">Next 24-48 Hours</div>
-        </div>
-    </div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+<div>
+<span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">⚙️ DETERMINISTIC RECOMMENDATION ENGINE</span><br>
+<span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 SELL TODAY</span>
+<div style="font-size: 2.7rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
+{rec['recommended_market']}
+</div>
+<div style="font-size: 3.8rem; font-weight: 800; color: #F7F4EB; margin-top: 0.2rem; line-height: 1;">
+₹{rec['highest_price']:,.0f} <span style="font-size: 1.4rem; color: #A3A096; font-weight: 600;">/ Quintal</span>
+</div>
+</div>
+<div style="text-align: right; background: rgba(11, 13, 9, 0.65); padding: 1.3rem 1.8rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
+<div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">MODEL CONFIDENCE</div>
+<div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37;">94%</div>
+<div style="font-size: 0.85rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">
+Trend: {rec['trend'].capitalize()} ({rec['trend_desc']})
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25);">
+<div class="telemetry-item">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Gain</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #C87D55; margin-top: 0.3rem;">+₹{rec['extra_earnings']:,.0f} / Q</div>
+</div>
+<div class="telemetry-item">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Transport Action</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #8CAE68; margin-top: 0.3rem;">Recommended</div>
+</div>
+<div class="telemetry-item">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Weather Context</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">{w_data['rain_risk']}</div>
+</div>
+<div class="telemetry-item">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Selling Horizon</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">Next 24-48 Hours</div>
+</div>
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -382,28 +382,28 @@ st.markdown(f"""
 # ==============================================================================
 st.markdown(f"""
 <div class="trust-indicator-card">
-    <div class="trust-grid">
-        <div>
-            <div class="trust-label">System Confidence</div>
-            <div class="trust-value" style="color: #D4AF37;">94% Confidence</div>
-        </div>
-        <div>
-            <div class="trust-label">Last Updated</div>
-            <div class="trust-value">12 minutes ago</div>
-        </div>
-        <div>
-            <div class="trust-label">Data Sources</div>
-            <div class="trust-value">Agmarknet • Weather API</div>
-        </div>
-        <div>
-            <div class="trust-label">Data Reliability</div>
-            <div class="trust-value" style="color: #8CAE68;">High (70%+ Consistency)</div>
-        </div>
-        <div>
-            <div class="trust-label">Verification Status</div>
-            <div class="trust-value" style="color: #38bdf8;">✓ Verified Record</div>
-        </div>
-    </div>
+<div class="trust-grid">
+<div>
+<div class="trust-label">System Confidence</div>
+<div class="trust-value" style="color: #D4AF37;">94% Confidence</div>
+</div>
+<div>
+<div class="trust-label">Last Updated</div>
+<div class="trust-value">12 minutes ago</div>
+</div>
+<div>
+<div class="trust-label">Data Sources</div>
+<div class="trust-value">Agmarknet • Weather API</div>
+</div>
+<div>
+<div class="trust-label">Data Reliability</div>
+<div class="trust-value" style="color: #8CAE68;">High (70%+ Consistency)</div>
+</div>
+<div>
+<div class="trust-label">Verification Status</div>
+<div class="trust-value" style="color: #38bdf8;">✓ Verified Record</div>
+</div>
+</div>
 </div>
 """, unsafe_allow_html=True)
 
