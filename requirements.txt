@@ -35,3 +35,7 @@ google-generativeai>=0.3.0
 # Interactive mandi price trend and comparison charts
 plotly>=5.18.0
 
+# Google Text-to-Speech for Kannada Voice Advisor
+gTTS>=2.5.0
+
+
