@@ -1,9 +1,10 @@
 """
 Krishi Market Advisor 🌾
-Earth-Themed AI Agricultural Intelligence Dashboard for Karnataka Farmers
+Farmer-First Personalised Dashboard & AI Market Intelligence Engine
 """
 
 import sys
+from datetime import datetime
 from pathlib import Path
 import streamlit as st
 import pandas as pd
@@ -34,10 +35,10 @@ st.set_page_config(
     page_title="Krishi Market Advisor 🌾 | ಕರ್ನಾಟಕ ಕೃಷಿ ಮಾರುಕಟ್ಟೆ ಸಲಹೆಗಾರ",
     page_icon="🌾",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",  # Collapsed by default so dashboard takes center stage!
 )
 
-# ── Earthy Agricultural Design System & Custom CSS ─────────────────────────────
+# ── Earthy Farmer-First Styling ───────────────────────────────────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&display=swap');
@@ -46,106 +47,91 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
     }
 
-    /* Earthy Hero Header Container */
-    .hero-banner {
-        background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%);
-        border-radius: 18px;
-        padding: 2.2rem 2rem;
+    /* Welcome Greeting Header */
+    .welcome-card {
+        background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 70%, #40916c 100%);
+        border-radius: 20px;
+        padding: 1.8rem 2.2rem;
         color: #ffffff;
-        box-shadow: 0 10px 25px rgba(27, 67, 50, 0.15);
+        box-shadow: 0 10px 30px rgba(27, 67, 50, 0.18);
         margin-bottom: 1.8rem;
-        position: relative;
-        overflow: hidden;
     }
-    .hero-banner::after {
-        content: "🌾";
-        position: absolute;
-        right: 20px;
-        bottom: -10px;
-        font-size: 8rem;
-        opacity: 0.12;
-        pointer-events: none;
-    }
-    .hero-title {
-        font-size: 2.4rem;
+    .welcome-greeting {
+        font-size: 2.2rem;
         font-weight: 800;
         color: #f4f1ea;
-        margin-bottom: 0.3rem;
-        letter-spacing: -0.5px;
-    }
-    .hero-subtitle {
-        font-size: 1.1rem;
-        color: #d8f3dc;
-        font-weight: 500;
-        max-width: 850px;
-    }
-
-    /* Live Ticker Bar */
-    .ticker-bar {
-        background-color: #fefae0;
-        border: 1px solid #e9c46a;
-        border-radius: 12px;
-        padding: 0.65rem 1.2rem;
-        margin-bottom: 1.5rem;
-        color: #7f5539;
-        font-weight: 700;
-        font-size: 0.92rem;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-    }
-    .ticker-tag {
-        background: #dda15e;
-        color: #ffffff;
-        padding: 3px 10px;
-        border-radius: 8px;
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    /* Earthy KPI Cards */
-    .kpi-card {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 1.3rem 1.4rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-        border: 1.5px solid #e2e8f0;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        height: 100%;
-    }
-    .kpi-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(45, 106, 79, 0.12);
-        border-color: #95d5b2;
-    }
-    .kpi-icon {
-        font-size: 1.6rem;
         margin-bottom: 0.4rem;
     }
-    .kpi-label {
-        font-size: 0.82rem;
+    .meta-pills-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 0.8rem;
+    }
+    .meta-pill {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 6px 14px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #e8f5e9;
+    }
+
+    /* Today's Recommendation Spotlight Card */
+    .spotlight-card {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 1.8rem;
+        border: 2px solid #2d6a4f;
+        box-shadow: 0 8px 24px rgba(45, 106, 79, 0.12);
+        margin-bottom: 2rem;
+    }
+    .spotlight-header {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #1b4332;
+        border-bottom: 2px solid #e8f5e9;
+        padding-bottom: 0.6rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.2rem;
+    }
+    .spotlight-item {
+        background: #f8faf6;
+        border-radius: 12px;
+        padding: 1rem 1.1rem;
+        border: 1px solid #e2e8f0;
+    }
+    .spotlight-label {
+        font-size: 0.8rem;
         font-weight: 700;
         color: #64748b;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
-    .kpi-value {
-        font-size: 1.85rem;
+    .spotlight-value {
+        font-size: 1.6rem;
         font-weight: 800;
         color: #1b4332;
-        margin: 0.2rem 0;
+        margin-top: 0.2rem;
     }
-    .kpi-sub {
-        font-size: 0.88rem;
+    .spotlight-sub {
+        font-size: 0.85rem;
+        font-weight: 700;
         color: #2d6a4f;
-        font-weight: 600;
     }
 
-    /* AI Badge Styling */
+    /* Badges */
     .badge-gemini {
-        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        background: #e8f5e9;
         color: #1b4332;
         border: 1px solid #81c784;
         padding: 6px 14px;
@@ -167,7 +153,7 @@ st.markdown("""
         margin-bottom: 1rem;
     }
 
-    /* Profit Card Styling */
+    /* Profit Card */
     .profit-card-green {
         background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
         border: 2px solid #22c55e;
@@ -182,45 +168,27 @@ st.markdown("""
         padding: 1.5rem;
         color: #7c2d12;
     }
-
-    /* Weather Widget */
-    .weather-box {
-        background: #fdfbf7;
-        border: 1px solid #e6dfd5;
-        border-radius: 14px;
-        padding: 1rem 1.2rem;
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    /* Custom Button styling */
-    .stButton>button {
-        border-radius: 12px;
-        font-weight: 700;
-        background-color: #2d6a4f;
-        color: white;
-        border: none;
-        padding: 0.5rem 1.2rem;
-        transition: all 0.2s ease;
-    }
-    .stButton>button:hover {
-        background-color: #1b4332;
-        color: white;
-        box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
-    }
 </style>
 """, unsafe_allow_html=True)
 
 
-# ── Sidebar Configuration ─────────────────────────────────────────────────────
-st.sidebar.markdown("### 🌾 Krishi Advisor Controls")
-
+# ── Load Default Options ──────────────────────────────────────────────────────
 data_folder = "data"
 available_commodities = get_available_commodities(data_folder)
 default_crop = "Arecanut(Betelnut/Supari)"
 default_idx = available_commodities.index(default_crop) if default_crop in available_commodities else 0
+
+
+# ── Sidebar Setup (Filters & Settings) ───────────────────────────────────────
+st.sidebar.image("https://img.icons8.com/color/96/wheat.png", width=70)
+st.sidebar.title("⚙️ Market Controls")
+
+user_name = st.sidebar.text_input("👤 Farmer Name", value="Yukti")
+user_location = st.sidebar.selectbox(
+    "📍 Your Location",
+    options=list(DISTANCES_KM.keys()),
+    index=0
+)
 
 selected_commodity = st.sidebar.selectbox(
     "🌱 Select Crop / Commodity",
@@ -243,8 +211,7 @@ threshold = st.sidebar.slider(
     min_value=30,
     max_value=100,
     value=70,
-    step=5,
-    help="Filters out mandis that don't report data consistently."
+    step=5
 )
 
 lang_choice = st.sidebar.radio(
@@ -254,8 +221,7 @@ lang_choice = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("### 📡 Live Data Sync")
-if st.sidebar.button("🔄 Fetch Government API Data"):
+if st.sidebar.button("🔄 Fetch Today's Govt API Data"):
     with st.spinner("Connecting to Govt Agmarknet Portal..."):
         try:
             fetch_data_pipeline()
@@ -265,27 +231,16 @@ if st.sidebar.button("🔄 Fetch Government API Data"):
             st.sidebar.error(f"Fetch failed: {e}")
 
 
-# ── Hero Banner Section ───────────────────────────────────────────────────────
-st.markdown("""
-<div class="hero-banner">
-    <div class="hero-title">Krishi Market Advisor 🌾</div>
-    <div class="hero-subtitle">ಕರ್ನಾಟಕ ಕೃಷಿ ಮಾರುಕಟ್ಟೆ ಸಲಹೆಗಾರ · AI-Powered Mandi Selling Advice, Price Momentum Analytics & Transport Profit Engine</div>
-</div>
-""", unsafe_allow_html=True)
+# ── Time-of-Day Greeting Calculation ──────────────────────────────────────────
+current_hour = datetime.now().hour
+if current_hour < 12:
+    greeting_str = "Good Morning"
+elif current_hour < 17:
+    greeting_str = "Good Afternoon"
+else:
+    greeting_str = "Good Evening"
 
-# ── Live Ticker Banner ────────────────────────────────────────────────────────
-st.markdown("""
-<div class="ticker-bar">
-    <span class="ticker-tag">Live Market Ticker</span>
-    <span>🌾 Arecanut: ₹52,600/Q (Rising ↑)</span>
-    <span>•</span>
-    <span>🥥 Copra: ₹32,100/Q (Stable →)</span>
-    <span>•</span>
-    <span>🌶️ Black Pepper: ₹66,900/Q</span>
-    <span>•</span>
-    <span>🍅 Tomato: ₹2,400/Q</span>
-</div>
-""", unsafe_allow_html=True)
+today_date_str = datetime.now().strftime("%d %B %Y")
 
 
 # ── Load Recommendation Data ──────────────────────────────────────────────────
@@ -297,64 +252,66 @@ rec_result = get_market_recommendation(
 )
 
 if rec_result.get("status") != "success":
-    st.warning(f"⚠️ {rec_result.get('message', 'No market recommendation available for this crop.')}")
-    st.info("Try adjusting the reliability threshold slider or fetching fresh government data.")
+    st.warning(f"⚠️ {rec_result.get('message', 'No market recommendation available.')}")
     st.stop()
 
 rec = rec_result["recommendation"]
 markets_data = rec_result.get("markets", [])
 
 
-# ── Earthy KPI Cards ──────────────────────────────────────────────────────────
-col1, col2, col3, col4 = st.columns(4)
-
-with col1:
-    st.markdown(f"""
-    <div class="kpi-card">
-        <div class="kpi-icon">🏛️</div>
-        <div class="kpi-label">Recommended Mandi</div>
-        <div class="kpi-value" style="font-size: 1.4rem;">{rec['recommended_market']}</div>
-        <div class="kpi-sub">Reported on {rec['date']}</div>
+# ── 1. Personalized Welcome Header ────────────────────────────────────────────
+st.markdown(f"""
+<div class="welcome-card">
+    <div class="welcome-greeting">🌾 {greeting_str}, {user_name} 👋</div>
+    <div style="font-size: 1.05rem; color: #d8f3dc;">Welcome to Krishi Market Advisor — Karnataka's AI Mandi Selling Intelligence</div>
+    <div class="meta-pills-row">
+        <span class="meta-pill">📍 Location: {user_location}</span>
+        <span class="meta-pill">🌦 Weather: 27°C | Light Rain</span>
+        <span class="meta-pill">📅 Date: {today_date_str}</span>
     </div>
-    """, unsafe_allow_html=True)
+</div>
+""", unsafe_allow_html=True)
 
-with col2:
-    st.markdown(f"""
-    <div class="kpi-card">
-        <div class="kpi-icon">💰</div>
-        <div class="kpi-label">Highest Modal Price</div>
-        <div class="kpi-value">₹{rec['highest_price']:,.0f}</div>
-        <div class="kpi-sub">per quintal</div>
+
+# ── 2. Today's Recommendation Spotlight Card ──────────────────────────────────
+trend_icon = "📈" if rec['trend'] == "rising" else ("📉" if rec['trend'] == "falling" else "➡️")
+trend_label = f"{trend_icon} {rec['trend'].capitalize()} ({rec['trend_desc']})"
+
+st.markdown(f"""
+<div class="spotlight-card">
+    <div class="spotlight-header">
+        <span>🌟 Today's Best Market Recommendation</span>
+        <span style="font-size: 0.9rem; font-weight: 600; color: #2d6a4f;">Variety: {rec_result['variety']}</span>
     </div>
-    """, unsafe_allow_html=True)
-
-with col3:
-    st.markdown(f"""
-    <div class="kpi-card">
-        <div class="kpi-icon">📈</div>
-        <div class="kpi-label">Extra Earnings Advantage</div>
-        <div class="kpi-value">+₹{rec['extra_earnings']:,.0f}</div>
-        <div class="kpi-sub">+{rec['extra_earnings_pct']:.1f}% vs lowest mandi</div>
+    <div class="spotlight-grid">
+        <div class="spotlight-item">
+            <div class="spotlight-label">Crop / Commodity</div>
+            <div class="spotlight-value" style="font-size: 1.4rem;">{selected_commodity.split('(')[0]}</div>
+            <div class="spotlight-sub">Karnataka Mandis</div>
+        </div>
+        <div class="spotlight-item">
+            <div class="spotlight-label">Best Market</div>
+            <div class="spotlight-value" style="font-size: 1.4rem;">{rec['recommended_market']}</div>
+            <div class="spotlight-sub">Highest Price Mandi</div>
+        </div>
+        <div class="spotlight-item">
+            <div class="spotlight-label">Today's Price</div>
+            <div class="spotlight-value">₹{rec['highest_price']:,.0f}</div>
+            <div class="spotlight-sub">per quintal ({rec['date']})</div>
+        </div>
+        <div class="spotlight-item">
+            <div class="spotlight-label">Market Trend</div>
+            <div class="spotlight-value" style="font-size: 1.25rem;">{trend_label}</div>
+            <div class="spotlight-sub">+₹{rec['extra_earnings']:,.0f}/Q (+{rec['extra_earnings_pct']:.1f}%) Extra</div>
+        </div>
     </div>
-    """, unsafe_allow_html=True)
-
-with col4:
-    st.markdown(f"""
-    <div class="kpi-card">
-        <div class="kpi-icon">🛡️</div>
-        <div class="kpi-label">Verified Mandis</div>
-        <div class="kpi-value">{rec_result['reliable_markets_count']}</div>
-        <div class="kpi-sub">Variety: {rec_result['variety']} ({rec_result['total_days']} days data)</div>
-    </div>
-    """, unsafe_allow_html=True)
+</div>
+""", unsafe_allow_html=True)
 
 
-st.markdown("<br>", unsafe_allow_html=True)
-
-
-# ── Tabs Navigation ───────────────────────────────────────────────────────────
+# ── 3. Tabs Navigation ────────────────────────────────────────────────────────
 tab1, tab2, tab3, tab4 = st.tabs([
-    "🤖 AI Market Advisory & Voice",
+    "🤖 AI Advisory & Voice",
     "🚚 Transport & Pure Net Profit Calculator",
     "📈 Price Momentum Analytics",
     "📋 Verified Mandi Table"
@@ -370,7 +327,7 @@ with tab1:
         <h5 style="margin:0; color: #1b4332;">⏳ Smart Timing Advisor: <b>BEST TIME TO SELL: NEXT 24-48 HOURS</b></h5>
         <p style="margin: 4px 0 0 0; color: #4a5568; font-size: 0.95rem;">
             Modal prices at <b>{rec['recommended_market']}</b> are currently <b>{rec['trend']}</b> ({rec['trend_desc']}). 
-            Market arrivals are expected to peak later this week. Selling within the next 2 days captures current peak prices.
+            Selling within the next 2 days captures current peak prices before arrival increases.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -437,7 +394,7 @@ with tab1:
                 st.markdown(f"##### 🔊 Listen in {'Kannada (ಕನ್ನಡ)' if target_lang=='kn' else 'English'}")
                 st.audio(audio_bytes, format="audio/mp3")
 
-    # WhatsApp Share Helper
+    # WhatsApp Share Button
     st.markdown("---")
     encoded_text = urllib.parse.quote(f"🌾 *Krishi Market Advisor*: Best market for {selected_commodity} ({rec_result['variety']}) is *{rec['recommended_market']}* at ₹{rec['highest_price']:,.0f}/Q (Extra gain: +₹{rec['extra_earnings']:,.0f}/Q).")
     st.markdown(f"""
@@ -457,12 +414,7 @@ with tab2:
     col_calc1, col_calc2 = st.columns(2)
 
     with col_calc1:
-        district_options = list(DISTANCES_KM.keys())
-        farmer_district = st.selectbox(
-            "📍 Select Your Home District / Region",
-            options=district_options,
-            index=0
-        )
+        farmer_district = user_location  # Pre-select user's location from welcome card!
 
         crop_quantity = st.number_input(
             "📦 Crop Quantity to Sell (in Quintals)",
@@ -493,13 +445,13 @@ with tab2:
         - **Target Mandi**: `{rec['recommended_market']}` (₹{rec['highest_price']:,.0f}/quintal)
         - **Closest/Lowest Mandi**: `{rec['lowest_market']}` (₹{rec['lowest_price']:,.0f}/quintal)
         - **Gross Price Advantage**: **+₹{rec['extra_earnings']:,.0f}** per quintal
-        - **Estimated One-Way Distance**: **{calc_result['distance_km']:.0f} km** ({calc_result['round_trip_km']:.0f} km round trip)
-        - **Total Gross Extra Revenue** ({crop_quantity:.0f} quintals): **₹{calc_result['gross_extra_revenue']:,.0f}**
-        - **Estimated Truck Freight Cost**: **₹{calc_result['estimated_freight_cost']:,.0f}**
+        - **Estimated Distance from {farmer_district}**: **{calc_result['distance_km']:.0f} km** ({calc_result['round_trip_km']:.0f} km round trip)
+        - **Gross Extra Revenue** ({crop_quantity:.0f} quintals): **₹{calc_result['gross_extra_revenue']:,.0f}**
+        - **Estimated Freight Cost**: **₹{calc_result['estimated_freight_cost']:,.0f}**
         """)
 
         card_class = "profit-card-green" if calc_result["is_profitable"] else "profit-card-orange"
-        profit_title = "🎉 PURE NET EXTRA PROFIT" if calc_result["is_profitable"] else "⚠️ TRANSPORT COST EXCEEDS PRICE GAIN"
+        profit_title = "🎉 PURE NET EXTRA PROFIT" if calc_result["is_profitable"] else "⚠️ TRANSPORT COST EXCEEDS GAIN"
 
         st.markdown(f"""
         <div class="{card_class}">
