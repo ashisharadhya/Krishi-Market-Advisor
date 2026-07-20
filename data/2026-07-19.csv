@@ -1,31 +1,31 @@
 state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price
-Karnataka,Koppal,Kustagi APMC,Maize,Hybrid/Local,FAQ,19/07/2026,2325,2325,2325
-Karnataka,Bengaluru South,Ramanagara APMC,Chilly Capsicum,Chilly Capsicum,Local,19/07/2026,5000,7200,6000
-Karnataka,Bengaluru South,Ramanagara APMC,Capsicum,Capsicum,Local,19/07/2026,6000,8000,7000
-Karnataka,Bengaluru South,Ramanagara APMC,Cauliflower,Cauliflower,Local,19/07/2026,2000,3200,2400
-Karnataka,Koppal,Kustagi APMC,Cowpea(Lobia/Karamani),Cowpea (Whole),Medium,19/07/2026,7050,7050,7050
-Karnataka,Bengaluru South,Ramanagara APMC,Bitter gourd,Bitter Gourd,Local,19/07/2026,3200,4400,4000
-Karnataka,Bengaluru South,Ramanagara APMC,Cucumbar(Kheera),Cucumbar,Local,19/07/2026,2200,2600,2400
+Karnataka,Chitradurga,Hiriyur APMC,Ground Nut Seed,Ground Nut Seed,Medium,19/07/2026,12681,12857,12769
+Karnataka,Bengaluru South,Ramanagara APMC,Green Chilli,Green Chilly,Local,19/07/2026,3000,4400,4000
 Karnataka,Bengaluru South,Ramanagara APMC,Alsandikai,Alsandikai,Local,19/07/2026,3000,3500,3200
-Karnataka,Bengaluru South,Ramanagara APMC,Beetroot,Beetroot,Local,19/07/2026,3000,3600,3200
 Karnataka,Koppal,Kustagi APMC,Neem Seed,Neem Seed,Medium,19/07/2026,900,2030,1668
+Karnataka,Bengaluru South,Ramanagara APMC,Chilly Capsicum,Chilly Capsicum,Local,19/07/2026,5000,7200,6000
+Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Brinjal,Local,19/07/2026,2400,4000,3500
 Karnataka,Chitradurga,Challakere APMC,Paddy(Common),Paddy,Local,19/07/2026,3126,3209,3153
-Karnataka,Bengaluru South,Ramanagara APMC,Ginger(Green),Green Ginger,Local,19/07/2026,7200,12000,10000
-Karnataka,Bengaluru South,Ramanagara APMC,Bottle gourd,Bottle Gourd,Local,19/07/2026,1200,1600,1400
-Karnataka,Bengaluru South,Ramanagara APMC,Drumstick,Drumstick,Local,19/07/2026,5000,7000,6400
-Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Round,Local,19/07/2026,1500,2200,2000
-Karnataka,Koppal,Kustagi APMC,Bajra(Pearl Millet/Cumbu),Hybrid,FAQ,19/07/2026,2500,2500,2500
-Karnataka,Bengaluru South,Ramanagara APMC,Tomato,Tomato,Local,19/07/2026,1000,1700,1500
-Karnataka,Bengaluru South,Ramanagara APMC,Carrot,Carrot,Local,19/07/2026,4000,5500,5000
 Karnataka,Bengaluru South,Ramanagara APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,19/07/2026,2800,4000,3500
+Karnataka,Bengaluru South,Ramanagara APMC,Ladies Finger,Ladies Finger,Local,19/07/2026,1600,2400,2000
+Karnataka,Bengaluru South,Ramanagara APMC,Snakeguard,Snakeguard,Local,19/07/2026,1600,2400,2000
+Karnataka,Koppal,Kustagi APMC,Bajra(Pearl Millet/Cumbu),Hybrid,FAQ,19/07/2026,2500,2500,2500
+Karnataka,Bengaluru South,Ramanagara APMC,Bitter gourd,Bitter Gourd,Local,19/07/2026,3200,4400,4000
+Karnataka,Bengaluru South,Ramanagara APMC,Ginger(Green),Green Ginger,Local,19/07/2026,7200,12000,10000
+Karnataka,Bengaluru South,Ramanagara APMC,Carrot,Carrot,Local,19/07/2026,4000,5500,5000
+Karnataka,Bengaluru South,Ramanagara APMC,Cucumbar(Kheera),Cucumbar,Local,19/07/2026,2200,2600,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Capsicum,Capsicum,Local,19/07/2026,6000,8000,7000
 Karnataka,Bengaluru South,Ramanagara APMC,Green Avare(W),Green Avare (W),Local,19/07/2026,3500,6000,4400
 Karnataka,Bengaluru South,Ramanagara APMC,Seemebadnekai,Seemebadanekai,Local,19/07/2026,2400,3200,3000
-Karnataka,Bengaluru South,Ramanagara APMC,Snakeguard,Snakeguard,Local,19/07/2026,1600,2400,2000
+Karnataka,Koppal,Kustagi APMC,Maize,Hybrid/Local,FAQ,19/07/2026,2325,2325,2325
 Karnataka,Koppal,Kustagi APMC,Red gram/Arhar/Tur(whole),Red,FAQ,19/07/2026,7400,7400,7400
-Karnataka,Chitradurga,Hiriyur APMC,Ground Nut Seed,Ground Nut Seed,Medium,19/07/2026,12681,12857,12769
+Karnataka,Koppal,Kustagi APMC,Cowpea(Lobia/Karamani),Cowpea (Whole),Medium,19/07/2026,7050,7050,7050
+Karnataka,Bengaluru South,Ramanagara APMC,Tomato,Tomato,Local,19/07/2026,1000,1700,1500
 Karnataka,Bengaluru South,Ramanagara APMC,Cabbage,Cabbage,Local,19/07/2026,1600,2400,2000
-Karnataka,Bengaluru South,Ramanagara APMC,Green Chilli,Green Chilly,Local,19/07/2026,3000,4400,4000
+Karnataka,Bengaluru South,Ramanagara APMC,Bottle gourd,Bottle Gourd,Local,19/07/2026,1200,1600,1400
 Karnataka,Bengaluru South,Ramanagara APMC,Beans,Beans (Whole),Local,19/07/2026,4000,6000,5000
 Karnataka,Bengaluru South,Ramanagara APMC,Raddish,Raddish,Local,19/07/2026,2400,3500,3000
-Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Brinjal,Local,19/07/2026,2400,4000,3500
-Karnataka,Bengaluru South,Ramanagara APMC,Ladies Finger,Ladies Finger,Local,19/07/2026,1600,2400,2000
+Karnataka,Bengaluru South,Ramanagara APMC,Drumstick,Drumstick,Local,19/07/2026,5000,7000,6400
+Karnataka,Bengaluru South,Ramanagara APMC,Cauliflower,Cauliflower,Local,19/07/2026,2000,3200,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Round,Local,19/07/2026,1500,2200,2000
+Karnataka,Bengaluru South,Ramanagara APMC,Beetroot,Beetroot,Local,19/07/2026,3000,3600,3200

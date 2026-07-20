@@ -41,6 +41,10 @@ class Config:
     # To get your free API key, register at: https://data.gov.in/user/register
     API_KEY: str = os.getenv("DATA_GOV_IN_API_KEY", "")
 
+    # Google Gemini API key for Phase 4 AI market explanations
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+
+
     # ── Data Filter Settings ──────────────────────────────────────────────────
     # We only want records from Karnataka.
     TARGET_STATE: str = "Karnataka"

@@ -3,7 +3,7 @@
                           Phase 2
                   Data Reliability Report
 ============================================================
-Generated At         : 2026-07-19 15:01:28
+Generated At         : 2026-07-19 15:17:10
 Files Analysed       : 4
 Total Records        : 1,110
 Date Range           : 2026-07-16 to 2026-07-19
@@ -50,10 +50,11 @@ Next Step
 Compare today's prices for Arecanut(Betelnut/Supari)
 across all Karnataka mandis and recommend the
 best market offering the highest modal price.
+
 Trend Analysis
 
-Available
-Historical data is sufficient to compare price movement across days.
+Not available until multiple days of
+historical data are collected.
 
 ------------------------------------------------------------
 Project Status

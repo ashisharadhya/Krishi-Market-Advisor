@@ -21,3 +21,17 @@ urllib3>=2.0.0
 # HTML parsing — required by pandas.read_html() to parse Agmarknet portal tables
 # Used by the fallback scraper when the OGD API is unresponsive
 lxml>=4.9.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 4 Dependencies — Gemini AI Explanations & Streamlit Dashboard
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Web UI dashboard for farmers and advisors
+streamlit>=1.30.0
+
+# Google Gemini API for natural language market explanations
+google-generativeai>=0.3.0
+
+# Interactive mandi price trend and comparison charts
+plotly>=5.18.0
+
