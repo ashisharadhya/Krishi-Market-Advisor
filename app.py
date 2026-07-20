@@ -125,13 +125,13 @@ st.markdown("""
     }
 
     .stApp {
-        background-color: #0B0D09 !important;
+        background-color: #050806 !important; /* Deepest forest black */
         background-image: 
-            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.18) 0%, transparent 45%),
-            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.14) 0%, transparent 45%),
-            repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 0, transparent 20px);
-        background-size: 140% 140%, 140% 140%, 100% 100%;
-        animation: ambientMotion 24s ease infinite;
+            radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.12) 0%, transparent 45%), /* Emerald glow top-left */
+            radial-gradient(circle at 85% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 45%), /* Ocean blue glow bottom-right */
+            repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 30px);
+        background-size: 100% 100%;
+        animation: ambientMotion 30s ease infinite;
         background-attachment: fixed;
     }
 
@@ -142,15 +142,15 @@ st.markdown("""
     }
 
     [data-testid="stSidebar"] {
-        background-color: #11150F !important;
-        border-right: 1px solid rgba(107, 138, 74, 0.2) !important;
+        background-color: #070A08 !important; /* Slightly lighter than background */
+        border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
     .sidebar-section-title {
         font-size: 0.85rem;
         font-weight: 700;
-        color: #D4AF37;
-        letter-spacing: 0.5px;
+        color: #10B981; /* Vibrant Emerald */
+        letter-spacing: 1px;
         margin-top: 1.4rem;
         margin-bottom: 0.8rem;
         text-transform: uppercase;
@@ -159,176 +159,186 @@ st.markdown("""
 
     .copilot-summary-card {
         position: relative;
-        background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
-        border: 1.5px solid rgba(107, 138, 74, 0.35);
-        border-radius: 22px;
-        padding: 2.5rem;
-        color: #F7F4EB;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        background: linear-gradient(160deg, rgba(16, 25, 20, 0.8) 0%, rgba(9, 13, 10, 0.95) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 2.8rem;
+        color: #F8FAFC;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         margin-bottom: 1.8rem;
         overflow: hidden;
-        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
     }
     .copilot-summary-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(212, 175, 55, 0.6);
-        box-shadow: 0 24px 60px rgba(43, 67, 36, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
+        transform: translateY(-5px);
+        border-color: rgba(16, 185, 129, 0.4); /* Glow border on hover */
+        box-shadow: 0 30px 60px -15px rgba(16, 185, 129, 0.15), 0 0 40px rgba(16, 185, 129, 0.1);
     }
     .crop-svg-watermark {
-        animation: gentleFloat 6s ease-in-out infinite;
+        animation: gentleFloat 8s ease-in-out infinite;
+        opacity: 0.15 !important;
+        filter: brightness(1.5) drop-shadow(0 0 10px rgba(16, 185, 129, 0.2));
     }
 
     .telemetry-item {
-        background: rgba(11, 13, 9, 0.65);
-        border: 1px solid rgba(107, 138, 74, 0.22);
-        border-radius: 14px;
-        padding: 1.1rem 1.3rem;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1.3rem 1.5rem;
+        backdrop-filter: blur(10px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
         overflow: hidden;
     }
     .telemetry-item:hover {
-        transform: translateY(-2px);
-        background: rgba(15, 20, 14, 0.85);
-        border-color: rgba(138, 174, 104, 0.5);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(107, 138, 74, 0.1);
+        transform: translateY(-3px) scale(1.02);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(16, 185, 129, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
     }
     .telemetry-item::before {
         content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
-        transition: left 0.5s ease-in-out;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+        transition: left 0.6s ease-in-out;
     }
     .telemetry-item:hover::before { left: 100%; }
 
     .trust-indicator-card {
-        background: rgba(15, 20, 14, 0.92);
-        border: 1px solid rgba(107, 138, 74, 0.3);
-        border-radius: 18px;
-        padding: 1.3rem 1.8rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
         margin-bottom: 2.2rem;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(12px);
     }
     .trust-indicator-card:hover {
-        border-color: rgba(212, 175, 55, 0.3);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-color: rgba(56, 189, 248, 0.3); /* Ocean blue border on hover */
+        box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+        background: rgba(255, 255, 255, 0.03);
     }
     .trust-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
     .trust-label {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #A3A096;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #94A3B8; /* Slate gray */
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
     }
     .trust-value {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #F7F4EB;
-        margin-top: 0.25rem;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #F8FAFC;
+        margin-top: 0.4rem;
         transition: color 0.3s ease;
     }
     .trust-indicator-card:hover .trust-value {
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
     }
 
     .summary-check-card {
-        background: rgba(20, 25, 18, 0.85);
-        border: 1px solid rgba(107, 138, 74, 0.25);
-        border-radius: 14px;
-        padding: 1rem 1.2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 1.2rem 1.4rem;
         margin-bottom: 0.8rem;
         display: flex;
         align-items: center;
-        gap: 12px;
-        transition: all 0.3s ease;
+        gap: 14px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .summary-check-card:hover {
-        transform: translateX(4px);
-        background: rgba(30, 38, 26, 0.9);
-        border-color: rgba(138, 174, 104, 0.5);
-        box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.3);
+        transform: translateX(8px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(16, 185, 129, 0.3);
+        box-shadow: -6px 6px 20px -5px rgba(0, 0, 0, 0.4);
     }
 
     .sim-card {
-        background: #141912;
-        border: 1px solid rgba(107, 138, 74, 0.3);
-        border-radius: 16px;
-        padding: 1.4rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        padding: 1.8rem;
         margin-bottom: 1rem;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         cursor: default;
+        backdrop-filter: blur(10px);
     }
     .sim-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(138, 174, 104, 0.5);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.04);
     }
     .sim-card-recommended {
-        border-color: #D4AF37;
-        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
-        background: linear-gradient(145deg, #182215 0%, #1f2c1b 100%);
+        border-color: rgba(16, 185, 129, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+        background: linear-gradient(160deg, rgba(16, 185, 129, 0.05) 0%, rgba(0,0,0,0) 100%);
     }
     .sim-card-recommended:hover {
-        border-color: #F7D559;
-        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+        border-color: #10B981;
+        box-shadow: 0 15px 40px -10px rgba(16, 185, 129, 0.3);
     }
     
-    @keyframes pulseSoft {
-        0% { opacity: 0.8; transform: scale(0.98); }
-        50% { opacity: 1; transform: scale(1); }
-        100% { opacity: 0.8; transform: scale(0.98); }
+    @keyframes pulseGlow {
+        0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
     .smart-alert-banner {
-        background: rgba(200, 169, 76, 0.12);
-        border: 1px solid rgba(200, 169, 76, 0.35);
-        border-radius: 14px;
-        padding: 0.9rem 1.4rem;
-        margin-bottom: 1.8rem;
+        background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 16px;
+        padding: 1.1rem 1.6rem;
+        margin-bottom: 2rem;
         display: flex;
         align-items: center;
-        gap: 12px;
-        color: #F7F4EB;
-        animation: pulseSoft 3s infinite ease-in-out;
-        transition: all 0.3s ease;
+        gap: 16px;
+        color: #F8FAFC;
+        animation: pulseGlow 3s infinite;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(8px);
     }
     .smart-alert-banner:hover {
-        background: rgba(200, 169, 76, 0.18);
-        border-color: rgba(200, 169, 76, 0.5);
+        background: linear-gradient(90deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.1) 100%);
+        border-color: rgba(245, 158, 11, 0.6);
         animation-play-state: paused;
+        transform: scale(1.01);
     }
 
     .stTabs [data-baseweb="tab-list"] {
-        gap: 12px;
+        gap: 16px;
         background-color: transparent;
-        border-bottom: 1px solid rgba(107, 138, 74, 0.25);
-        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
     }
     .stTabs [data-baseweb="tab"] {
-        height: 48px;
-        background-color: #141912;
+        height: 52px;
+        background-color: transparent;
         border-radius: 12px;
-        border: 1px solid rgba(107, 138, 74, 0.22);
-        color: #A3A096;
+        border: 1px solid transparent;
+        color: #94A3B8;
         font-weight: 600;
-        padding: 0 24px;
-        transition: all 0.2s ease;
+        padding: 0 28px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .stTabs [data-baseweb="tab"]:hover {
-        background-color: #1A2218;
-        color: #E2DFD2;
-        border-color: rgba(107, 138, 74, 0.4);
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #F8FAFC;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #2B4324 !important;
-        border-color: #47663B !important;
-        color: #F7F4EB !important;
-        box-shadow: 0 4px 15px rgba(43, 67, 36, 0.4);
+        background-color: #10B981 !important;
+        border-color: #059669 !important;
+        color: #ffffff !important;
+        box-shadow: 0 8px 20px -6px rgba(16, 185, 129, 0.5);
     }
 </style>
 """, unsafe_allow_html=True)
