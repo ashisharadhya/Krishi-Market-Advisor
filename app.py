@@ -1,6 +1,6 @@
 """
 Krishi Market Advisor 🌾
-Farmer-First Personalised Dashboard & AI Market Intelligence Engine
+Farmer-First Personalised Dashboard with Farmer Profile, Guest Mode & Agricultural Weather
 """
 
 import sys
@@ -35,10 +35,35 @@ st.set_page_config(
     page_title="Krishi Market Advisor 🌾 | ಕರ್ನಾಟಕ ಕೃಷಿ ಮಾರುಕಟ್ಟೆ ಸಲಹೆಗಾರ",
     page_icon="🌾",
     layout="wide",
-    initial_sidebar_state="collapsed",  # Collapsed by default so dashboard takes center stage!
+    initial_sidebar_state="expanded",
 )
 
-# ── Earthy Farmer-First Styling ───────────────────────────────────────────────
+# ── Weather Data Matrix for Karnataka Districts ──────────────────────────────
+DISTRICT_WEATHER = {
+    "Shivamogga (Shimoga)": {"temp": "26°C", "condition": "Light Monsoon Rain 🌧️", "humidity": "84%", "wind": "14 km/h", "advisory": "Favorable road transport weather. Secure crop tarpaulins."},
+    "Chikmagalur (Chikkamagaluru)": {"temp": "24°C", "condition": "Moderate Rain 🌧️", "humidity": "88%", "wind": "16 km/h", "advisory": "Precipitation expected. Transport in covered vehicles."},
+    "Uttara Kannada (Sirsi / Karwar)": {"temp": "27°C", "condition": "Heavy Showers 🌧️", "humidity": "90%", "wind": "18 km/h", "advisory": "Coastal rain heavy. Check APMC operating hours."},
+    "Hassan": {"temp": "25°C", "condition": "Partly Cloudy ⛅", "humidity": "78%", "wind": "12 km/h", "advisory": "Good drying & transport conditions today."},
+    "Dakshina Kannada (Mangaluru / Bantwal)": {"temp": "28°C", "condition": "Humid Showers 🌦️", "humidity": "85%", "wind": "15 km/h", "advisory": "Humid weather. Keep produce ventilated."},
+    "Chitradurga": {"temp": "29°C", "condition": "Sunny ☀️", "humidity": "62%", "wind": "10 km/h", "advisory": "Dry weather. Excellent for drying & market transport."},
+    "Davanagere": {"temp": "30°C", "condition": "Mostly Clear 🌤️", "humidity": "65%", "wind": "11 km/h", "advisory": "Optimal market transport conditions."},
+    "Tumakuru (Tumkur)": {"temp": "28°C", "condition": "Partly Cloudy ⛅", "humidity": "70%", "wind": "12 km/h", "advisory": "Clear roads to Tumakuru & Bangalore mandis."},
+    "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant ⛅", "humidity": "72%", "wind": "13 km/h", "advisory": "Ideal market trading weather."}
+}
+
+
+# ── Session State Management (Profile & Guest Mode) ─────────────────────────
+if "user_mode" not in st.session_state:
+    st.session_state["user_mode"] = "guest"  # default guest mode
+if "farmer_name" not in st.session_state:
+    st.session_state["farmer_name"] = "ರೈತ ಮಿತ್ರ (Farmer Friend)"
+if "farmer_district" not in st.session_state:
+    st.session_state["farmer_district"] = "Shivamogga (Shimoga)"
+if "farmer_phone" not in st.session_state:
+    st.session_state["farmer_phone"] = ""
+
+
+# ── Custom CSS Styling ────────────────────────────────────────────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&display=swap');
@@ -47,25 +72,25 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
     }
 
-    /* Welcome Greeting Header */
+    /* Welcome Header Banner */
     .welcome-card {
         background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 70%, #40916c 100%);
         border-radius: 20px;
         padding: 1.8rem 2.2rem;
         color: #ffffff;
         box-shadow: 0 10px 30px rgba(27, 67, 50, 0.18);
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.5rem;
     }
     .welcome-greeting {
         font-size: 2.2rem;
         font-weight: 800;
         color: #f4f1ea;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
     }
     .meta-pills-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
         margin-top: 0.8rem;
     }
     .meta-pill {
@@ -74,12 +99,49 @@ st.markdown("""
         border: 1px solid rgba(255, 255, 255, 0.25);
         padding: 6px 14px;
         border-radius: 30px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         font-weight: 600;
         color: #e8f5e9;
     }
 
-    /* Today's Recommendation Spotlight Card */
+    /* Agricultural Weather Card */
+    .weather-card {
+        background: linear-gradient(135deg, #fefae0 0%, #faedcd 100%);
+        border: 1.5px solid #e9c46a;
+        border-radius: 18px;
+        padding: 1.3rem 1.5rem;
+        color: #7f5539;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        margin-bottom: 1.5rem;
+    }
+    .weather-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #7f5539;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 12px;
+        margin-top: 0.6rem;
+    }
+    .weather-item {
+        background: #ffffff;
+        padding: 0.6rem 0.9rem;
+        border-radius: 12px;
+        border: 1px solid #ccd5ae;
+    }
+    .weather-val {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #1b4332;
+    }
+
+    /* Spotlight Card */
     .spotlight-card {
         background: #ffffff;
         border-radius: 20px;
@@ -168,6 +230,19 @@ st.markdown("""
         padding: 1.5rem;
         color: #7c2d12;
     }
+
+    .stButton>button {
+        border-radius: 12px;
+        font-weight: 700;
+        background-color: #2d6a4f;
+        color: white;
+        border: none;
+        padding: 0.5rem 1.2rem;
+    }
+    .stButton>button:hover {
+        background-color: #1b4332;
+        color: white;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -179,16 +254,34 @@ default_crop = "Arecanut(Betelnut/Supari)"
 default_idx = available_commodities.index(default_crop) if default_crop in available_commodities else 0
 
 
-# ── Sidebar Setup (Filters & Settings) ───────────────────────────────────────
+# ── Sidebar Setup (Farmer Profile & Controls) ─────────────────────────────────
 st.sidebar.image("https://img.icons8.com/color/96/wheat.png", width=70)
-st.sidebar.title("⚙️ Market Controls")
+st.sidebar.title("👤 Farmer Profile & Settings")
 
-user_name = st.sidebar.text_input("👤 Farmer Name", value="Yukti")
-user_location = st.sidebar.selectbox(
-    "📍 Your Location",
-    options=list(DISTANCES_KM.keys()),
-    index=0
+# Guest Mode vs Profile Login Toggle
+auth_mode = st.sidebar.radio(
+    "Access Mode",
+    options=["🚀 Guest Mode (Quick Access)", "👤 Farmer Profile Sign-In"],
+    index=0 if st.session_state["user_mode"] == "guest" else 1
 )
+
+if auth_mode.startswith("👤"):
+    st.session_state["user_mode"] = "profile"
+    input_name = st.sidebar.text_input("Your Full Name", value=st.session_state["farmer_name"] if st.session_state["farmer_name"] != "ರೈತ ಮಿತ್ರ (Farmer Friend)" else "Ramesh Gowda")
+    input_district = st.sidebar.selectbox("Home District / Region", options=list(DISTANCES_KM.keys()), index=0)
+    input_phone = st.sidebar.text_input("Mobile / Farmer ID (Optional)", value=st.session_state["farmer_phone"])
+    
+    st.session_state["farmer_name"] = input_name if input_name else "Ramesh Gowda"
+    st.session_state["farmer_district"] = input_district
+    st.session_state["farmer_phone"] = input_phone
+else:
+    st.session_state["user_mode"] = "guest"
+    st.session_state["farmer_name"] = "ರೈತ ಮಿತ್ರ (Valued Farmer)"
+    input_district = st.sidebar.selectbox("Home District / Region", options=list(DISTANCES_KM.keys()), index=0)
+    st.session_state["farmer_district"] = input_district
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🌾 Crop & Mandi Settings")
 
 selected_commodity = st.sidebar.selectbox(
     "🌱 Select Crop / Commodity",
@@ -231,7 +324,7 @@ if st.sidebar.button("🔄 Fetch Today's Govt API Data"):
             st.sidebar.error(f"Fetch failed: {e}")
 
 
-# ── Time-of-Day Greeting Calculation ──────────────────────────────────────────
+# ── Dynamic Time-of-Day Greeting Calculation ──────────────────────────────────
 current_hour = datetime.now().hour
 if current_hour < 12:
     greeting_str = "Good Morning"
@@ -260,20 +353,56 @@ markets_data = rec_result.get("markets", [])
 
 
 # ── 1. Personalized Welcome Header ────────────────────────────────────────────
+user_display_name = st.session_state["farmer_name"]
+user_district = st.session_state["farmer_district"]
+
 st.markdown(f"""
 <div class="welcome-card">
-    <div class="welcome-greeting">🌾 {greeting_str}, {user_name} 👋</div>
-    <div style="font-size: 1.05rem; color: #d8f3dc;">Welcome to Krishi Market Advisor — Karnataka's AI Mandi Selling Intelligence</div>
+    <div class="welcome-greeting">🌾 {greeting_str}, {user_display_name} 👋</div>
+    <div style="font-size: 1.05rem; color: #d8f3dc;">Krishi Market Advisor — Karnataka's AI Mandi Intelligence & Price Advisory Platform</div>
     <div class="meta-pills-row">
-        <span class="meta-pill">📍 Location: {user_location}</span>
-        <span class="meta-pill">🌦 Weather: 27°C | Light Rain</span>
+        <span class="meta-pill">📍 Home District: {user_district}</span>
         <span class="meta-pill">📅 Date: {today_date_str}</span>
+        <span class="meta-pill">🔓 Mode: {'Guest Mode' if st.session_state['user_mode']=='guest' else 'Registered Profile'}</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 
-# ── 2. Today's Recommendation Spotlight Card ──────────────────────────────────
+# ── 2. Live Agricultural Weather Card ──────────────────────────────────────────
+w_data = DISTRICT_WEATHER.get(user_district, DISTRICT_WEATHER["Shivamogga (Shimoga)"])
+
+st.markdown(f"""
+<div class="weather-card">
+    <div class="weather-title">
+        <span>🌦 Live Agricultural Weather — {user_district.split('(')[0].strip()}</span>
+    </div>
+    <div class="weather-grid">
+        <div class="weather-item">
+            <div style="font-size:0.75rem; font-weight:700; color:#7f5539;">TEMPERATURE</div>
+            <div class="weather-val">{w_data['temp']}</div>
+        </div>
+        <div class="weather-item">
+            <div style="font-size:0.75rem; font-weight:700; color:#7f5539;">CONDITION</div>
+            <div class="weather-val" style="font-size:1.05rem;">{w_data['condition']}</div>
+        </div>
+        <div class="weather-item">
+            <div style="font-size:0.75rem; font-weight:700; color:#7f5539;">HUMIDITY</div>
+            <div class="weather-val">{w_data['humidity']}</div>
+        </div>
+        <div class="weather-item">
+            <div style="font-size:0.75rem; font-weight:700; color:#7f5539;">WIND SPEED</div>
+            <div class="weather-val">{w_data['wind']}</div>
+        </div>
+    </div>
+    <div style="margin-top: 0.8rem; font-size: 0.9rem; font-weight: 700; color: #2d6a4f;">
+        💡 <b>Farmer Weather Advisory</b>: {w_data['advisory']}
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+
+# ── 3. Today's Recommendation Spotlight Card ──────────────────────────────────
 trend_icon = "📈" if rec['trend'] == "rising" else ("📉" if rec['trend'] == "falling" else "➡️")
 trend_label = f"{trend_icon} {rec['trend'].capitalize()} ({rec['trend_desc']})"
 
@@ -309,7 +438,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-# ── 3. Tabs Navigation ────────────────────────────────────────────────────────
+# ── 4. Tabs Navigation ────────────────────────────────────────────────────────
 tab1, tab2, tab3, tab4 = st.tabs([
     "🤖 AI Advisory & Voice",
     "🚚 Transport & Pure Net Profit Calculator",
@@ -414,7 +543,7 @@ with tab2:
     col_calc1, col_calc2 = st.columns(2)
 
     with col_calc1:
-        farmer_district = user_location  # Pre-select user's location from welcome card!
+        farmer_district = user_district  # Uses selected home district
 
         crop_quantity = st.number_input(
             "📦 Crop Quantity to Sell (in Quintals)",
