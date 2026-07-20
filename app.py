@@ -1,10 +1,10 @@
 """
 Krishi Market Advisor 🌾
-Agricultural Decision Intelligence Platform — Subtle Visual Richness & Monochromatic Vector Art (Prompt 15)
+Agricultural Decision Intelligence Platform — Dynamic Kannada (ಕನ್ನಡ) & Dual Output Localization Overhaul
 """
 
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 import streamlit as st
 import pandas as pd
@@ -71,15 +71,15 @@ CROP_SVG_VECTORS = {
 
 # ── District Weather & Risk Matrix ───────────────────────────────────────────
 DISTRICT_WEATHER = {
-    "Shivamogga (Shimoga)": {"temp": "26°C", "condition": "Light Monsoon Rain", "humidity": "84%", "wind": "14 km/h", "rain_risk": "Low Rain Risk", "advisory": "Safe transport window open until 4:00 PM today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>"""},
-    "Chikmagalur (Chikkamagaluru)": {"temp": "24°C", "condition": "Moderate Rain", "humidity": "88%", "wind": "16 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Transport in covered vehicles recommended.", "risk_level": "Medium Risk", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/><path d="M8 19v2M12 19v2M16 19v2"/></svg>"""},
-    "Uttara Kannada (Sirsi / Karwar)": {"temp": "27°C", "condition": "Heavy Showers", "humidity": "90%", "wind": "18 km/h", "rain_risk": "High Rain Risk", "advisory": "Verify APMC operating hours due to coastal rain.", "risk_level": "High Risk", "risk_color": "#f87171", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/><polygon points="13 11 9 17 15 17 11 23"/></svg>"""},
-    "Hassan": {"temp": "25°C", "condition": "Partly Cloudy", "humidity": "78%", "wind": "12 km/h", "rain_risk": "No Rain Risk", "advisory": "Ideal drying & market transport weather today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
-    "Dakshina Kannada (Mangaluru / Bantwal)": {"temp": "28°C", "condition": "Humid Showers", "humidity": "85%", "wind": "15 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Keep produce ventilated during transport.", "risk_level": "Medium Risk", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/></svg>"""},
-    "Chitradurga": {"temp": "29°C", "condition": "Sunny", "humidity": "62%", "wind": "10 km/h", "rain_risk": "No Rain Risk", "advisory": "Dry weather. Excellent for drying & transport.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
-    "Davanagere": {"temp": "30°C", "condition": "Mostly Clear", "humidity": "65%", "wind": "11 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market transport conditions.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
-    "Tumakuru (Tumkur)": {"temp": "28°C", "condition": "Partly Cloudy", "humidity": "70%", "wind": "12 km/h", "rain_risk": "Low Rain Risk", "advisory": "Clear highways to Tumakuru & Bangalore mandis.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
-    "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant", "humidity": "72%", "wind": "13 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market trading weather.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""}
+    "Shivamogga (Shimoga)": {"temp": "26°C", "condition": "Light Monsoon Rain", "humidity": "84%", "wind": "14 km/h", "rain_risk": "Low Rain Risk", "advisory": "Safe transport window open until 4:00 PM today.", "advisory_kn": "ಇಂದು ಸಂಜೆ 4:00 ಗಂಟೆಯವರೆಗೆ ಸುರಕ್ಷಿತ ಸಾರಿಗೆ ಸಮಯವಿದೆ.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>"""},
+    "Chikmagalur (Chikkamagaluru)": {"temp": "24°C", "condition": "Moderate Rain", "humidity": "88%", "wind": "16 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Transport in covered vehicles recommended.", "advisory_kn": "ಮುಚ್ಚಿದ ವಾಹನಗಳಲ್ಲಿ ಸಾರಿಗೆ ಮಾಡಲು ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.", "risk_level": "Medium Risk", "risk_level_kn": "ಮಧ್ಯಮ ಅಪಾಯ", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/><path d="M8 19v2M12 19v2M16 19v2"/></svg>"""},
+    "Uttara Kannada (Sirsi / Karwar)": {"temp": "27°C", "condition": "Heavy Showers", "humidity": "90%", "wind": "18 km/h", "rain_risk": "High Rain Risk", "advisory": "Verify APMC operating hours due to coastal rain.", "advisory_kn": "ಕರಾವಳಿ ಮಳೆಯಿಂದಾಗಿ ಎಪಿಎಂಸಿ ಸಮಯವನ್ನು ಪರಿಶೀಲಿಸಿ.", "risk_level": "High Risk", "risk_level_kn": "ಹೆಚ್ಚಿನ ಅಪಾಯ", "risk_color": "#f87171", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/><polygon points="13 11 9 17 15 17 11 23"/></svg>"""},
+    "Hassan": {"temp": "25°C", "condition": "Partly Cloudy", "humidity": "78%", "wind": "12 km/h", "rain_risk": "No Rain Risk", "advisory": "Ideal drying & market transport weather today.", "advisory_kn": "ಇಂದು ಒಣಗಿಸಲು ಮತ್ತು ಸಾರಿಗೆಗೆ ಸೂಕ್ತ ಹವಾಮಾನವಿದೆ.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Dakshina Kannada (Mangaluru / Bantwal)": {"temp": "28°C", "condition": "Humid Showers", "humidity": "85%", "wind": "15 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Keep produce ventilated during transport.", "advisory_kn": "ಸಾರಿಗೆ ಸಮಯದಲ್ಲಿ ಬೆಳೆಗೆ ಗಾಳಿ ಆಡುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ.", "risk_level": "Medium Risk", "risk_level_kn": "ಮಧ್ಯಮ ಅಪಾಯ", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/></svg>"""},
+    "Chitradurga": {"temp": "29°C", "condition": "Sunny", "humidity": "62%", "wind": "10 km/h", "rain_risk": "No Rain Risk", "advisory": "Dry weather. Excellent for drying & transport.", "advisory_kn": "ಒಣ ಹವಾಮಾನ. ಒಣಗಿಸಲು ಮತ್ತು ಸಾರಿಗೆಗೆ ಅತ್ಯುತ್ತಮ.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Davanagere": {"temp": "30°C", "condition": "Mostly Clear", "humidity": "65%", "wind": "11 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market transport conditions.", "advisory_kn": "ಸೂಕ್ತ ಮಾರುಕಟ್ಟೆ ಸಾರಿಗೆ ಪರಿಸ್ಥಿತಿಗಳು.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Tumakuru (Tumkur)": {"temp": "28°C", "condition": "Partly Cloudy", "humidity": "70%", "wind": "12 km/h", "rain_risk": "Low Rain Risk", "advisory": "Clear highways to Tumakuru & Bangalore mandis.", "advisory_kn": "ತುಮಕೂರು ಮತ್ತು ಬೆಂಗಳೂರು ಮಾರುಕಟ್ಟೆಗೆ ದಾರಿ ಮುಕ್ತವಾಗಿದೆ.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant", "humidity": "72%", "wind": "13 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market trading weather.", "advisory_kn": "ಉತ್ತಮ ವ್ಯಾಪಾರ ಹವಾಮಾನ.", "risk_level": "Low Risk", "risk_level_kn": "ಕಡಿಮೆ ಅಪಾಯ", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""}
 }
 
 # ── Session State Management ─────────────────────────────────────────────────
@@ -97,7 +97,7 @@ if "harvest_qty" not in st.session_state:
     st.session_state["harvest_qty"] = 20.0
 
 
-# ── Design System CSS & Organic Contour Textures ──────────────────────────────
+# ── Design System CSS ─────────────────────────────────────────────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
@@ -157,7 +157,6 @@ st.markdown("""
         font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Master Decision Hero Card with Floating Crop SVG Watermark */
     .copilot-summary-card {
         position: relative;
         background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
@@ -391,6 +390,51 @@ user_qty = st.session_state.get("harvest_qty", 20.0)
 w_data = DISTRICT_WEATHER.get(user_district, DISTRICT_WEATHER["Shivamogga (Shimoga)"])
 today_date_str = datetime.now().strftime("%d %B %Y")
 
+# Language Localization Mapping
+is_kn = (lang_choice in ["Kannada", "Dual Output"])
+is_kn_only = (lang_choice == "Kannada")
+
+txt = {
+    "platform_tag": "ಕೃಷಿ AI ಕಾಪೈಲಟ್ • ಮಾರುಕಟ್ಟೆ ಸಲಹಾ ವೇದಿಕೆ" if is_kn_only else "KRISHI AI COPILOT • DECISION INTELLIGENCE PLATFORM",
+    "main_title": f"{user_display_name} ರವರಿಗೆ ಇಂದಿನ ಮಾರುಕಟ್ಟೆ ಸಲಹೆ" if is_kn_only else f"Today's Decision for {user_display_name}",
+    "target_crop_lbl": "ಬೆಳೆ" if is_kn else "Target Crop",
+    "vol_lbl": "ಪ್ರಮಾಣ" if is_kn else "Volume",
+    "base_lbl": "ಆರಂಭಿಕ ಜಿಲ್ಲೆ" if is_kn else "Base",
+    "date_lbl": "ದಿನಾಂಕ" if is_kn else "Date",
+    "alert_hdr": "ಬುದ್ಧಿವಂತ ಮಾರುಕಟ್ಟೆ ಸಲಹೆ:" if is_kn else "Smart Contextual Advisory:",
+    "advisory_body": w_data.get('advisory_kn', w_data['advisory']) if is_kn else w_data['advisory'],
+    "rec_tag": "ವೈಯಕ್ತಿಕರಿಸಿದ ಮಾರುಕಟ್ಟೆ ಸಲಹೆ" if is_kn else "Personalized Market Recommendation",
+    "action_sell": "🟢 ಇಂದು ಮಾರಾಟ ಮಾಡಿ" if is_kn else "🟢 Sell Today",
+    "net_profit_q": "ನಿವ್ವಳ ಲಾಭ / ಕ್ವಿಂಟಾಲ್" if is_kn else "Net Profit / Quintal",
+    "gross_price_lbl": "ಒಟ್ಟು ಮಾರಾಟ ಬೆಲೆ" if is_kn else "Gross Selling Price",
+    "freight_lbl": "ಅಂದಾಜು ಸಾರಿಗೆ ವೆಚ್ಚ" if is_kn else "Est. Freight",
+    "confidence_lbl": "ಮಾದರಿ ವಿಶ್ವಾಸಾರ್ಹತೆ" if is_kn else "Model Confidence",
+    "risk_lbl": "ಅಪಾಯ" if is_kn else "Risk",
+    "risk_level_str": w_data.get('risk_level_kn', w_data['risk_level']) if is_kn else w_data['risk_level'],
+    "expected_net": "ನಿರೀಕ್ಷಿತ ನಿವ್ವಳ ಲಾಭ" if is_kn else "Expected Net Profit",
+    "transport_act": "ಸಾರಿಗೆ ಶಿಫಾರಸು" if is_kn else "Transport Action",
+    "weather_win": "ಹವಾಮಾನ ಸಮಯ" if is_kn else "Weather Window",
+    "selling_horizon": "ಸೂಕ್ತ ಮಾರಾಟ ಸಮಯ" if is_kn else "Optimal Selling Horizon",
+    "recommended_str": "ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ" if is_kn else "Recommended",
+    "until_4pm": "ಸಂಜೆ 4:00 ರವರೆಗೆ" if is_kn else "Until 4:00 PM",
+    "next_24h": "ಮುಂದಿನ 24 ಗಂಟೆಗಳಲ್ಲಿ" if is_kn else "Next 24 Hours",
+    "conf_rationale": "ವಿಶ್ವಾಸಾರ್ಹತೆ ಆಧಾರ" if is_kn else "Confidence Rationale",
+    "conf_desc": "94% • ಹವಾಮಾನ ಮತ್ತು 12 ಮಾರುಕಟ್ಟೆಗಳು" if is_kn else "94% • Weather & 12 APMCs",
+    "last_updated": "ಕೊನೆಯ ನವೀಕರಣ" if is_kn else "Last Updated",
+    "min_ago": "12 ನಿಮಿಷಗಳ ಹಿಂದೆ" if is_kn else "12 minutes ago",
+    "sources": "ಮಾಹಿತಿ ಮೂಲಗಳು" if is_kn else "Data Sources",
+    "consistency": "ಮಾಹಿತಿ ಸ್ಥಿರತೆ" if is_kn else "Data Consistency",
+    "high_ver": "ಹೆಚ್ಚು (70%+ ಪರಿಶೀಲಿಸಲಾಗಿದೆ)" if is_kn else "High (70%+ Verified)",
+    "verification": "ಪರಿಶೀಲನೆ" if is_kn else "Verification",
+    "govt_rec": "✓ ಸರ್ಕಾರದ ಅಧಿಕೃತ ದಾಖಲೆ" if is_kn else "✓ Government Record",
+    "sim_title": "🎲 ಮಾರಾಟ ಸಮಯ ಹೋಲಿಕೆ (ಸಿಮ್ಯುಲೇಟರ್)" if is_kn else "🎲 Decision Simulator (Compare Trade-Off Scenarios)",
+    "sim_sub": "ಇಂದು ಮಾರಾಟ ಮಾಡುವುದು ಮತ್ತು 1-3 ದಿನ ಕಾಯುವುದರ ನಡುವಿನ ಆರ್ಥಿಕ ಹೋಲಿಕೆ." if is_kn else "Simulate financial trade-offs of selling today versus holding produce for 1 to 3 days.",
+    "opt_a": "ಆಯ್ಕೆ ಎ: ಇಂದು ಮಾರಾಟ ಮಾಡಿ" if is_kn else "Option A: Sell Today",
+    "opt_b": "ಆಯ್ಕೆ ಬಿ: 1 ದಿನ ಕಾಯಿರಿ" if is_kn else "Option B: Wait 1 Day",
+    "opt_c": "ಆಯ್ಕೆ ಸಿ: 3 ದಿನ ಕಾಯಿರಿ" if is_kn else "Option C: Wait 3 Days",
+    "expander_lbl": "▼ ಈ ಸಲಹೆಗೆ ಪ್ರಮುಖ ಕಾರಣಗಳು (ವಿವರವಾದ ವಿಶ್ಲೇಷಣೆ)" if is_kn else "▼ Why this recommendation? (Decision Drivers & Full Rationale)",
+}
+
 # Detect Crop Monochromatic Vector Key
 crop_name_raw = selected_commodity.split('(')[0].strip()
 if "Areca" in crop_name_raw or "Supari" in crop_name_raw:
@@ -422,11 +466,11 @@ net_profit_per_q = rec['highest_price'] - (transport_calc['estimated_freight_cos
 st.markdown(f"""
 <div style="margin-bottom: 1.8rem;">
 <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(200, 169, 76, 0.12); border: 1px solid rgba(200, 169, 76, 0.3); color: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 30px; margin-bottom: 0.6rem;">
-KRISHI AI COPILOT • DECISION INTELLIGENCE PLATFORM
+{txt['platform_tag']}
 </div>
-<div style="font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px;">Today's Decision for {user_display_name}</div>
+<div style="font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px;">{txt['main_title']}</div>
 <div style="font-size: 0.95rem; color: #A3A096; margin-top: 0.4rem;">
-Target Crop: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • Volume: <b>{user_qty:.0f} Quintals</b> • Base: <b>{user_district.split('(')[0]}</b> • Date: <b>{today_date_str}</b>
+{txt['target_crop_lbl']}: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']}) • {txt['vol_lbl']}: <b>{user_qty:.0f} Quintals</b> • {txt['base_lbl']}: <b>{user_district.split('(')[0]}</b> • {txt['date_lbl']}: <b>{today_date_str}</b>
 </div>
 </div>
 """, unsafe_allow_html=True)
@@ -439,14 +483,14 @@ st.markdown(f"""
 <div class="smart-alert-banner">
     <span style="display: flex; align-items: center;">{w_data['icon_svg']}</span>
     <div>
-        <b>Smart Contextual Advisory:</b> {w_data['advisory']} Expected Net Transport Profit is <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> for {user_qty:.0f} Quintals via {selected_vehicle}.
+        <b>{txt['alert_hdr']}</b> {txt['advisory_body']} Expected Net Transport Profit is <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> for {user_qty:.0f} Quintals via {selected_vehicle}.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 
 # ==============================================================================
-# HERO AI DECISION SUMMARY (WITH CROP SVG WATERMARK & LUCIDE WEATHER BADGES)
+# HERO AI DECISION SUMMARY (DYNAMIC KANNADA & ENGLISH LOCALIZATION)
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
@@ -454,44 +498,44 @@ st.markdown(f"""
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; position: relative; z-index: 2;">
 <div>
-<span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">Personalized Market Recommendation</span><br>
-<span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 Sell Today</span>
+<span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">{txt['rec_tag']}</span><br>
+<span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">{txt['action_sell']}</span>
 <div style="font-size: 2.7rem; font-weight: 800; color: #D4AF37; letter-spacing: -0.5px;">
 {rec['recommended_market']}
 </div>
 <div style="font-size: 3.6rem; font-weight: 800; color: #F7F4EB; margin-top: 0.2rem; line-height: 1;">
-₹{net_profit_per_q:,.0f} <span style="font-size: 1.3rem; color: #8CAE68; font-weight: 600;">Net Profit / Quintal</span>
+₹{net_profit_per_q:,.0f} <span style="font-size: 1.3rem; color: #8CAE68; font-weight: 600;">{txt['net_profit_q']}</span>
 </div>
 <div style="font-size: 0.92rem; color: #A3A096; margin-top: 0.5rem;">
-Gross Selling Price: <b>₹{rec['highest_price']:,.0f}/Q</b> • Est. Freight: <b>₹{transport_calc['estimated_freight_cost'] / user_qty:,.0f}/Q</b> ({transport_calc['round_trip_km']:.0f} km)
+{txt['gross_price_lbl']}: <b>₹{rec['highest_price']:,.0f}/Q</b> • {txt['freight_lbl']}: <b>₹{transport_calc['estimated_freight_cost'] / user_qty:,.0f}/Q</b> ({transport_calc['round_trip_km']:.0f} km)
 </div>
 </div>
 
 <div style="text-align: right; background: rgba(11, 13, 9, 0.65); padding: 1.3rem 1.8rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
-<div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">Model Confidence</div>
+<div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">{txt['confidence_lbl']}</div>
 <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37;">94%</div>
 <div style="font-size: 0.85rem; color: {w_data['risk_color']}; font-weight: 700; margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 6px;">
-{w_data['icon_svg']} Risk: {w_data['risk_level']} ({w_data['rain_risk']})
+{w_data['icon_svg']} {txt['risk_lbl']}: {txt['risk_level_str']} ({w_data['rain_risk']})
 </div>
 </div>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25); position: relative; z-index: 2;">
 <div class="telemetry-item">
-<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Profit</div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">{txt['expected_net']}</div>
 <div style="font-size: 1.3rem; font-weight: 800; color: #6ee7b7; margin-top: 0.3rem;">+₹{transport_calc['net_extra_profit']:,.0f} Net</div>
 </div>
 <div class="telemetry-item">
-<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Transport Action</div>
-<div style="font-size: 1.3rem; font-weight: 800; color: #8CAE68; margin-top: 0.3rem;">Recommended ({selected_vehicle})</div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">{txt['transport_act']}</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #8CAE68; margin-top: 0.3rem;">{txt['recommended_str']} ({selected_vehicle})</div>
 </div>
 <div class="telemetry-item">
-<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Weather Window</div>
-<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">Until 4:00 PM</div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">{txt['weather_win']}</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">{txt['until_4pm']}</div>
 </div>
 <div class="telemetry-item">
-<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Optimal Selling Horizon</div>
-<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">Next 24 Hours</div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">{txt['selling_horizon']}</div>
+<div style="font-size: 1.3rem; font-weight: 800; color: #F7F4EB; margin-top: 0.3rem;">{txt['next_24h']}</div>
 </div>
 </div>
 </div>
@@ -505,24 +549,24 @@ st.markdown(f"""
 <div class="trust-indicator-card">
 <div class="trust-grid">
 <div>
-<div class="trust-label">Confidence Rationale</div>
-<div class="trust-value" style="color: #D4AF37;">94% • Weather & 12 APMCs</div>
+<div class="trust-label">{txt['conf_rationale']}</div>
+<div class="trust-value" style="color: #D4AF37;">{txt['conf_desc']}</div>
 </div>
 <div>
-<div class="trust-label">Last Updated</div>
-<div class="trust-value">12 minutes ago</div>
+<div class="trust-label">{txt['last_updated']}</div>
+<div class="trust-value">{txt['min_ago']}</div>
 </div>
 <div>
-<div class="trust-label">Data Sources</div>
+<div class="trust-label">{txt['sources']}</div>
 <div class="trust-value">Agmarknet • Weather API</div>
 </div>
 <div>
-<div class="trust-label">Data Consistency</div>
-<div class="trust-value" style="color: #8CAE68;">High (70%+ Verified)</div>
+<div class="trust-label">{txt['consistency']}</div>
+<div class="trust-value" style="color: #8CAE68;">{txt['high_ver']}</div>
 </div>
 <div>
-<div class="trust-label">Verification</div>
-<div class="trust-value" style="color: #38bdf8;">✓ Government Record</div>
+<div class="trust-label">{txt['verification']}</div>
+<div class="trust-value" style="color: #38bdf8;">{txt['govt_rec']}</div>
 </div>
 </div>
 </div>
@@ -535,8 +579,8 @@ if using_fallback:
 # ==============================================================================
 # DECISION SIMULATION MATRIX ("WHAT IF?")
 # ==============================================================================
-st.markdown("### 🎲 Decision Simulator (Compare Trade-Off Scenarios)")
-st.markdown("Simulate financial trade-offs of selling today versus holding produce for 1 to 3 days.")
+st.markdown(f"### {txt['sim_title']}")
+st.markdown(txt['sim_sub'])
 
 sim_col1, sim_col2, sim_col3 = st.columns(3)
 
@@ -544,9 +588,9 @@ with sim_col1:
     st.markdown(f"""
     <div class="sim-card sim-card-recommended">
         <span style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; font-family: 'JetBrains Mono', monospace;">RECOMMENDED</span>
-        <h4 style="margin-top: 0.6rem; color: #D4AF37;">Option A: Sell Today</h4>
+        <h4 style="margin-top: 0.6rem; color: #D4AF37;">{txt['opt_a']}</h4>
         <div style="font-size: 1.8rem; font-weight: 800; color: #F7F4EB;">₹{rec['highest_price']:,.0f} / Q</div>
-        <div style="font-size: 0.9rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">Net Gain: +₹{transport_calc['net_extra_profit']:,.0f}</div>
+        <div style="font-size: 0.9rem; color: #8CAE68; font-weight: 600; margin-top: 0.2rem;">{txt['expected_net']}: +₹{transport_calc['net_extra_profit']:,.0f}</div>
         <hr style="border-color: rgba(107, 138, 74, 0.2); margin: 0.8rem 0;">
         <div style="font-size: 0.85rem; color: #A3A096;">
             • <b>Risk Level</b>: Low Risk (Safe Weather)<br>
@@ -560,9 +604,9 @@ with sim_col2:
     st.markdown(f"""
     <div class="sim-card">
         <span style="background: rgba(254, 240, 138, 0.15); color: #fef08a; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; font-family: 'JetBrains Mono', monospace;">HOLD 1 DAY</span>
-        <h4 style="margin-top: 0.6rem; color: #F7F4EB;">Option B: Wait 1 Day</h4>
+        <h4 style="margin-top: 0.6rem; color: #F7F4EB;">{txt['opt_b']}</h4>
         <div style="font-size: 1.8rem; font-weight: 800; color: #F7F4EB;">₹{rec['highest_price'] + 450:,.0f} / Q</div>
-        <div style="font-size: 0.9rem; color: #fef08a; font-weight: 600; margin-top: 0.2rem;">Est. Net Gain: +₹{(rec['extra_earnings'] + 450) * user_qty:,.0f}</div>
+        <div style="font-size: 0.9rem; color: #fef08a; font-weight: 600; margin-top: 0.2rem;">{txt['expected_net']}: +₹{(rec['extra_earnings'] + 450) * user_qty:,.0f}</div>
         <hr style="border-color: rgba(107, 138, 74, 0.2); margin: 0.8rem 0;">
         <div style="font-size: 0.85rem; color: #A3A096;">
             • <b>Risk Level</b>: Medium Risk (Rain Forecast)<br>
@@ -576,9 +620,9 @@ with sim_col3:
     st.markdown(f"""
     <div class="sim-card">
         <span style="background: rgba(248, 113, 113, 0.15); color: #f87171; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; font-family: 'JetBrains Mono', monospace;">HOLD 3 DAYS</span>
-        <h4 style="margin-top: 0.6rem; color: #F7F4EB;">Option C: Wait 3 Days</h4>
+        <h4 style="margin-top: 0.6rem; color: #F7F4EB;">{txt['opt_c']}</h4>
         <div style="font-size: 1.8rem; font-weight: 800; color: #F7F4EB;">₹{rec['highest_price'] - 600:,.0f} / Q</div>
-        <div style="font-size: 0.9rem; color: #f87171; font-weight: 600; margin-top: 0.2rem;">Est. Net Gain: -₹{abs((rec['extra_earnings'] - 600) * user_qty):,.0f}</div>
+        <div style="font-size: 0.9rem; color: #f87171; font-weight: 600; margin-top: 0.2rem;">{txt['expected_net']}: -₹{abs((rec['extra_earnings'] - 600) * user_qty):,.0f}</div>
         <hr style="border-color: rgba(107, 138, 74, 0.2); margin: 0.8rem 0;">
         <div style="font-size: 0.85rem; color: #A3A096;">
             • <b>Risk Level</b>: High Risk (Arrival Spill)<br>
@@ -594,7 +638,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ==============================================================================
 # PROGRESSIVE DISCLOSURE (WHY THIS RECOMMENDATION?)
 # ==============================================================================
-with st.expander("▼ Why this recommendation? (Decision Drivers & Full Rationale)", expanded=False):
+with st.expander(txt['expander_lbl'], expanded=False):
     col_exp1, col_exp2 = st.columns([1.4, 1])
     
     with col_exp1:
@@ -636,8 +680,9 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ==============================================================================
 # ADVANCED COPILOT TOOLS & ANALYTICS TABS
 # ==============================================================================
+tab1_name = "🎙️ ಇಂದಿನ ಸಲಹೆ ಕೇಳಿ (Kannada Audio)" if is_kn_only else "🎙️ Listen to Today's Advice"
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-    "🎙️ Listen to Today's Advice",
+    tab1_name,
     "📊 Top Markets Net Profit Matrix",
     "📈 Price Trajectory & Timeline",
     "🚚 Freight & Transport Net Profit",
