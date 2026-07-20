@@ -1,6 +1,6 @@
 """
 Krishi Market Advisor 🌾
-Production-Ready Enterprise Decision Intelligence Engine — Pixel-Perfect Principal Design Audit (Prompt 7)
+Production-Ready Enterprise Decision Intelligence Engine — Final Master Review Pass (Apple / Linear / Stripe Standard)
 """
 
 import sys
@@ -62,12 +62,11 @@ if "farmer_phone" not in st.session_state:
     st.session_state["farmer_phone"] = ""
 
 
-# ── Principal Enterprise Design System (Pixel-Perfect Execution) ────────────
+# ── Enterprise Design System (Final Master Review Standard) ───────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
-    /* Global Forest Soil Canvas */
     html, body, [class*="st-"] {
         font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         background-color: #0B0D09 !important;
@@ -75,7 +74,6 @@ st.markdown("""
         -webkit-font-smoothing: antialiased;
     }
 
-    /* Ambient Background Motion */
     @keyframes ambientMotion {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
@@ -92,21 +90,19 @@ st.markdown("""
         background-attachment: fixed;
     }
 
-    /* Pixel-Perfect Whitespace & Layout Rhythms */
     .block-container {
         padding-top: 2.4rem !important;
         padding-bottom: 5rem !important;
         max-width: 1260px;
     }
 
-    /* Micro-Interactions Standards */
     .copilot-summary-card, .trust-indicator-card, .telemetry-item, .dark-moss-card {
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                     box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                     border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Hero AI Copilot Summary Card */
+    /* Master Decision Hero Card */
     .copilot-summary-card {
         background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
         border: 1.5px solid rgba(107, 138, 74, 0.35);
@@ -122,7 +118,6 @@ st.markdown("""
         box-shadow: 0 24px 60px rgba(43, 67, 36, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
     }
 
-    /* Telemetry Items */
     .telemetry-item {
         background: rgba(11, 13, 9, 0.65);
         border: 1px solid rgba(107, 138, 74, 0.22);
@@ -135,7 +130,6 @@ st.markdown("""
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    /* Trust Telemetry Grid */
     .trust-indicator-card {
         background: rgba(15, 20, 14, 0.92);
         border: 1px solid rgba(107, 138, 74, 0.3);
@@ -148,7 +142,26 @@ st.markdown("""
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
-    /* Enterprise Custom Tabs */
+    .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.2rem;
+    }
+    .trust-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #A3A096;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .trust-value {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #F7F4EB;
+        margin-top: 0.25rem;
+    }
+
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
         background-color: transparent;
@@ -171,7 +184,6 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(43, 67, 36, 0.4);
     }
 
-    /* Button Polish */
     .stButton>button {
         border-radius: 12px;
         font-weight: 700;
@@ -303,7 +315,7 @@ today_date_str = datetime.now().strftime("%d %B %Y")
 
 
 # ==============================================================================
-# HIERARCHY LEVEL 1: HERO INTELLIGENCE PANEL
+# LEVEL 1: HERO INTELLIGENCE HEADER
 # ==============================================================================
 st.markdown(f"""
 <div style="margin-bottom: 2.2rem;">
@@ -319,7 +331,7 @@ st.markdown(f"""
 
 
 # ==============================================================================
-# HIERARCHY LEVEL 2: TODAY'S DECISION SUMMARY (DOMINANT HERO CARD)
+# LEVEL 2: TODAY'S AI DECISION SUMMARY (ANSWERS 3 CORE QUESTIONS IN <5 SECONDS)
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
@@ -366,7 +378,7 @@ st.markdown(f"""
 
 
 # ==============================================================================
-# TRUST TELEMETRY INDICATORS
+# TRUST INDICATORS
 # ==============================================================================
 st.markdown(f"""
 <div class="trust-indicator-card">
@@ -400,7 +412,7 @@ if using_fallback:
 
 
 # ==============================================================================
-# PROGRESSIVE DISCLOSURE: WHY THIS RECOMMENDATION?
+# LEVEL 3: PROGRESSIVE DISCLOSURE (WHY THIS RECOMMENDATION?)
 # ==============================================================================
 with st.expander("▼ Why this recommendation? (Expand Decision Details)", expanded=False):
     col_exp1, col_exp2 = st.columns([1.5, 1])
@@ -426,7 +438,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ==============================================================================
-# SUPPORTING COPILOT TOOLS & ANIMATED PLOTLY CHARTS
+# LEVEL 4: ADVANCED ANALYTICS (EXPLICIT USER REQUEST ONLY)
 # ==============================================================================
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "✨ Gemini AI Insights & Voice",
