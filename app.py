@@ -183,7 +183,22 @@ st.markdown("""
         border: 1px solid rgba(107, 138, 74, 0.22);
         border-radius: 14px;
         padding: 1.1rem 1.3rem;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
     }
+    .telemetry-item:hover {
+        transform: translateY(-2px);
+        background: rgba(15, 20, 14, 0.85);
+        border-color: rgba(138, 174, 104, 0.5);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(107, 138, 74, 0.1);
+    }
+    .telemetry-item::before {
+        content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+        transition: left 0.5s ease-in-out;
+    }
+    .telemetry-item:hover::before { left: 100%; }
 
     .trust-indicator-card {
         background: rgba(15, 20, 14, 0.92);
@@ -191,6 +206,11 @@ st.markdown("""
         border-radius: 18px;
         padding: 1.3rem 1.8rem;
         margin-bottom: 2.2rem;
+        transition: all 0.3s ease;
+    }
+    .trust-indicator-card:hover {
+        border-color: rgba(212, 175, 55, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
     .trust-grid {
         display: grid;
@@ -210,6 +230,10 @@ st.markdown("""
         font-weight: 700;
         color: #F7F4EB;
         margin-top: 0.25rem;
+        transition: color 0.3s ease;
+    }
+    .trust-indicator-card:hover .trust-value {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
     }
 
     .summary-check-card {
@@ -221,6 +245,13 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 12px;
+        transition: all 0.3s ease;
+    }
+    .summary-check-card:hover {
+        transform: translateX(4px);
+        background: rgba(30, 38, 26, 0.9);
+        border-color: rgba(138, 174, 104, 0.5);
+        box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .sim-card {
@@ -229,11 +260,28 @@ st.markdown("""
         border-radius: 16px;
         padding: 1.4rem;
         margin-bottom: 1rem;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: default;
+    }
+    .sim-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(138, 174, 104, 0.5);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
     .sim-card-recommended {
         border-color: #D4AF37;
         box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
         background: linear-gradient(145deg, #182215 0%, #1f2c1b 100%);
+    }
+    .sim-card-recommended:hover {
+        border-color: #F7D559;
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+    }
+    
+    @keyframes pulseSoft {
+        0% { opacity: 0.8; transform: scale(0.98); }
+        50% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0.8; transform: scale(0.98); }
     }
 
     .smart-alert-banner {
@@ -246,6 +294,13 @@ st.markdown("""
         align-items: center;
         gap: 12px;
         color: #F7F4EB;
+        animation: pulseSoft 3s infinite ease-in-out;
+        transition: all 0.3s ease;
+    }
+    .smart-alert-banner:hover {
+        background: rgba(200, 169, 76, 0.18);
+        border-color: rgba(200, 169, 76, 0.5);
+        animation-play-state: paused;
     }
 
     .stTabs [data-baseweb="tab-list"] {
@@ -262,6 +317,12 @@ st.markdown("""
         color: #A3A096;
         font-weight: 600;
         padding: 0 24px;
+        transition: all 0.2s ease;
+    }
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: #1A2218;
+        color: #E2DFD2;
+        border-color: rgba(107, 138, 74, 0.4);
     }
     .stTabs [aria-selected="true"] {
         background-color: #2B4324 !important;
