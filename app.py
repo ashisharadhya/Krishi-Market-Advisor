@@ -1,10 +1,10 @@
 """
 Krishi Market Advisor 🌾
-Agricultural Decision Intelligence Platform — Decision Simulator, Net Profit Intelligence, Risk Telemetry & Historical Log (Prompt 14)
+Agricultural Decision Intelligence Platform — Subtle Visual Richness & Monochromatic Vector Art (Prompt 15)
 """
 
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 import streamlit as st
 import pandas as pd
@@ -32,23 +32,54 @@ from main import run_pipeline as fetch_data_pipeline
 
 # ── Page Configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Krishi AI Copilot | Agricultural Decision Intelligence Platform",
+    page_title="Krishi AI Copilot | Decision Intelligence Platform",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
+# ── Monochromatic Crop SVG Vector Library ─────────────────────────────────────
+CROP_SVG_VECTORS = {
+    "Arecanut": """<svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22; position:absolute; right:20px; top:20px; pointer-events:none;">
+        <path d="M50 90C50 90 52 50 80 20C80 20 60 40 50 90Z" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M50 90C50 90 48 50 20 20C20 20 40 40 50 90Z" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="50" cy="35" r="5" fill="#D4AF37"/>
+        <circle cx="42" cy="45" r="4.5" fill="#D4AF37"/>
+        <circle cx="58" cy="45" r="4.5" fill="#D4AF37"/>
+        <circle cx="50" cy="55" r="4" fill="#D4AF37"/>
+    </svg>""",
+    "Coffee": """<svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22; position:absolute; right:20px; top:20px; pointer-events:none;">
+        <path d="M50 85V15M50 40C30 30 20 45 50 40M50 60C70 50 80 65 50 60" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <ellipse cx="32" cy="36" rx="6" ry="9" fill="#D4AF37" transform="rotate(-20 32 36)"/>
+        <ellipse cx="68" cy="56" rx="6" ry="9" fill="#D4AF37" transform="rotate(20 68 56)"/>
+    </svg>""",
+    "Paddy": """<svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22; position:absolute; right:20px; top:20px; pointer-events:none;">
+        <path d="M30 90C40 60 50 30 80 15" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M60 28C65 22 75 22 70 30" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+        <path d="M50 42C55 36 65 36 60 44" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+        <path d="M40 56C45 50 55 50 50 58" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+    </svg>""",
+    "Coconut": """<svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22; position:absolute; right:20px; top:20px; pointer-events:none;">
+        <path d="M50 90C45 60 35 35 15 25M50 90C55 60 65 35 85 25M50 90V20" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="45" cy="50" r="7" fill="#D4AF37"/>
+        <circle cx="56" cy="52" r="6.5" fill="#D4AF37"/>
+    </svg>""",
+    "Default": """<svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.22; position:absolute; right:20px; top:20px; pointer-events:none;">
+        <path d="M50 85V20M50 45C30 35 25 50 50 45M50 65C70 55 75 70 50 65" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>"""
+}
+
 # ── District Weather & Risk Matrix ───────────────────────────────────────────
 DISTRICT_WEATHER = {
-    "Shivamogga (Shimoga)": {"temp": "26°C", "condition": "Light Monsoon Rain", "humidity": "84%", "wind": "14 km/h", "rain_risk": "Low Rain Risk", "advisory": "Safe transport window open until 4:00 PM today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"},
-    "Chikmagalur (Chikkamagaluru)": {"temp": "24°C", "condition": "Moderate Rain", "humidity": "88%", "wind": "16 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Transport in covered vehicles recommended.", "risk_level": "Medium Risk", "risk_color": "#fef08a"},
-    "Uttara Kannada (Sirsi / Karwar)": {"temp": "27°C", "condition": "Heavy Showers", "humidity": "90%", "wind": "18 km/h", "rain_risk": "High Rain Risk", "advisory": "Verify APMC operating hours due to coastal rain.", "risk_level": "High Risk", "risk_color": "#f87171"},
-    "Hassan": {"temp": "25°C", "condition": "Partly Cloudy", "humidity": "78%", "wind": "12 km/h", "rain_risk": "No Rain Risk", "advisory": "Ideal drying & market transport weather today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"},
-    "Dakshina Kannada (Mangaluru / Bantwal)": {"temp": "28°C", "condition": "Humid Showers", "humidity": "85%", "wind": "15 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Keep produce ventilated during transport.", "risk_level": "Medium Risk", "risk_color": "#fef08a"},
-    "Chitradurga": {"temp": "29°C", "condition": "Sunny", "humidity": "62%", "wind": "10 km/h", "rain_risk": "No Rain Risk", "advisory": "Dry weather. Excellent for drying & transport.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"},
-    "Davanagere": {"temp": "30°C", "condition": "Mostly Clear", "humidity": "65%", "wind": "11 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market transport conditions.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"},
-    "Tumakuru (Tumkur)": {"temp": "28°C", "condition": "Partly Cloudy", "humidity": "70%", "wind": "12 km/h", "rain_risk": "Low Rain Risk", "advisory": "Clear highways to Tumakuru & Bangalore mandis.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"},
-    "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant", "humidity": "72%", "wind": "13 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market trading weather.", "risk_level": "Low Risk", "risk_color": "#6ee7b7"}
+    "Shivamogga (Shimoga)": {"temp": "26°C", "condition": "Light Monsoon Rain", "humidity": "84%", "wind": "14 km/h", "rain_risk": "Low Rain Risk", "advisory": "Safe transport window open until 4:00 PM today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>"""},
+    "Chikmagalur (Chikkamagaluru)": {"temp": "24°C", "condition": "Moderate Rain", "humidity": "88%", "wind": "16 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Transport in covered vehicles recommended.", "risk_level": "Medium Risk", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/><path d="M8 19v2M12 19v2M16 19v2"/></svg>"""},
+    "Uttara Kannada (Sirsi / Karwar)": {"temp": "27°C", "condition": "Heavy Showers", "humidity": "90%", "wind": "18 km/h", "rain_risk": "High Rain Risk", "advisory": "Verify APMC operating hours due to coastal rain.", "risk_level": "High Risk", "risk_color": "#f87171", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/><polygon points="13 11 9 17 15 17 11 23"/></svg>"""},
+    "Hassan": {"temp": "25°C", "condition": "Partly Cloudy", "humidity": "78%", "wind": "12 km/h", "rain_risk": "No Rain Risk", "advisory": "Ideal drying & market transport weather today.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Dakshina Kannada (Mangaluru / Bantwal)": {"temp": "28°C", "condition": "Humid Showers", "humidity": "85%", "wind": "15 km/h", "rain_risk": "Moderate Rain Risk", "advisory": "Keep produce ventilated during transport.", "risk_level": "Medium Risk", "risk_color": "#fef08a", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fef08a" stroke-width="2" stroke-linecap="round"><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/></svg>"""},
+    "Chitradurga": {"temp": "29°C", "condition": "Sunny", "humidity": "62%", "wind": "10 km/h", "rain_risk": "No Rain Risk", "advisory": "Dry weather. Excellent for drying & transport.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Davanagere": {"temp": "30°C", "condition": "Mostly Clear", "humidity": "65%", "wind": "11 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market transport conditions.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Tumakuru (Tumkur)": {"temp": "28°C", "condition": "Partly Cloudy", "humidity": "70%", "wind": "12 km/h", "rain_risk": "Low Rain Risk", "advisory": "Clear highways to Tumakuru & Bangalore mandis.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""},
+    "Ramanagara / Bengaluru Rural": {"temp": "27°C", "condition": "Pleasant", "humidity": "72%", "wind": "13 km/h", "rain_risk": "No Rain Risk", "advisory": "Optimal market trading weather.", "risk_level": "Low Risk", "risk_color": "#6ee7b7", "icon_svg": """<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg>"""}
 }
 
 # ── Session State Management ─────────────────────────────────────────────────
@@ -64,11 +95,9 @@ if "farm_acres" not in st.session_state:
     st.session_state["farm_acres"] = 2.5
 if "harvest_qty" not in st.session_state:
     st.session_state["harvest_qty"] = 20.0
-if "has_dry_shed" not in st.session_state:
-    st.session_state["has_dry_shed"] = True
 
 
-# ── Earthy Design System CSS ──────────────────────────────────────────────────
+# ── Design System CSS & Organic Contour Textures ──────────────────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
@@ -80,7 +109,6 @@ st.markdown("""
         -webkit-font-smoothing: antialiased;
     }
 
-    /* Preserve Streamlit Material Icon Fonts */
     [data-testid="stIconMaterial"], [class*="Material"], [class*="icon"], [data-testid="stSidebarCollapseButton"] * {
         font-family: 'Material Symbols Rounded', 'Material Icons', sans-serif !important;
     }
@@ -90,13 +118,19 @@ st.markdown("""
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
     }
+    @keyframes gentleFloat {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0px); }
+    }
 
     .stApp {
         background-color: #0B0D09 !important;
         background-image: 
-            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.16) 0%, transparent 45%),
-            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.12) 0%, transparent 45%);
-        background-size: 140% 140%;
+            radial-gradient(circle at 10% 10%, rgba(43, 67, 36, 0.18) 0%, transparent 45%),
+            radial-gradient(circle at 90% 90%, rgba(200, 169, 76, 0.14) 0%, transparent 45%),
+            repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 0, transparent 20px);
+        background-size: 140% 140%, 140% 140%, 100% 100%;
         animation: ambientMotion 24s ease infinite;
         background-attachment: fixed;
     }
@@ -107,15 +141,9 @@ st.markdown("""
         max-width: 1240px;
     }
 
-    /* Sidebar Styling */
     [data-testid="stSidebar"] {
         background-color: #11150F !important;
         border-right: 1px solid rgba(107, 138, 74, 0.2) !important;
-    }
-    [data-testid="stSidebar"] .block-container {
-        padding-top: 2rem !important;
-        padding-left: 1.4rem !important;
-        padding-right: 1.4rem !important;
     }
 
     .sidebar-section-title {
@@ -129,8 +157,9 @@ st.markdown("""
         font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Hero AI Decision Card */
+    /* Master Decision Hero Card with Floating Crop SVG Watermark */
     .copilot-summary-card {
+        position: relative;
         background: linear-gradient(145deg, #141912 0%, #1A2218 60%, #1f2a1c 100%);
         border: 1.5px solid rgba(107, 138, 74, 0.35);
         border-radius: 22px;
@@ -138,12 +167,16 @@ st.markdown("""
         color: #F7F4EB;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
         margin-bottom: 1.8rem;
+        overflow: hidden;
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .copilot-summary-card:hover {
         transform: translateY(-4px);
         border-color: rgba(212, 175, 55, 0.6);
         box-shadow: 0 24px 60px rgba(43, 67, 36, 0.35), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+    .crop-svg-watermark {
+        animation: gentleFloat 6s ease-in-out infinite;
     }
 
     .telemetry-item {
@@ -153,7 +186,6 @@ st.markdown("""
         padding: 1.1rem 1.3rem;
     }
 
-    /* Trust Indicators Card */
     .trust-indicator-card {
         background: rgba(15, 20, 14, 0.92);
         border: 1px solid rgba(107, 138, 74, 0.3);
@@ -181,7 +213,6 @@ st.markdown("""
         margin-top: 0.25rem;
     }
 
-    /* Scannable Check Item Card */
     .summary-check-card {
         background: rgba(20, 25, 18, 0.85);
         border: 1px solid rgba(107, 138, 74, 0.25);
@@ -193,7 +224,6 @@ st.markdown("""
         gap: 12px;
     }
 
-    /* Simulator Option Card */
     .sim-card {
         background: #141912;
         border: 1px solid rgba(107, 138, 74, 0.3);
@@ -207,7 +237,6 @@ st.markdown("""
         background: linear-gradient(145deg, #182215 0%, #1f2c1b 100%);
     }
 
-    /* Smart Alert Banner */
     .smart-alert-banner {
         background: rgba(200, 169, 76, 0.12);
         border: 1px solid rgba(200, 169, 76, 0.35);
@@ -220,7 +249,6 @@ st.markdown("""
         color: #F7F4EB;
     }
 
-    /* Custom Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
         background-color: transparent;
@@ -253,7 +281,7 @@ default_crop = "Arecanut(Betelnut/Supari)"
 default_idx = available_commodities.index(default_crop) if default_crop in available_commodities else 0
 
 
-# ── Sidebar Setup (Farmer Profile & System Controls - Req 1, 10) ───────────────
+# ── Sidebar Setup ─────────────────────────────────────────────────────────────
 st.sidebar.markdown('<div class="sidebar-section-title">Farmer Profile & Preferences</div>', unsafe_allow_html=True)
 
 auth_mode = st.sidebar.radio(
@@ -269,7 +297,6 @@ if auth_mode.startswith("Registered"):
     input_phone = st.sidebar.text_input("Farmer ID / Phone", value=st.session_state["farmer_phone"])
     st.session_state["farm_acres"] = st.sidebar.number_input("Land Area (Acres)", min_value=0.5, value=2.5, step=0.5)
     st.session_state["harvest_qty"] = st.sidebar.number_input("Typical Harvest Volume (Quintals)", min_value=1.0, value=20.0, step=5.0)
-    st.session_state["has_dry_shed"] = st.sidebar.checkbox("Has Storage / Drying Shed?", value=True)
     
     st.session_state["farmer_name"] = input_name if input_name else "Ramesh Gowda"
     st.session_state["farmer_district"] = input_district
@@ -330,7 +357,7 @@ if st.sidebar.button("Refresh Government Market Data"):
             st.sidebar.error(f"Fetch failed: {e}")
 
 
-# ── Load Recommendation & Net Profit Data (Req 2) ─────────────────────────────
+# ── Load Recommendation & Net Profit Data ─────────────────────────────────────
 effective_threshold = float(threshold)
 rec_result = get_market_recommendation(
     folder=data_folder,
@@ -364,7 +391,20 @@ user_qty = st.session_state.get("harvest_qty", 20.0)
 w_data = DISTRICT_WEATHER.get(user_district, DISTRICT_WEATHER["Shivamogga (Shimoga)"])
 today_date_str = datetime.now().strftime("%d %B %Y")
 
-# Calculate Pure Net Profit Intelligence (Req 2)
+# Detect Crop Monochromatic Vector Key
+crop_name_raw = selected_commodity.split('(')[0].strip()
+if "Areca" in crop_name_raw or "Supari" in crop_name_raw:
+    crop_vector_svg = CROP_SVG_VECTORS["Arecanut"]
+elif "Coffee" in crop_name_raw:
+    crop_vector_svg = CROP_SVG_VECTORS["Coffee"]
+elif "Paddy" in crop_name_raw or "Rice" in crop_name_raw:
+    crop_vector_svg = CROP_SVG_VECTORS["Paddy"]
+elif "Coconut" in crop_name_raw:
+    crop_vector_svg = CROP_SVG_VECTORS["Coconut"]
+else:
+    crop_vector_svg = CROP_SVG_VECTORS["Default"]
+
+# Calculate Net Profit
 transport_calc = calculate_net_transport_profit(
     farmer_district=user_district,
     target_mandi=rec["recommended_market"],
@@ -393,11 +433,11 @@ Target Crop: <b>{selected_commodity.split('(')[0]}</b> ({rec_result['variety']})
 
 
 # ==============================================================================
-# REQUIREMENT 9: SMART CONTEXTUAL ALERT BANNER
+# SMART CONTEXTUAL ALERT BANNER
 # ==============================================================================
 st.markdown(f"""
 <div class="smart-alert-banner">
-    <span style="font-size: 1.3rem;">⚡</span>
+    <span style="display: flex; align-items: center;">{w_data['icon_svg']}</span>
     <div>
         <b>Smart Contextual Advisory:</b> {w_data['advisory']} Expected Net Transport Profit is <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> for {user_qty:.0f} Quintals via {selected_vehicle}.
     </div>
@@ -406,11 +446,13 @@ st.markdown(f"""
 
 
 # ==============================================================================
-# REQUIREMENT 1, 2 & 6: TODAY'S DECISION SUMMARY (NET PROFIT & RISK TELEMETRY)
+# HERO AI DECISION SUMMARY (WITH CROP SVG WATERMARK & LUCIDE WEATHER BADGES)
 # ==============================================================================
 st.markdown(f"""
 <div class="copilot-summary-card">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+<div class="crop-svg-watermark">{crop_vector_svg}</div>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; position: relative; z-index: 2;">
 <div>
 <span style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem;">Personalized Market Recommendation</span><br>
 <span style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 16px; border-radius: 30px; display: inline-block; margin-bottom: 1.2rem;">🟢 Sell Today</span>
@@ -428,13 +470,13 @@ Gross Selling Price: <b>₹{rec['highest_price']:,.0f}/Q</b> • Est. Freight: <
 <div style="text-align: right; background: rgba(11, 13, 9, 0.65); padding: 1.3rem 1.8rem; border-radius: 16px; border: 1px solid rgba(107, 138, 74, 0.3);">
 <div style="font-size: 0.75rem; color: #A3A096; font-weight: 700; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;">Model Confidence</div>
 <div style="font-size: 2.6rem; font-weight: 800; color: #D4AF37;">94%</div>
-<div style="font-size: 0.85rem; color: {w_data['risk_color']}; font-weight: 700; margin-top: 0.2rem;">
-Risk: {w_data['risk_level']} ({w_data['rain_risk']})
+<div style="font-size: 0.85rem; color: {w_data['risk_color']}; font-weight: 700; margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 6px;">
+{w_data['icon_svg']} Risk: {w_data['risk_level']} ({w_data['rain_risk']})
 </div>
 </div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25);">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; padding-top: 1.8rem; border-top: 1px solid rgba(107, 138, 74, 0.25); position: relative; z-index: 2;">
 <div class="telemetry-item">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #A3A096; text-transform: uppercase;">Expected Net Profit</div>
 <div style="font-size: 1.3rem; font-weight: 800; color: #6ee7b7; margin-top: 0.3rem;">+₹{transport_calc['net_extra_profit']:,.0f} Net</div>
@@ -457,7 +499,7 @@ Risk: {w_data['risk_level']} ({w_data['rain_risk']})
 
 
 # ==============================================================================
-# REQUIREMENT 5 & 7: TRUST TELEMETRY & CONFIDENCE EXPLANATION
+# TRUST TELEMETRY & CONFIDENCE EXPLANATION
 # ==============================================================================
 st.markdown(f"""
 <div class="trust-indicator-card">
@@ -491,7 +533,7 @@ if using_fallback:
 
 
 # ==============================================================================
-# REQUIREMENT 3: DECISION SIMULATION MATRIX ("WHAT IF?")
+# DECISION SIMULATION MATRIX ("WHAT IF?")
 # ==============================================================================
 st.markdown("### 🎲 Decision Simulator (Compare Trade-Off Scenarios)")
 st.markdown("Simulate financial trade-offs of selling today versus holding produce for 1 to 3 days.")
@@ -550,7 +592,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ==============================================================================
-# REQUIREMENT 5: PROGRESSIVE DISCLOSURE (WHY THIS RECOMMENDATION?)
+# PROGRESSIVE DISCLOSURE (WHY THIS RECOMMENDATION?)
 # ==============================================================================
 with st.expander("▼ Why this recommendation? (Decision Drivers & Full Rationale)", expanded=False):
     col_exp1, col_exp2 = st.columns([1.4, 1])
@@ -592,7 +634,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ==============================================================================
-# ADVANCED COPILOT TOOLS & ANALYTICS TABS (REQ 4, 8, 11)
+# ADVANCED COPILOT TOOLS & ANALYTICS TABS
 # ==============================================================================
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "🎙️ Listen to Today's Advice",
@@ -636,7 +678,7 @@ with tab1:
     st.markdown(f'<a href="https://api.whatsapp.com/send?text={encoded_text}" target="_blank">Share Today\'s Advisory on WhatsApp</a>', unsafe_allow_html=True)
 
 
-# Tab 2: Market Comparison Net Profit Matrix (Req 4)
+# Tab 2: Market Comparison Net Profit Matrix
 with tab2:
     st.subheader("Top Regional Mandis Comparative Net Profit Matrix")
     st.markdown("Sometimes the market with highest selling price is not the best financial choice after accounting for transport distance and freight.")
@@ -663,7 +705,7 @@ with tab2:
     st.dataframe(pd.DataFrame(comp_rows), width="stretch")
 
 
-# Tab 3: Decision Timeline Trajectory (Req 8)
+# Tab 3: Decision Timeline Trajectory
 with tab3:
     st.subheader("7-Day Price Trajectory & Outlook Timeline")
     
@@ -732,7 +774,7 @@ with tab5:
         st.metric("Pure Net Farm Profit", f"₹{net_prof:,.0f}", f"ROI: {roi_pct:.1f}%")
 
 
-# Tab 6: Decision History Log (Req 11)
+# Tab 6: Decision History Log
 with tab6:
     st.subheader("Historical Decision Log & Accuracy Audit")
     st.markdown("Long-term historical record of system recommendations versus actual market outcomes to build model trust.")
