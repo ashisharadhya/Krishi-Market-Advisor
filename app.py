@@ -1,6 +1,6 @@
 """
 Krishi Market Advisor 🌾
-Farmer-First Personalised Dashboard with Smart Fallback for Niche Crops
+Earth-Themed Premium AI Agricultural Intelligence Dashboard (Light & Dark Mode Support)
 """
 
 import sys
@@ -63,59 +63,92 @@ if "farmer_phone" not in st.session_state:
     st.session_state["farmer_phone"] = ""
 
 
-# ── Custom CSS Styling ────────────────────────────────────────────────────────
+# ── Rich Earthy Theme CSS (Adapts to Light & Dark Mode) ───────────────────────
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&display=swap');
 
     html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
+        font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
     }
 
+    /* Theme Variables */
+    :root {
+        --earth-green-primary: #1b4332;
+        --earth-green-accent: #2d6a4f;
+        --earth-green-light: #d8f3dc;
+        --earth-amber-main: #dda15e;
+        --earth-amber-warm: #fefae0;
+        --card-bg-light: #ffffff;
+        --card-border-light: #e2e8f0;
+        --text-primary-light: #0f172a;
+        --text-secondary-light: #475569;
+    }
+
+    /* Welcome Banner with Rich Organic Gradient */
     .welcome-card {
-        background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 70%, #40916c 100%);
-        border-radius: 20px;
-        padding: 1.8rem 2.2rem;
-        color: #ffffff;
-        box-shadow: 0 10px 30px rgba(27, 67, 50, 0.18);
-        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 55%, #40916c 100%);
+        border-radius: 22px;
+        padding: 2.2rem 2.4rem;
+        color: #ffffff !important;
+        box-shadow: 0 12px 32px rgba(27, 67, 50, 0.22);
+        margin-bottom: 1.6rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .welcome-card::after {
+        content: "🌾";
+        position: absolute;
+        right: 25px;
+        bottom: -15px;
+        font-size: 9rem;
+        opacity: 0.14;
+        pointer-events: none;
     }
     .welcome-greeting {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
         font-weight: 800;
-        color: #f4f1ea;
+        color: #f4f1ea !important;
         margin-bottom: 0.3rem;
+        letter-spacing: -0.5px;
+    }
+    .welcome-subtitle {
+        font-size: 1.1rem;
+        color: #d8f3dc !important;
+        font-weight: 500;
+        max-width: 850px;
     }
     .meta-pills-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 0.8rem;
+        gap: 12px;
+        margin-top: 1rem;
     }
     .meta-pill {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 7px 16px;
         border-radius: 30px;
         font-size: 0.88rem;
-        font-weight: 600;
-        color: #e8f5e9;
+        font-weight: 700;
+        color: #ffffff !important;
     }
 
+    /* Live Agricultural Weather Card */
     .weather-card {
         background: linear-gradient(135deg, #fefae0 0%, #faedcd 100%);
         border: 1.5px solid #e9c46a;
-        border-radius: 18px;
-        padding: 1.3rem 1.5rem;
-        color: #7f5539;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.04);
-        margin-bottom: 1.5rem;
+        border-radius: 20px;
+        padding: 1.4rem 1.6rem;
+        color: #5c3d2e !important;
+        box-shadow: 0 6px 18px rgba(233, 196, 106, 0.15);
+        margin-bottom: 1.6rem;
     }
     .weather-title {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         font-weight: 800;
-        color: #7f5539;
+        color: #5c3d2e !important;
         margin-bottom: 0.5rem;
         display: flex;
         align-items: center;
@@ -129,45 +162,52 @@ st.markdown("""
     }
     .weather-item {
         background: #ffffff;
-        padding: 0.6rem 0.9rem;
-        border-radius: 12px;
-        border: 1px solid #ccd5ae;
+        padding: 0.7rem 1rem;
+        border-radius: 14px;
+        border: 1px solid #e9c46a;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
     .weather-val {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 800;
-        color: #1b4332;
+        color: #1b4332 !important;
     }
 
+    /* Spotlight Card */
     .spotlight-card {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 1.8rem;
+        background: var(--card-bg-light);
+        border-radius: 22px;
+        padding: 2rem;
         border: 2px solid #2d6a4f;
-        box-shadow: 0 8px 24px rgba(45, 106, 79, 0.12);
-        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(45, 106, 79, 0.12);
+        margin-bottom: 2.2rem;
     }
     .spotlight-header {
-        font-size: 1.3rem;
+        font-size: 1.35rem;
         font-weight: 800;
         color: #1b4332;
         border-bottom: 2px solid #e8f5e9;
-        padding-bottom: 0.6rem;
-        margin-bottom: 1.2rem;
+        padding-bottom: 0.8rem;
+        margin-bottom: 1.4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .spotlight-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 1.3rem;
     }
     .spotlight-item {
         background: #f8faf6;
-        border-radius: 12px;
-        padding: 1rem 1.1rem;
-        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 1.1rem 1.2rem;
+        border: 1px solid #cbd5e1;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .spotlight-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.06);
     }
     .spotlight-label {
         font-size: 0.8rem;
@@ -177,20 +217,21 @@ st.markdown("""
         letter-spacing: 0.5px;
     }
     .spotlight-value {
-        font-size: 1.6rem;
+        font-size: 1.65rem;
         font-weight: 800;
         color: #1b4332;
-        margin-top: 0.2rem;
+        margin-top: 0.25rem;
     }
     .spotlight-sub {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
         font-weight: 700;
         color: #2d6a4f;
     }
 
+    /* Badges */
     .badge-gemini {
         background: #e8f5e9;
-        color: #1b4332;
+        color: #1b4332 !important;
         border: 1px solid #81c784;
         padding: 6px 14px;
         border-radius: 20px;
@@ -201,7 +242,7 @@ st.markdown("""
     }
     .badge-fallback {
         background-color: #fff3e0;
-        color: #e65100;
+        color: #e65100 !important;
         border: 1px solid #ffcc80;
         padding: 6px 14px;
         border-radius: 20px;
@@ -211,32 +252,74 @@ st.markdown("""
         margin-bottom: 1rem;
     }
 
+    /* Profit Card Styling */
     .profit-card-green {
         background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
         border: 2px solid #22c55e;
-        border-radius: 16px;
-        padding: 1.5rem;
-        color: #14532d;
+        border-radius: 18px;
+        padding: 1.6rem;
+        color: #14532d !important;
     }
     .profit-card-orange {
         background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
         border: 2px solid #f97316;
-        border-radius: 16px;
-        padding: 1.5rem;
-        color: #7c2d12;
+        border-radius: 18px;
+        padding: 1.6rem;
+        color: #7c2d12 !important;
     }
 
+    /* Custom Buttons */
     .stButton>button {
-        border-radius: 12px;
+        border-radius: 14px;
         font-weight: 700;
-        background-color: #2d6a4f;
-        color: white;
+        background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+        color: white !important;
         border: none;
-        padding: 0.5rem 1.2rem;
+        padding: 0.6rem 1.4rem;
+        box-shadow: 0 4px 12px rgba(45, 106, 79, 0.2);
+        transition: all 0.2s ease;
     }
     .stButton>button:hover {
-        background-color: #1b4332;
-        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(45, 106, 79, 0.35);
+        color: white !important;
+    }
+
+    /* Dark Mode Adaptations */
+    @media (prefers-color-scheme: dark) {
+        .spotlight-card {
+            background: #1e293b;
+            border-color: #40916c;
+        }
+        .spotlight-header {
+            color: #ecfdf5;
+            border-bottom-color: #334155;
+        }
+        .spotlight-item {
+            background: #0f172a;
+            border-color: #334155;
+        }
+        .spotlight-value {
+            color: #6ee7b7;
+        }
+        .spotlight-label {
+            color: #94a3b8;
+        }
+        .weather-card {
+            background: linear-gradient(135deg, #33291e 0%, #291e14 100%);
+            border-color: #dda15e;
+            color: #fefae0 !important;
+        }
+        .weather-title {
+            color: #fefae0 !important;
+        }
+        .weather-item {
+            background: #1e1b18;
+            border-color: #7f5539;
+        }
+        .weather-val {
+            color: #dda15e !important;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -340,7 +423,6 @@ rec_result = get_market_recommendation(
     threshold_pct=effective_threshold
 )
 
-# Smart Fallback: If 70% yields no markets, automatically check at 30% for sparse/niche crops!
 using_fallback_threshold = False
 if rec_result.get("status") != "success":
     fallback_result = get_market_recommendation(
@@ -369,7 +451,7 @@ user_district = st.session_state["farmer_district"]
 st.markdown(f"""
 <div class="welcome-card">
     <div class="welcome-greeting">🌾 {greeting_str}, {user_display_name} 👋</div>
-    <div style="font-size: 1.05rem; color: #d8f3dc;">Krishi Market Advisor — Karnataka's AI Mandi Intelligence & Price Advisory Platform</div>
+    <div class="welcome-subtitle">Krishi Market Advisor — Karnataka's AI Mandi Intelligence & Price Advisory Platform</div>
     <div class="meta-pills-row">
         <span class="meta-pill">📍 Home District: {user_district}</span>
         <span class="meta-pill">📅 Date: {today_date_str}</span>
@@ -453,9 +535,10 @@ st.markdown(f"""
 
 
 # ── 4. Tabs Navigation ────────────────────────────────────────────────────────
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🤖 AI Advisory & Voice",
     "🚚 Transport & Pure Net Profit Calculator",
+    "💰 Farm Cultivation ROI Calculator",
     "📈 Price Momentum Analytics",
     "📋 Verified Mandi Table"
 ])
@@ -466,7 +549,7 @@ with tab1:
 
     # Smart Selling Timing Recommendation Card
     st.markdown(f"""
-    <div style="background-color: #f4f6f0; border-left: 5px solid #2d6a4f; padding: 1.1rem; border-radius: 12px; margin-bottom: 1.2rem;">
+    <div style="background-color: #f4f6f0; border-left: 5px solid #2d6a4f; padding: 1.1rem; border-radius: 14px; margin-bottom: 1.2rem;">
         <h5 style="margin:0; color: #1b4332;">⏳ Smart Timing Advisor: <b>BEST TIME TO SELL: NEXT 24-48 HOURS</b></h5>
         <p style="margin: 4px 0 0 0; color: #4a5568; font-size: 0.95rem;">
             Modal prices at <b>{rec['recommended_market']}</b> are currently <b>{rec['trend']}</b> ({rec['trend_desc']}). 
@@ -607,8 +690,44 @@ with tab2:
         """, unsafe_allow_html=True)
 
 
-# ── Tab 3: Mandi Price Analytics ──────────────────────────────────────────────
+# ── Tab 3: Farm Cultivation ROI Calculator (NEW) ──────────────────────────────
 with tab3:
+    st.subheader("💰 Cultivation Cost & Return on Investment (ROI) Calculator")
+    st.markdown("Calculate your **pure net profit margin** after deducting seed, fertilizer, labor, and harvesting expenses.")
+
+    col_roi1, col_roi2 = st.columns(2)
+
+    with col_roi1:
+        acres = st.number_input("🌾 Total Land Area (in Acres)", min_value=0.5, max_value=50.0, value=2.0, step=0.5)
+        yield_per_acre = st.number_input("📦 Expected Yield per Acre (Quintals)", min_value=1.0, max_value=100.0, value=10.0, step=1.0)
+        total_yield = acres * yield_per_acre
+
+        cost_per_acre = st.number_input("💸 Cultivation Cost per Acre (Seeds, Labor, Fertilizer ₹)", min_value=1000, max_value=200000, value=45000, step=5000)
+        total_cost = acres * cost_per_acre
+
+    with col_roi2:
+        gross_revenue = total_yield * rec['highest_price']
+        net_farm_profit = gross_revenue - total_cost
+        roi_percentage = (net_farm_profit / total_cost * 100) if total_cost else 0
+
+        st.markdown(f"""
+        <div style="background-color: #f8faf6; border: 1.5px solid #2d6a4f; border-radius: 16px; padding: 1.4rem;">
+            <h4 style="margin-top: 0; color: #1b4332;">📊 Farm Income Summary</h4>
+            <div style="font-size: 0.95rem; color: #334155;">
+                • Total Crop Production: <b>{total_yield:.0f} Quintals</b> ({acres} acres)<br>
+                • Total Cultivation Expenses: <b>₹{total_cost:,.0f}</b><br>
+                • Gross Harvest Revenue (at {rec['recommended_market']}): <b>₹{gross_revenue:,.0f}</b>
+            </div>
+            <hr style="margin: 12px 0;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: #64748b;">NET FARM PROFIT</div>
+            <div style="font-size: 2rem; font-weight: 800; color: #1b4332;">₹{net_farm_profit:,.0f}</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #2d6a4f;">ROI: {roi_percentage:.1f}% Return on Cultivation</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+# ── Tab 4: Mandi Price Analytics ──────────────────────────────────────────────
+with tab4:
     st.subheader("📈 Mandi Price Comparisons & Trends")
     
     col_chart1, col_chart2 = st.columns(2)
@@ -666,8 +785,8 @@ with tab3:
             st.info("Insufficient multi-day data points for line chart.")
 
 
-# ── Tab 4: Detailed Data Table ────────────────────────────────────────────────
-with tab4:
+# ── Tab 5: Detailed Data Table ────────────────────────────────────────────────
+with tab5:
     st.subheader("📋 Verified Mandi Price Records")
     table_rows = []
     for m in markets_data:
