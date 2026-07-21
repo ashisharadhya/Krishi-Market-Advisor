@@ -907,7 +907,7 @@ with tab6:
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #A3A096; font-size: 0.85rem; padding-bottom: 1rem; font-family: \"JetBrains Mono\", monospace;'>"
-    "KRISHI AI COPILOT • AGRICULTURAL DECISION INTELLIGENCE PLATFORM • POWERED BY AGMARKNET & GEMINI 1.5 FLASH AI"
+    "KRISHI AI COPILOT • AGRICULTURAL DECISION INTELLIGENCE PLATFORM • POWERED BY AGMARKNET & GEMINI 2.5 FLASH AI"
     "</div>",
     unsafe_allow_html=True
 )

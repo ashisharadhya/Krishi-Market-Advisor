@@ -78,7 +78,7 @@ def call_gemini_api(prompt_dict: Dict[str, str], api_key: Optional[str] = None) 
         import google.generativeai as genai
         genai.configure(api_key=effective_key)
 
-        model_name = "gemini-1.5-flash"
+        model_name = "gemini-2.5-flash"
         system_instruction = prompt_dict.get("system_instruction")
         user_prompt = prompt_dict.get("user_prompt", "")
 
