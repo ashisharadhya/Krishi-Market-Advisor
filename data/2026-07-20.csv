@@ -1,0 +1,490 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price
+Karnataka,Davangere,Davangere APMC,Ragi(Finger Millet),Local,Local,20/07/2026,2000,3501,2795
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Paddy(Common),Paddy Medium,Local,20/07/2026,2000,2000,2000
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Green Chilli,Green Chilly,Local,20/07/2026,1400,2600,2000
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Cabbage,Cabbage,Local,20/07/2026,1500,2400,2000
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Raddish,Raddish,Local,20/07/2026,1500,3000,2200
+Karnataka,Kalaburagi,Kalaburagi APMC,Rice,Broken Rice,Local,20/07/2026,2200,3000,2600
+Karnataka,Kalaburagi,Kalaburagi APMC,Pineapple,Pine Apple,Local,20/07/2026,4000,8000,6000
+Karnataka,Kalaburagi,Kalaburagi APMC,Brinjal,Brinjal,Local,20/07/2026,1500,3500,2500
+Karnataka,Kalaburagi,Kalaburagi APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Local,20/07/2026,6800,8900,7800
+Karnataka,Kalaburagi,Kalaburagi APMC,Gur(Jaggery),Other,Local,20/07/2026,2150,4500,3700
+Karnataka,Kalaburagi,Kalaburagi APMC,Jowar(Sorghum),Jowar ( White),Non-FAQ,20/07/2026,2400,5500,4300
+Karnataka,Kalaburagi,Kalaburagi APMC,Green Gram(Moong)(Whole),Green (Whole),Non-FAQ,20/07/2026,4500,7350,6200
+Karnataka,Chikkaballapur,Chintamani APMC,Green Chilli,Green Chilly,Local,20/07/2026,2500,3500,3000
+Karnataka,Chikkaballapur,Chintamani APMC,Capsicum,Capsicum,Local,20/07/2026,1500,3000,2000
+Karnataka,Vijayanagara,Hospet APMC,Green Chilli,Green Chilly,Local,20/07/2026,1800,2400,2200
+Karnataka,Koppal,Kustagi APMC,Red gram/Arhar/Tur(whole),Red,FAQ,20/07/2026,8350,8350,8350
+Karnataka,Bellary,Ballari APMC,Maize,Local,Non-FAQ,20/07/2026,1959,2286,2123
+Karnataka,Kolar,Kolar APMC,Brinjal,Brinjal,Local,20/07/2026,1000,2500,2000
+Karnataka,Kolar,Kolar APMC,Bitter gourd,Bitter Gourd,Local,20/07/2026,2000,4000,3200
+Karnataka,Kolar,Kolar APMC,Capsicum,Capsicum,Local,20/07/2026,4000,6000,5000
+Karnataka,Koppal,Gangavathi APMC,Rice,Broken Rice,Small,20/07/2026,2100,2100,2100
+Karnataka,Raichur,Raichur APMC,Red gram/Arhar/Tur(whole),Red,Grade Range-1,20/07/2026,6029,7609,7369
+Karnataka,Raichur,Raichur APMC,Cotton,H4,FAQ,20/07/2026,8700,8700,8700
+Karnataka,Chikkaballapur,Gauribidanur APMC,Potato,Potato,Local,20/07/2026,1000,2000,1500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Green Chilli,Green Chilly,Local,20/07/2026,3500,4500,4000
+Karnataka,Chikkaballapur,Gauribidanur APMC,Carrot,Carrot,Local,20/07/2026,2000,3000,2500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,2000,3000,2500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Chapparad Avare,Chapparada Avarekai,Local,20/07/2026,1500,2500,2000
+Karnataka,Bagalkot,Hungund APMC,Jowar(Sorghum),Yellow,FAQ,20/07/2026,2500,2500,2500
+Karnataka,Belagavi,Soundati APMC,Bengal Gram(Gram)(Whole),Jawari/Local,Non-FAQ,20/07/2026,5800,5800,5800
+Karnataka,Bengaluru South,Channapatna APMC,Banana,Pachha Bale,Local,20/07/2026,1700,2500,2200
+Karnataka,Davangere,Channagiri APMC,Maize,Popcorn,Grade Range-1,20/07/2026,5000,5000,5000
+Karnataka,Chitradurga,Chitradurga APMC,Groundnut,Natte,Local,20/07/2026,3509,8325,6844
+Karnataka,Chitradurga,Chitradurga APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Local,20/07/2026,6555,6555,6555
+Karnataka,Chikkamagaluru,Mudigere APMC,Arecanut(Betelnut/Supari),Other,Local,20/07/2026,49823,49823,49823
+Karnataka,Dakshina Kannada,Bantwala APMC,Rice,Other,Local,20/07/2026,2500,3000,2800
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Ragi(Finger Millet),Local,Local,20/07/2026,4886,4886,4886
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Beans,Beans (Whole),Local,20/07/2026,3500,5000,4000
+Karnataka,Uttara Kannada,Honnavar APMC,Arecanut(Betelnut/Supari),Hale Chali,Local,20/07/2026,40000,42000,41000
+Karnataka,Kolar,Bangarpet APMC,Garlic,Garlic,Local,20/07/2026,9000,10300,10000
+Karnataka,Kolar,Bangarpet APMC,Green Chilli,Green Chilly,Local,20/07/2026,2000,3700,3500
+Karnataka,Uttara Kannada,Sirsi APMC,Arecanut(Betelnut/Supari),Kempugotu,Local,20/07/2026,31199,35699,33030
+Karnataka,Mysuru,Nanjangud APMC,Tomato,Tomato,Local,20/07/2026,3700,4666,4166
+Karnataka,Mysuru,Nanjangud APMC,Raddish,Raddish,Local,20/07/2026,2380,3333,2777
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Sippegotu,Local,20/07/2026,15220,23000,22359
+Karnataka,Shivamogga,Bhadravathi APMC,Paddy(Common),Paddy Medium,Local,20/07/2026,2000,3040,2500
+Karnataka,Shivamogga,Bhadravathi APMC,Coconut,Medium,Local,20/07/2026,22000,22000,22000
+Karnataka,Shivamogga,Bhadravathi APMC,Arecanut(Betelnut/Supari),Sippegotu,Local,20/07/2026,11000,12000,11500
+Karnataka,Bidar,Bidar APMC,Bengal Gram(Gram)(Whole),Jawari/Local,Non-FAQ,20/07/2026,5562,6500,6184
+Karnataka,Bidar,Bidar APMC,Black Gram(Urd Beans)(Whole),Black Gram (Whole),Non-FAQ,20/07/2026,6522,8555,7441
+Karnataka,Bidar,Bidar APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Non-FAQ,20/07/2026,3038,8679,8228
+Karnataka,Bengaluru South,Ramanagara APMC,Snakeguard,Snakeguard,Local,20/07/2026,1600,2400,2000
+Karnataka,Bengaluru South,Ramanagara APMC,Green Avare(W),Green Avare (W),Local,20/07/2026,3500,5000,4000
+Karnataka,Bengaluru South,Ramanagara APMC,Knool Khol,Knool Khol,Local,20/07/2026,3000,4500,4000
+Karnataka,Raichur,Manvi APMC,Paddy(Common),Sona Masuri New,Non-FAQ,20/07/2026,2350,2400,2372
+Karnataka,Gadag,Laxmeshwar APMC,Bengal Gram(Gram)(Whole),Jawari/Local,Non-FAQ,20/07/2026,3460,6319,5589
+Karnataka,Gadag,Laxmeshwar APMC,Green Gram(Moong)(Whole),Green (Whole),Non-FAQ,20/07/2026,3591,3591,3591
+Karnataka,Shivamogga,Shimoga APMC,Onion,Onion,Local,20/07/2026,2400,3600,3000
+Karnataka,Shivamogga,Shimoga APMC,Ginger(Green),Green Ginger,Local,20/07/2026,10000,15000,12500
+Karnataka,Shivamogga,Shimoga APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,1500,2000,1750
+Karnataka,Shivamogga,Shimoga APMC,Bunch Beans,Bunch Beans,Local,20/07/2026,2000,3000,2500
+Karnataka,Davangere,Honnali APMC,Brinjal,Brinjal,Medium,20/07/2026,1100,1300,1200
+Karnataka,Davangere,Honnali APMC,Beans,Beans (Whole),Medium,20/07/2026,2000,2500,2400
+Karnataka,Chamarajanagar,Gundlupet APMC,Turmeric,Local,Local,20/07/2026,11500,13650,11500
+Karnataka,Chamarajanagar,Gundlupet APMC,Green Chilli,Green Chilly,Local,20/07/2026,3000,3200,3000
+Karnataka,Chamarajanagar,Gundlupet APMC,Beetroot,Beetroot,Local,20/07/2026,2700,2700,2700
+Karnataka,Vijayapura,Vijayapura APMC,Red gram split/Arhar dal/Tur dal,Arhar Dal(Tur),Local,20/07/2026,8550,10800,9200
+Karnataka,Vijayapura,Vijayapura APMC,Wheat,Sona,Local,20/07/2026,2437,5100,2700
+Karnataka,Vijayapura,Vijayapura APMC,Bengal Gram(Gram)(Whole),Average (Whole),Local,20/07/2026,5462,5462,5462
+Karnataka,Vijayapura,Vijayapura APMC,Green Gram(Moong)(Whole),Green (Whole),Local,20/07/2026,9100,9400,9300
+Karnataka,Vijayapura,Vijayapura APMC,Mataki,Mataki (W),Local,20/07/2026,5850,7900,6000
+Karnataka,Chikkamagaluru,Tarikere APMC,Arecanut(Betelnut/Supari),Other,Local,20/07/2026,26500,27000,26676
+Karnataka,Chikkaballapur,Bagepalli APMC,Brinjal,Brinjal,Small,20/07/2026,1300,2900,2000
+Karnataka,Chikkaballapur,Bagepalli APMC,Green Chilli,Green Chilly,Small,20/07/2026,3500,4500,4000
+Karnataka,Chikkaballapur,Bagepalli APMC,Raddish,Raddish,Small,20/07/2026,2000,3000,2400
+Karnataka,Shivamogga,APMC THIRTHAHALLI,Black pepper,Other,Local,20/07/2026,30000,30000,30000
+Karnataka,Shivamogga,APMC THIRTHAHALLI,Arecanut(Betelnut/Supari),Rashi,Local,20/07/2026,47437,47951,47951
+Karnataka,Bengaluru,Bengaluru APMC,Onion,Onion,Large,20/07/2026,1800,2800,2400
+Karnataka,Bengaluru,Bengaluru APMC,Turmeric,Turmeric Stick,Medium,20/07/2026,18000,22000,20000
+Karnataka,Bengaluru,Bengaluru APMC,Red gram split/Arhar dal/Tur dal,Arhar Dal(Tur),Medium,20/07/2026,12000,12500,12250
+Karnataka,Bengaluru,Bengaluru APMC,Alasande Gram,Alasande Gram,Medium,20/07/2026,8000,8500,8250
+Karnataka,Bengaluru,Bengaluru APMC,Wheat,Local,FAQ,20/07/2026,3500,4500,4000
+Karnataka,Bengaluru,Bengaluru APMC,Green Gram(Moong)(Whole),Green (Whole),FAQ,20/07/2026,11000,12000,11500
+Karnataka,Bengaluru,Bengaluru APMC,Mustard,Other,FAQ,20/07/2026,10200,11500,10850
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Apple,Apple,Large,20/07/2026,10000,18000,16000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Banana - Green,Banana - Green,Local,20/07/2026,2000,2400,2300
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Capsicum,Capsicum,Local,20/07/2026,4000,5000,4500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Alsandikai,Alsandikai,Local,20/07/2026,2800,3000,2900
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Drumstick,Drumstick,Local,20/07/2026,4000,5500,4500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Sweet Pumpkin,Sweet Pumpkin,Local,20/07/2026,800,1000,900
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Suvarna Gadde,Suvarnagadde,Local,20/07/2026,3800,4000,3900
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Lime,Lime,Local,20/07/2026,3500,4500,4000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Karbuja(Musk Melon),Karbhuja,Local,20/07/2026,1000,2000,1500
+Karnataka,Tumakuru,Tiptur APMC,Copra,Copra,Local,20/07/2026,30500,32766,32666
+Karnataka,Davangere,Davangere APMC,Paddy(Common),Paddy Medium,Local,20/07/2026,2370,3350,2895
+Karnataka,Davangere,Davangere APMC,Apple,Apple,Local,20/07/2026,10000,20000,15000
+Karnataka,Davangere,Davangere APMC,Mango,Mango,Local,20/07/2026,3000,4000,3500
+Karnataka,Davangere,Davangere APMC,Pineapple,Pine Apple,Local,20/07/2026,2000,3000,2500
+Karnataka,Davangere,Davangere APMC,Papaya,Papaya,Local,20/07/2026,500,1000,700
+Karnataka,Davangere,Davangere APMC,Arecanut(Betelnut/Supari),Sippegotu,Local,20/07/2026,12000,12000,12000
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Gur(Jaggery),Achhu,Local,20/07/2026,3400,4701,4599
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,1600,3200,2300
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Knool Khol,Knool Khol,Local,20/07/2026,1500,3000,2200
+Karnataka,Kalaburagi,Kalaburagi APMC,Wheat,Sharbati,Local,20/07/2026,2200,3150,2600
+Karnataka,Kalaburagi,Kalaburagi APMC,Rice,Fine,Local,20/07/2026,4000,5500,4750
+Karnataka,Kalaburagi,Kalaburagi APMC,Apple,Apple,Local,20/07/2026,4000,8000,6000
+Karnataka,Kalaburagi,Kalaburagi APMC,Black Gram(Urd Beans)(Whole),Black Gram (Whole),Non-FAQ,20/07/2026,4200,7000,6200
+Karnataka,Kalaburagi,Kalaburagi APMC,Soyabean,Soyabeen,Non-FAQ,20/07/2026,5500,6650,6100
+Karnataka,Bagalkot,Bagalkot APMC,Jowar(Sorghum),Jowar ( White),Local,20/07/2026,3900,3900,3900
+Karnataka,Chikkaballapur,Chintamani APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,400,600,500
+Karnataka,Chikkaballapur,Chintamani APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,1500,3000,2000
+Karnataka,Vijayanagara,Hospet APMC,Carrot,Carrot,Local,20/07/2026,2000,2400,2400
+Karnataka,Vijayanagara,Hospet APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,1600,2000,1800
+Karnataka,Koppal,Kustagi APMC,Neem Seed,Neem Seed,Medium,20/07/2026,800,1800,1629
+Karnataka,Koppal,Kustagi APMC,Maize,Hybrid/Local,FAQ,20/07/2026,2000,2000,2000
+Karnataka,Koppal,Kustagi APMC,Sunflower/Sunflower Seed,Hybrid,FAQ,20/07/2026,8000,8000,8000
+Karnataka,Bellary,Ballari APMC,Jowar(Sorghum),Yellow,Non-FAQ,20/07/2026,2009,3669,2145
+Karnataka,Kolar,Kolar APMC,Beans,Beans (Whole),Local,20/07/2026,3000,4000,3600
+Karnataka,Kolar,Kolar APMC,Chilly Capsicum,Chilly Capsicum,Local,20/07/2026,2000,3000,2500
+Karnataka,Kolar,Kolar APMC,Raddish,Raddish,Local,20/07/2026,1000,1500,1300
+Karnataka,Kolar,Kolar APMC,Chapparad Avare,Chapparada Avarekai,Local,20/07/2026,3000,4000,3200
+Karnataka,Kolar,Kolar APMC,Knool Khol,Knool Khol,Local,20/07/2026,1000,2000,1600
+Karnataka,Raichur,Sindhanur APMC,Rice,Broken Rice,FAQ,20/07/2026,2350,2350,2350
+Karnataka,Raichur,Sindhanur APMC,Paddy(Common),Paddy RNR new,FAQ,20/07/2026,2300,3710,3100
+Karnataka,Raichur,Sindhanur APMC,Bajra(Pearl Millet/Cumbu),Local,FAQ,20/07/2026,2100,2100,2100
+Karnataka,Koppal,Gangavathi APMC,Rice,Other,Small,20/07/2026,2300,3027,2600
+Karnataka,Koppal,Gangavathi APMC,Paddy(Common),Sona Masuri (OLD),Non-FAQ,20/07/2026,3333,3640,3427
+Karnataka,Chikkaballapur,Gauribidanur APMC,Bottle gourd,Bottle Gourd,Local,20/07/2026,1500,2200,2000
+Karnataka,Chikkaballapur,Gauribidanur APMC,Cabbage,Cabbage,Local,20/07/2026,800,1500,1200
+Karnataka,Chikkaballapur,Gauribidanur APMC,Raddish,Raddish,Local,20/07/2026,2500,3500,3000
+Karnataka,Chikkaballapur,Gauribidanur APMC,Knool Khol,Knool Khol,Local,20/07/2026,2000,3000,2500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Lime,Lime,Local,20/07/2026,3500,4500,4000
+Karnataka,Shivamogga,Shikaripura APMC,Paddy(Common),Paddy,FAQ,20/07/2026,2500,3000,2644
+Karnataka,Vijayanagara,H.B. Halli APMC,Cowpea(Lobia/Karamani),Cowpea (Whole),Large,20/07/2026,6800,7800,7800
+Karnataka,Vijayanagara,H.B. Halli APMC,Neem Seed,Neem Seed,Large,20/07/2026,900,900,900
+Karnataka,Bengaluru South,Channapatna APMC,Banana,Elakki Bale,Local,20/07/2026,3500,6700,6000
+Karnataka,Bengaluru South,Channapatna APMC,Tomato,Tomato,Local,20/07/2026,650,1750,1250
+Karnataka,Bengaluru South,Channapatna APMC,Green Chilli,Green Chilly,Local,20/07/2026,4500,5000,4700
+Karnataka,Dakshina Kannada,Bantwala APMC,Arecanut(Betelnut/Supari),New Variety,Local,20/07/2026,27000,47500,36200
+Karnataka,Hassan,Arasikere APMC,Coconut,Medium,Medium,20/07/2026,24000,24000,24000
+Karnataka,Hassan,Arasikere APMC,Arecanut(Betelnut/Supari),Other,Medium,20/07/2026,21000,21000,21000
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Potato,Other,Local,20/07/2026,1800,1800,1800
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Cauliflower,Local,Local,20/07/2026,1900,1900,1900
+Karnataka,Chitradurga,Challakere APMC,Groundnut,Gejje,Local,20/07/2026,6279,9429,7967
+Karnataka,Kolar,Bangarpet APMC,Brinjal,Brinjal,Local,20/07/2026,1000,1700,1500
+Karnataka,Kolar,Bangarpet APMC,Bitter gourd,Bitter Gourd,Local,20/07/2026,2500,3500,3000
+Karnataka,Kolar,Bangarpet APMC,Ginger(Green),Green Ginger,Local,20/07/2026,8000,9300,9000
+Karnataka,Kolar,Bangarpet APMC,Cabbage,Cabbage,Local,20/07/2026,700,1500,1000
+Karnataka,Kolar,Bangarpet APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,1500,2300,2000
+Karnataka,Kolar,Bangarpet APMC,Raddish,Raddish,Local,20/07/2026,700,1500,1300
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Cqca,Local,20/07/2026,11219,31699,29509
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Bilegotu,Local,20/07/2026,18199,31399,29299
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Rashi,Local,20/07/2026,39209,53019,52599
+Karnataka,Bidar,Bidar APMC,Wheat,Red,Non-FAQ,20/07/2026,2800,3475,3100
+Karnataka,Bidar,Bidar APMC,Soyabean,Yellow,Non-FAQ,20/07/2026,6123,7643,7504
+Karnataka,Bengaluru South,Ramanagara APMC,Green Chilli,Green Chilly,Local,20/07/2026,2400,5000,4000
+Karnataka,Bengaluru South,Ramanagara APMC,Carrot,Carrot,Local,20/07/2026,4000,6000,5000
+Karnataka,Bengaluru South,Ramanagara APMC,Beetroot,Beetroot,Local,20/07/2026,3200,4000,3500
+Karnataka,Bengaluru South,Ramanagara APMC,Drumstick,Drumstick,Local,20/07/2026,5000,7200,6500
+Karnataka,Belagavi,Bailahongal APMC,Maize,Hybrid/Local,Local,20/07/2026,1900,2200,2000
+Karnataka,Gadag,Laxmeshwar APMC,Mataki,Mataki (W),Small,20/07/2026,8288,8288,8288
+Karnataka,Gadag,Laxmeshwar APMC,Mustard,Other,Non-FAQ,20/07/2026,6829,6929,6879
+Karnataka,Gadag,Laxmeshwar APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Non-FAQ,20/07/2026,3350,6012,4681
+Karnataka,Shivamogga,Shimoga APMC,Tomato,Tomato,Local,20/07/2026,400,1000,700
+Karnataka,Shivamogga,Shimoga APMC,Bitter gourd,Bitter Gourd,Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shimoga APMC,Carrot,Carrot,Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shimoga APMC,Cabbage,Cabbage,Local,20/07/2026,1000,1200,1100
+Karnataka,Shivamogga,Shimoga APMC,Sweet Pumpkin,Sweet Pumpkin,Local,20/07/2026,800,1200,1000
+Karnataka,Davangere,Honnali APMC,Cucumbar(Kheera),Cucumbar,Medium,20/07/2026,1500,1800,1700
+Karnataka,Davangere,Honnali APMC,Ridgeguard(Tori),Ridgeguard(Tori),Medium,20/07/2026,1000,1500,1300
+Karnataka,Mysuru,Periyapatna APMC,Arecanut(Betelnut/Supari),Sippegotu,Medium,20/07/2026,13300,13300,13300
+Karnataka,Vijayapura,Vijayapura APMC,Bengal Gram Dal(Chana Dal),Bengal Gram Dal,Local,20/07/2026,6650,7600,6875
+Karnataka,Vijayapura,Vijayapura APMC,Black Gram Dal(Urd Dal),Black Gram Dal,Local,20/07/2026,1080,11100,10600
+Karnataka,Chikkamagaluru,Tarikere APMC,Jowar(Sorghum),Yellow,Local,20/07/2026,4250,4250,4250
+Karnataka,Chikkaballapur,Bagepalli APMC,Bitter gourd,Bitter Gourd,Small,20/07/2026,3000,3400,3100
+Karnataka,Shivamogga,APMC THIRTHAHALLI,Maize,Hybrid/Local,Local,20/07/2026,2500,2500,2500
+Karnataka,Bengaluru,Bengaluru APMC,Rice,Medium,Medium,20/07/2026,6000,6300,6150
+Karnataka,Bengaluru,Bengaluru APMC,Garlic,Garlic,Medium,20/07/2026,9000,25000,14000
+Karnataka,Bengaluru,Bengaluru APMC,Corriander seed,Coriander Seed,Medium,20/07/2026,15000,20000,17500
+Karnataka,Bengaluru,Bengaluru APMC,Dry Chillies,Guntur,Medium,20/07/2026,22000,28000,25000
+Karnataka,Bengaluru,Bengaluru APMC,Green Gram Dal(Moong Dal),Green Gram Dal,Medium,20/07/2026,11500,12500,12000
+Karnataka,Bengaluru,Bengaluru APMC,Ground Nut Seed,Ground Nut Seed,Medium,20/07/2026,14700,15000,14850
+Karnataka,Bengaluru,Bengaluru APMC,Chennangi Dal,Chennangi Dal,Medium,20/07/2026,6000,6500,6250
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Grapes,Black,Local,20/07/2026,2000,3000,2500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Snakeguard,Snakeguard,Local,20/07/2026,1400,1600,1500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Cucumbar(Kheera),Cucumbar,Local,20/07/2026,2700,3000,2800
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Peas Wet,Peas Wet,Local,20/07/2026,11000,13000,12000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Bunch Beans,Bunch Beans,Local,20/07/2026,3800,4200,4000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Water Melon,Water Melon,Local,20/07/2026,800,1500,1300
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Beetroot,Beetroot,Local,20/07/2026,2600,3000,2800
+Karnataka,Mandya,Srirangapattana APMC,Gur(Jaggery),Kurikatu,Local,20/07/2026,4000,4200,4000
+Karnataka,Uttara Kannada,Kumta APMC,Arecanut(Betelnut/Supari),Hale Chali,Local,20/07/2026,44989,48219,46759
+Karnataka,Chikkaballapur,Bagepalli APMC,Tomato,Tomato,Small,20/07/2026,230,2500,1900
+Karnataka,Chikkaballapur,Bagepalli APMC,Carrot,Carrot,Small,20/07/2026,2000,30000,2400
+Karnataka,Chikkaballapur,Bagepalli APMC,Beetroot,Beetroot,Small,20/07/2026,1800,2500,2000
+Karnataka,Chikkaballapur,Bagepalli APMC,Drumstick,Drumstick,Small,20/07/2026,3000,4000,3200
+Karnataka,Shivamogga,APMC THIRTHAHALLI,Arecanut(Betelnut/Supari),Gorabalu,Local,20/07/2026,29000,30500,29500
+Karnataka,Bengaluru South,Channapatna APMC,Brinjal,Brinjal,Local,20/07/2026,3600,4000,3800
+Karnataka,Chitradurga,Chitradurga APMC,Ragi(Finger Millet),Local,Local,20/07/2026,3200,3901,3567
+Karnataka,Chitradurga,Chitradurga APMC,Avare Dal,Avare (Whole),Local,20/07/2026,3925,3925,3925
+Karnataka,Chikkamagaluru,Mudigere APMC,Black pepper,Other,Local,20/07/2026,70000,70000,70000
+Karnataka,Dakshina Kannada,Bantwala APMC,Arecanut(Betelnut/Supari),Cqca,Local,20/07/2026,17000,27000,25000
+Karnataka,Kolar,Bangarpet APMC,Onion,Onion,Local,20/07/2026,2000,2700,2500
+Karnataka,Kolar,Bangarpet APMC,Beetroot,Beetroot,Local,20/07/2026,2000,2500,2300
+Karnataka,Kolar,Bangarpet APMC,Drumstick,Drumstick,Local,20/07/2026,3500,4500,4300
+Karnataka,Uttara Kannada,Sirsi APMC,Arecanut(Betelnut/Supari),Chali,Local,20/07/2026,43149,48690,46232
+Karnataka,Uttara Kannada,Sirsi APMC,Arecanut(Betelnut/Supari),Bette,Local,20/07/2026,31899,46399,40647
+Karnataka,Mysuru,Nanjangud APMC,Beans,Beans (Whole),Local,20/07/2026,3703,6666,5550
+Karnataka,Raichur,Lingasugur APMC,Bajra(Pearl Millet/Cumbu),Hybrid,Non-FAQ,20/07/2026,2000,2890,2600
+Karnataka,Raichur,Lingasugur APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Non-FAQ,20/07/2026,8225,8225,8225
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Kempugotu,Local,20/07/2026,35399,39511,38399
+Karnataka,Shivamogga,Bhadravathi APMC,Gur(Jaggery),Unde,Local,20/07/2026,6500,6500,6500
+Karnataka,Bidar,Bidar APMC,Jowar(Sorghum),Jowar ( White),Non-FAQ,20/07/2026,3600,5300,4700
+Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Round,Local,20/07/2026,1800,2400,2000
+Karnataka,Bengaluru South,Ramanagara APMC,Tomato,Tomato,Local,20/07/2026,1000,1800,1500
+Karnataka,Bengaluru South,Ramanagara APMC,Ginger(Green),Green Ginger,Local,20/07/2026,8000,13000,12000
+Karnataka,Bengaluru South,Ramanagara APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,2000,2600,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Capsicum,Capsicum,Local,20/07/2026,6000,8000,7000
+Karnataka,Haveri,Hanagal APMC,Rice,CR 1009 (Coarse) Boiled,Medium,20/07/2026,2200,2200,2200
+Karnataka,Raichur,Manvi APMC,Paddy(Common),Sona Masuri (OLD),Non-FAQ,20/07/2026,3170,4614,4126
+Karnataka,Raichur,Manvi APMC,Bajra(Pearl Millet/Cumbu),Other,Non-FAQ,20/07/2026,2600,2600,2600
+Karnataka,Gadag,Laxmeshwar APMC,Alasande Gram,Alasande Gram,Small,20/07/2026,5248,7279,5609
+Karnataka,Gadag,Laxmeshwar APMC,Maize,Local,Non-FAQ,20/07/2026,2315,2315,2315
+Karnataka,Gadag,Laxmeshwar APMC,Jowar(Sorghum),Jowar ( White),Non-FAQ,20/07/2026,2111,3019,2402
+Karnataka,Shivamogga,Shimoga APMC,Garlic,Garlic,Local,20/07/2026,10000,18000,15000
+Karnataka,Shivamogga,Shimoga APMC,Cauliflower,Cauliflower,Local,20/07/2026,1500,2000,1750
+Karnataka,Shivamogga,Shimoga APMC,Brinjal,Brinjal,Local,20/07/2026,1200,1600,1400
+Karnataka,Shivamogga,Shimoga APMC,Green Chilli,Green Chilly,Local,20/07/2026,2000,4000,3000
+Karnataka,Shivamogga,Shimoga APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,1500,2000,1750
+Karnataka,Shivamogga,Shimoga APMC,Beetroot,Beetroot,Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shimoga APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,800,1000,900
+Karnataka,Shivamogga,Shimoga APMC,Raddish,Raddish,Local,20/07/2026,2000,3000,2500
+Karnataka,Udupi,Udupi APMC,Onion,Onion,Local,20/07/2026,2300,2400,2400
+Karnataka,Davangere,Honnali APMC,Cabbage,Cabbage,Medium,20/07/2026,1000,1200,1100
+Karnataka,Davangere,Honnali APMC,Ladies Finger,Ladies Finger,Medium,20/07/2026,1500,1800,1700
+Karnataka,Dakshina Kannada,Puttur APMC,Arecanut(Betelnut/Supari),New Variety,Local,20/07/2026,30000,47500,46000
+Karnataka,Chamarajanagar,Gundlupet APMC,Tomato,Tomato,Local,20/07/2026,1300,1400,1300
+Karnataka,Chamarajanagar,Gundlupet APMC,Kulthi(Horse Gram),Horse gram (Whole),Local,20/07/2026,4700,4700,4700
+Karnataka,Chamarajanagar,Gundlupet APMC,Coconut,Small,Local,20/07/2026,20000,20000,20000
+Karnataka,Vijayapura,Vijayapura APMC,Copra,Copra,Local,20/07/2026,6500,6900,6800
+Karnataka,Davangere,Davangere APMC,Rice,Medium,Local,20/07/2026,2300,7345,4842
+Karnataka,Davangere,Davangere APMC,Copra,Copra,Local,20/07/2026,11700,13150,12435
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Brinjal,Round/Long,Local,20/07/2026,1000,1600,1300
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Beans,Beans (Whole),Local,20/07/2026,1500,2300,1900
+Karnataka,Kalaburagi,Kalaburagi APMC,Rice,Coarse,Local,20/07/2026,3100,4000,3600
+Karnataka,Kalaburagi,Kalaburagi APMC,Orange,Nagpuri,Local,20/07/2026,4000,6000,5000
+Karnataka,Kalaburagi,Kalaburagi APMC,Beans,Beans (Whole),Local,20/07/2026,1000,3000,2500
+Karnataka,Kalaburagi,Kalaburagi APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,1500,2500,2000
+Karnataka,Kalaburagi,Kalaburagi APMC,Capsicum,Capsicum,Local,20/07/2026,3000,5000,4000
+Karnataka,Kalaburagi,Kalaburagi APMC,Karbuja(Musk Melon),Karbhuja,Local,20/07/2026,5000,7000,6000
+Karnataka,Bagalkot,Bagalkot APMC,Groundnut,Gejje,Local,20/07/2026,6311,8911,8014
+Karnataka,Bagalkot,Bagalkot APMC,Cowpea(Lobia/Karamani),Cowpea (Whole),Local,20/07/2026,4800,5800,5800
+Karnataka,Chikkaballapur,Chintamani APMC,Tomato,Tomato,Local,20/07/2026,300,1466,1000
+Karnataka,Vijayanagara,Hospet APMC,Onion,Local,Local,20/07/2026,1800,2200,2000
+Karnataka,Vijayanagara,Hospet APMC,Potato,Potato,Local,20/07/2026,1200,1400,1400
+Karnataka,Vijayanagara,Hospet APMC,Garlic,Garlic,Local,20/07/2026,4400,4600,4600
+Karnataka,Vijayanagara,Hospet APMC,Brinjal,Brinjal,Local,20/07/2026,2000,3000,2800
+Karnataka,Vijayanagara,Hospet APMC,Ginger(Green),Green Ginger,Local,20/07/2026,2600,2800,2800
+Karnataka,Vijayanagara,Hospet APMC,Cabbage,Cabbage,Local,20/07/2026,1000,1000,1000
+Karnataka,Dharwad,Dharwar APMC,Jowar(Sorghum),Jowar ( White),FAQ,20/07/2026,5700,5700,5700
+Karnataka,Gadag,Rona APMC,Bengal Gram(Gram)(Whole),Average (Whole),Non-FAQ,20/07/2026,7500,7500,7500
+Karnataka,Kolar,Kolar APMC,Carrot,Carrot,Local,20/07/2026,2500,4500,4000
+Karnataka,Kolar,Kolar APMC,Cabbage,Cabbage,Local,20/07/2026,800,1000,900
+Karnataka,Koppal,Gangavathi APMC,Paddy(Common),Paddy RNR Old,Non-FAQ,20/07/2026,3693,3757,3747
+Karnataka,Koppal,Gangavathi APMC,Bajra(Pearl Millet/Cumbu),Local,Non-FAQ,20/07/2026,2600,2600,2600
+Karnataka,Chikkaballapur,Gauribidanur APMC,Brinjal,Round,Local,20/07/2026,2000,3000,2500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Beetroot,Beetroot,Local,20/07/2026,1500,2500,2000
+Karnataka,Chikkaballapur,Gauribidanur APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,600,800,700
+Karnataka,Chikkaballapur,Gauribidanur APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,1500,2500,2000
+Karnataka,Mysuru,Hunsur APMC,Coconut,Small,Local,20/07/2026,15000,15000,15000
+Karnataka,Bengaluru,Bengaluru APMC,Rice,Fine,Medium,20/07/2026,5800,6200,6000
+Karnataka,Bengaluru,Bengaluru APMC,Onion,Local,Medium,20/07/2026,1500,2200,1800
+Karnataka,Bengaluru,Bengaluru APMC,Onion,Puna,Local,20/07/2026,1500,3200,2500
+Karnataka,Bengaluru,Bengaluru APMC,Potato,Local,Medium,20/07/2026,1700,2000,1800
+Karnataka,Bengaluru,Bengaluru APMC,Gur(Jaggery),Mudde,Medium,20/07/2026,5000,5500,5250
+Karnataka,Bengaluru,Bengaluru APMC,Kulthi(Horse Gram),Horse gram (Whole),Medium,20/07/2026,7000,7500,7250
+Karnataka,Bengaluru,Bengaluru APMC,Foxtail Millet(Navane),Other,Medium,20/07/2026,4000,4500,4250
+Karnataka,Bengaluru,Bengaluru APMC,Coconut,Small,Medium,20/07/2026,20000,30000,25000
+Karnataka,Bengaluru,Bengaluru APMC,Black Gram Dal(Urd Dal),Black Gram Dal,Medium,20/07/2026,8000,8300,8150
+Karnataka,Bengaluru,Bengaluru APMC,Jowar(Sorghum),Jowar ( White),FAQ,20/07/2026,3000,4000,3500
+Karnataka,Bengaluru,Bengaluru APMC,Bengal Gram(Gram)(Whole),Average (Whole),FAQ,20/07/2026,6000,6500,6250
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Banana,Nendra Bale,Local,20/07/2026,1000,2900,1950
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Banana,Elakki Bale,Local,20/07/2026,1000,7100,1650
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Cauliflower,Cauliflower,Local,20/07/2026,2200,2600,2400
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Ladies Finger,Ladies Finger,Local,20/07/2026,2400,2800,2700
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Thondekai,Thondekai,Local,20/07/2026,2600,2900,2800
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Green Chilli,Green Chilly,Local,20/07/2026,3500,4500,4000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Pomegranate,Pomogranate,Large,20/07/2026,10000,18000,14000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Bottle gourd,Bottle Gourd,Local,20/07/2026,1800,2000,1900
+Karnataka,Uttara Kannada,Kumta APMC,Arecanut(Betelnut/Supari),Cqca,Local,20/07/2026,17869,31999,29769
+Karnataka,Chitradurga,Holalkere APMC,Arecanut(Betelnut/Supari),Other,Local,20/07/2026,22927,26200,24962
+Karnataka,Bellary,Ballari APMC,Bajra(Pearl Millet/Cumbu),Hybrid,Non-FAQ,20/07/2026,2323,2711,2559
+Karnataka,Davangere,Davangere APMC,Onion,Onion,Local,20/07/2026,2000,3000,2600
+Karnataka,Davangere,Davangere APMC,Water Melon,Water Melon,Local,20/07/2026,1000,2000,1500
+Karnataka,Davangere,Davangere APMC,Coconut,Small,Local,20/07/2026,15000,15000,15000
+Karnataka,Davangere,Davangere APMC,Karbuja(Musk Melon),Karbhuja,Local,20/07/2026,1000,2000,1500
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Brinjal,Other,Local,20/07/2026,1000,1200,1100
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Turmeric,Turmeric,Local,20/07/2026,13200,13200,13200
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Beetroot,Beetroot,Local,20/07/2026,1400,2700,2000
+Karnataka,Kalaburagi,Kalaburagi APMC,Bengal Gram(Gram)(Whole),Average (Whole),Local,20/07/2026,4850,6300,5550
+Karnataka,Kalaburagi,Kalaburagi APMC,Water Melon,Water Melon,Local,20/07/2026,3000,5000,4000
+Karnataka,Kalaburagi,Kalaburagi APMC,Tomato,Tomato,Local,20/07/2026,1000,2000,1500
+Karnataka,Kalaburagi,Kalaburagi APMC,Green Chilli,Green Chilly,Local,20/07/2026,2000,3000,2500
+Karnataka,Kalaburagi,Kalaburagi APMC,"Sesamum(Sesame,Gingelly,Til)",Black,Non-FAQ,20/07/2026,9000,11800,10600
+Karnataka,Bagalkot,Bagalkot APMC,Bengal Gram(Gram)(Whole),Average (Whole),Local,20/07/2026,4009,4759,4259
+Karnataka,Bagalkot,Bagalkot APMC,Sunflower/Sunflower Seed,Sunflower,Local,20/07/2026,8211,8250,8220
+Karnataka,Chikkaballapur,Chintamani APMC,Brinjal,Brinjal,Local,20/07/2026,1500,3000,2000
+Karnataka,Chikkaballapur,Chintamani APMC,Beetroot,Beetroot,Local,20/07/2026,1000,2000,1500
+Karnataka,Chikkaballapur,Chintamani APMC,Knool Khol,Knool Khol,Local,20/07/2026,3000,6000,4000
+Karnataka,Vijayanagara,Hospet APMC,Tomato,Tomato,Local,20/07/2026,1000,1200,1200
+Karnataka,Vijayanagara,Hospet APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1500,1800,1600
+Karnataka,Kolar,Kolar APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,2000,3500,3000
+Karnataka,Raichur,Sindhanur APMC,Rice,Medium,FAQ,20/07/2026,2600,5200,5125
+Karnataka,Koppal,Gangavathi APMC,Garlic,Garlic,Small,20/07/2026,6000,6000,6000
+Karnataka,Raichur,Raichur APMC,Paddy(Common),Sona Mahsuri,FAQ,20/07/2026,2711,3259,3224
+Karnataka,Chikkaballapur,Gauribidanur APMC,Onion,Onion,Local,20/07/2026,2000,3000,2500
+Karnataka,Chikkaballapur,Gauribidanur APMC,Bitter gourd,Bitter Gourd,Local,20/07/2026,1500,2500,2000
+Karnataka,Chikkaballapur,Gauribidanur APMC,Thondekai,Thondekai,Local,20/07/2026,2500,3500,3000
+Karnataka,Mysuru,Hunsur APMC,Tender Coconut,Tender Coconut,Local,20/07/2026,20000,20000,20000
+Karnataka,Shivamogga,Shikaripura APMC,Rice,Broken Rice,FAQ,20/07/2026,2200,2200,2200
+Karnataka,Vijayanagara,H.B. Halli APMC,Ragi(Finger Millet),Feeds (Poultry Quality),FAQ,20/07/2026,3100,3100,3100
+Karnataka,Bengaluru South,Channapatna APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,2000,2500,2300
+Karnataka,Bengaluru South,Channapatna APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1200,2000,1600
+Karnataka,Dakshina Kannada,Bantwala APMC,Black pepper,Black Pepper,Grade Range-1,20/07/2026,35200,68500,51000
+Karnataka,Hassan,Arasikere APMC,Copra,Copra,FAQ,20/07/2026,30000,32000,30000
+Karnataka,Hassan,Arasikere APMC,Copra,Milling Copra,FAQ,20/07/2026,18000,24000,18000
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Green Chilli,Green Chilly,Local,20/07/2026,1200,1400,1300
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1200,1200,1200
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Knool Khol,Knool Khol,Local,20/07/2026,4000,4000,4000
+Karnataka,Kodagu,Madikeri APMC,Black pepper,Black Pepper,Local,20/07/2026,35000,35000,35000
+Karnataka,Kolar,Bangarpet APMC,Potato,Local,Local,20/07/2026,1000,2000,1500
+Karnataka,Kolar,Bangarpet APMC,Tomato,Tomato,Local,20/07/2026,800,1500,1000
+Karnataka,Kolar,Bangarpet APMC,Beans,Beans (Whole),Local,20/07/2026,5000,6700,6500
+Karnataka,Kolar,Bangarpet APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1000,1500,1300
+Karnataka,Kolar,Bangarpet APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,2000,2700,2500
+Karnataka,Kolar,Bangarpet APMC,Capsicum,Capsicum,Local,20/07/2026,3500,4700,4500
+Karnataka,Kolar,Bangarpet APMC,Knool Khol,Knool Khol,Local,20/07/2026,1000,2000,1500
+Karnataka,Mysuru,Nanjangud APMC,Brinjal,Brinjal,Local,20/07/2026,3030,3703,3333
+Karnataka,Mysuru,Nanjangud APMC,Carrot,Carrot,Local,20/07/2026,2380,3333,2777
+Karnataka,Shivamogga,Sagar APMC,Black pepper,Other,Local,20/07/2026,60899,67779,60899
+Karnataka,Shivamogga,Sagar APMC,Arecanut(Betelnut/Supari),Chali,Local,20/07/2026,34300,41519,40519
+Karnataka,Shivamogga,Bhadravathi APMC,Rice,Medium,Local,20/07/2026,2500,4800,2500
+Karnataka,Uttara Kannada,Haliyala APMC,Paddy(Common),Paddy Medium,Local,20/07/2026,2360,2600,2600
+Karnataka,Bengaluru South,Ramanagara APMC,Bitter gourd,Bitter Gourd,Local,20/07/2026,3200,4000,3500
+Karnataka,Bengaluru South,Ramanagara APMC,Bottle gourd,Bottle Gourd,Local,20/07/2026,1200,1600,1400
+Karnataka,Bengaluru South,Ramanagara APMC,Beans,Beans (Whole),Local,20/07/2026,4000,6000,5000
+Karnataka,Bengaluru South,Ramanagara APMC,Cabbage,Cabbage,Local,20/07/2026,2000,2800,2500
+Karnataka,Bengaluru South,Ramanagara APMC,Alsandikai,Alsandikai,Local,20/07/2026,3500,4000,3800
+Karnataka,Haveri,Hanagal APMC,Paddy(Common),Paddy,FAQ,20/07/2026,2000,3200,2400
+Karnataka,Haveri,Hanagal APMC,Maize,Local,FAQ,20/07/2026,2310,2470,2500
+Karnataka,Belagavi,Bailahongal APMC,Soyabean,Soyabeen,Local,20/07/2026,6600,7100,7017
+Karnataka,Raichur,Manvi APMC,Jowar(Sorghum),Other,Non-FAQ,20/07/2026,3350,3350,3350
+Karnataka,Gadag,Laxmeshwar APMC,Soyabean,Soyabeen,Non-FAQ,20/07/2026,5168,7099,6581
+Karnataka,Davangere,Honnali APMC,Green Chilli,Green Chilly,Medium,20/07/2026,1400,1600,1500
+Karnataka,Davangere,Honnali APMC,Coconut,Small,Medium,20/07/2026,16000,24000,19600
+Karnataka,Davangere,Honnali APMC,Beetroot,Beetroot,Medium,20/07/2026,2000,2200,2100
+Karnataka,Dakshina Kannada,Puttur APMC,Black pepper,Black Pepper,Local,20/07/2026,38000,67000,65000
+Karnataka,Dakshina Kannada,Puttur APMC,Arecanut(Betelnut/Supari),Cqca,Local,20/07/2026,20000,33000,29700
+Karnataka,Chamarajanagar,Gundlupet APMC,Sunflower/Sunflower Seed,Other,Local,20/07/2026,7300,7300,7300
+Karnataka,Chamarajanagar,Gundlupet APMC,Beans,Beans (Whole),Local,20/07/2026,2300,2300,2300
+Karnataka,Vijayapura,Vijayapura APMC,Dry Grapes,Dry Grapes,Local,20/07/2026,4000,32600,30800
+Karnataka,Vijayapura,Vijayapura APMC,Chennangi Dal,Chennangi Dal,Local,20/07/2026,6800,11113,7300
+Karnataka,Vijayapura,Vijayapura APMC,Cotton,Bunny,Local,20/07/2026,8093,9767,9600
+Karnataka,Vijayapura,Vijayapura APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Local,20/07/2026,7288,7599,7443
+Karnataka,Chikkamagaluru,Tarikere APMC,Ragi(Finger Millet),Local,Local,20/07/2026,3350,3350,3350
+Karnataka,Chikkaballapur,Bagepalli APMC,Cauliflower,Cauliflower,Small,20/07/2026,600,1400,1000
+Karnataka,Chikkaballapur,Bagepalli APMC,Beans,Beans (Whole),Small,20/07/2026,4000,6000,4500
+Karnataka,Chikkaballapur,Bagepalli APMC,Cabbage,Cabbage,Small,20/07/2026,2000,2400,2200
+Karnataka,Chikkaballapur,Bagepalli APMC,Snakeguard,Snakeguard,Small,20/07/2026,1500,2000,1600
+Karnataka,Chikkaballapur,Bagepalli APMC,Cucumbar(Kheera),Cucumbar,Small,20/07/2026,1000,1500,1100
+Karnataka,Chikkaballapur,Bagepalli APMC,Capsicum,Capsicum,Small,20/07/2026,2000,2500,2200
+Karnataka,Chikkaballapur,Bagepalli APMC,Knool Khol,Knool Khol,Small,20/07/2026,2000,3000,2200
+Karnataka,Bengaluru,Bengaluru APMC,Rice,Dappa,Medium,20/07/2026,3800,4300,4050
+Karnataka,Bengaluru,Bengaluru APMC,Onion,Bangalore-Samall,Small,20/07/2026,1000,1500,1200
+Karnataka,Bengaluru,Bengaluru APMC,Methi Seeds,Methiseeds,Medium,20/07/2026,8500,11500,10000
+Karnataka,Bengaluru,Bengaluru APMC,Green Peas,Green Peas,Medium,20/07/2026,9000,10000,9500
+Karnataka,Bengaluru,Bengaluru APMC,Ginger(Green),Green Ginger,Medium,20/07/2026,12000,16000,13000
+Karnataka,Bengaluru,Bengaluru APMC,Maize,Hybrid/Local,FAQ,20/07/2026,2400,2800,2600
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Banana,Nauti Bale,Local,20/07/2026,700,2800,1750
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Mango,Totapuri,Local,20/07/2026,800,1200,1000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Mango,Neelam,Local,20/07/2026,2000,4000,3000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Tomato,Tomato,Local,20/07/2026,1500,1700,1600
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Ginger(Green),Green Ginger,Local,20/07/2026,13000,15000,14000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Sweet Potato,Sweet Potato,Local,20/07/2026,2800,3200,3000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Raddish,Raddish,Local,20/07/2026,2000,2400,2300
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Green Avare(W),Green Avare (W),Local,20/07/2026,3200,4000,3600
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Cabbage,Cabbage,Local,20/07/2026,1600,1800,1700
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Banana,Pachha Bale,Local,20/07/2026,600,2700,1650
+Karnataka,Mandya,Srirangapattana APMC,Tender Coconut,Tender Coconut,Local,20/07/2026,20000,25000,25000
+Karnataka,Uttara Kannada,Kumta APMC,Arecanut(Betelnut/Supari),Factory,Local,20/07/2026,7039,23992,18689
+Karnataka,Chikkaballapur,Bagepalli APMC,Ladies Finger,Ladies Finger,Small,20/07/2026,1900,2500,2100
+Karnataka,Chikkaballapur,Bagepalli APMC,Ridgeguard(Tori),Ridgeguard(Tori),Small,20/07/2026,1000,2000,1500
+Karnataka,Shivamogga,APMC THIRTHAHALLI,Arecanut(Betelnut/Supari),Sippegotu,Local,20/07/2026,13000,14000,13500
+Karnataka,Davangere,Channagiri APMC,Coconut,Small,Grade Range-1,20/07/2026,22750,22750,22750
+Karnataka,Chitradurga,Chitradurga APMC,Maize,Local,Local,20/07/2026,2000,2704,2613
+Karnataka,Kalaburagi,Chincholi APMC,Red gram/Arhar/Tur(whole),Arhar (Whole),Non-FAQ,20/07/2026,8200,8500,8300
+Karnataka,Hassan,Arasikere APMC,Copra,Other,FAQ,20/07/2026,9000,12000,9000
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Onion,Other,Local,20/07/2026,2100,2100,2100
+Karnataka,Chikkamagaluru,Chikkamagaluru APMC,Tomato,Tomato,Local,20/07/2026,1200,2400,1400
+Karnataka,Uttara Kannada,Honnavar APMC,Arecanut(Betelnut/Supari),Hosa Chali,Local,20/07/2026,37000,39000,38000
+Karnataka,Kolar,Bangarpet APMC,Chilly Capsicum,Chilly Capsicum,Local,20/07/2026,3000,4500,4300
+Karnataka,Uttara Kannada,Sirsi APMC,Black pepper,Black Pepper,Local,20/07/2026,62299,70399,65167
+Karnataka,Uttara Kannada,Sirsi APMC,Arecanut(Betelnut/Supari),Bilegotu,Local,20/07/2026,25600,34299,30349
+Karnataka,Uttara Kannada,Sirsi APMC,Arecanut(Betelnut/Supari),Rashi,Local,20/07/2026,49511,51500,50506
+Karnataka,Mysuru,Nanjangud APMC,Potato,Potato,Local,20/07/2026,3030,3333,3030
+Karnataka,Raichur,Lingasugur APMC,Bengal Gram(Gram)(Whole),Average (Whole),Non-FAQ,20/07/2026,6000,6000,6000
+Karnataka,Shivamogga,Bhadravathi APMC,Arecanut(Betelnut/Supari),Other,Local,20/07/2026,27000,28500,28500
+Karnataka,Bidar,Bidar APMC,Rice,CR 1009 (Coarse) Boiled,Small,20/07/2026,4900,5500,5000
+Karnataka,Bidar,Bidar APMC,Green Gram(Moong)(Whole),Local,Non-FAQ,20/07/2026,4242,5555,5301
+Karnataka,Bengaluru South,Ramanagara APMC,Cauliflower,Cauliflower,Local,20/07/2026,2000,3200,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Brinjal,Brinjal,Local,20/07/2026,2000,4000,3000
+Karnataka,Bengaluru South,Ramanagara APMC,Chilly Capsicum,Chilly Capsicum,Local,20/07/2026,5000,7000,6000
+Karnataka,Bengaluru South,Ramanagara APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,2000,3000,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,2800,3500,3200
+Karnataka,Bengaluru South,Ramanagara APMC,Raddish,Raddish,Local,20/07/2026,2000,3200,2400
+Karnataka,Bengaluru South,Ramanagara APMC,Seemebadnekai,Seemebadanekai,Local,20/07/2026,2400,3200,3000
+Karnataka,Raichur,Manvi APMC,Rice,Other,Small,20/07/2026,2800,2800,2800
+Karnataka,Raichur,Manvi APMC,Dry Chillies,Local,Small,20/07/2026,5000,5000,5000
+Karnataka,Raichur,Manvi APMC,Cotton,Jayadhar,Non-FAQ,20/07/2026,9200,9200,9200
+Karnataka,Gadag,Laxmeshwar APMC,Wheat,White,Non-FAQ,20/07/2026,2025,3015,2520
+Karnataka,Gadag,Laxmeshwar APMC,Groundnut,Gejje,Non-FAQ,20/07/2026,3446,8529,5540
+Karnataka,Shivamogga,Shimoga APMC,Potato,Local,Local,20/07/2026,1700,2200,2000
+Karnataka,Shivamogga,Shimoga APMC,Beans,Beans (Whole),Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shimoga APMC,Thondekai,Thondekai,Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shimoga APMC,Capsicum,Capsicum,Local,20/07/2026,6000,8000,7000
+Karnataka,Shivamogga,Shimoga APMC,Drumstick,Drumstick,Local,20/07/2026,5000,7000,6000
+Karnataka,Shivamogga,Shimoga APMC,Knool Khol,Knool Khol,Local,20/07/2026,2000,3000,2500
+Karnataka,Udupi,Udupi APMC,Banana,Medium,Local,20/07/2026,2000,3500,2500
+Karnataka,Udupi,Udupi APMC,Potato,Potato,Local,20/07/2026,1300,1400,1400
+Karnataka,Udupi,Udupi APMC,Sweet Potato,Sweet Potato,Local,20/07/2026,2900,3000,3000
+Karnataka,Davangere,Honnali APMC,Cauliflower,Cauliflower,Medium,20/07/2026,2500,3000,2800
+Karnataka,Davangere,Honnali APMC,Cowpea(Veg),Cowpea (Veg),Medium,20/07/2026,1500,1800,1700
+Karnataka,Davangere,Honnali APMC,Paddy(Common),Paddy Medium,FAQ,20/07/2026,2020,2500,2350
+Karnataka,Davangere,Honnali APMC,Maize,Local,FAQ,20/07/2026,2400,2730,2557
+Karnataka,Vijayapura,Vijayapura APMC,Maize,Hybrid/Local,Local,20/07/2026,2478,3440,2494
+Karnataka,Bengaluru,Bengaluru APMC,Potato,Potato,Medium,20/07/2026,800,2000,1600
+Karnataka,Bengaluru,Bengaluru APMC,Tamarind Fruit,Tamarind Fruit,Medium,20/07/2026,11000,15000,13000
+Karnataka,Bengaluru,Bengaluru APMC,Bengal Gram Dal(Chana Dal),Bengal Gram Dal,Medium,20/07/2026,7000,8000,7500
+Karnataka,Bengaluru,Bengaluru APMC,Black Gram(Urd Beans)(Whole),Black Gram (Whole),FAQ,20/07/2026,7000,7200,7100
+Karnataka,Bengaluru,Bengaluru APMC,Groundnut,Big (With Shell),FAQ,20/07/2026,4000,5500,4750
+Karnataka,Bengaluru,Bengaluru APMC,Ragi(Finger Millet),Fine,FAQ,20/07/2026,4800,5200,5000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Pineapple,Pine Apple,Local,20/07/2026,2000,4000,3000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Grapes,Espani,Local,20/07/2026,3500,5500,4500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Papaya,Papaya,Local,20/07/2026,800,1600,1400
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",White Pumpkin,White Pumpkin,Local,20/07/2026,1100,1300,1200
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Chikoos(Sapota),Sapota,Local,20/07/2026,2000,3500,2500
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Mousambi(Sweet Lime),Mousambi,Large,20/07/2026,3200,4600,3800
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Ridgeguard(Tori),Ridgeguard(Tori),Local,20/07/2026,2500,2400,2300
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Chapparad Avare,Chapparada Avarekai,Local,20/07/2026,3600,4000,3800
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Seemebadnekai,Seemebadanekai,Local,20/07/2026,1300,1500,1400
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Beans,Beans (Whole),Local,20/07/2026,3500,4500,4000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Carrot,Carrot,Local,20/07/2026,4500,5500,5000
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Knool Khol,Knool Khol,Local,20/07/2026,2500,3000,2800
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Brinjal,Brinjal,Local,20/07/2026,2400,2800,2700
+Karnataka,Bengaluru,"Binny Mill (F&V), Bengaluru APMC",Bitter gourd,Bitter Gourd,Local,20/07/2026,2500,2700,2600
+Karnataka,Davangere,HarappanaHalli APMC,Ragi(Finger Millet),Local,Local,20/07/2026,3200,3500,3307
+Karnataka,Uttara Kannada,Kumta APMC,Arecanut(Betelnut/Supari),Hosa Chali,Local,20/07/2026,36199,46299,43529
+Karnataka,Uttara Kannada,Kumta APMC,Arecanut(Betelnut/Supari),Chippu,Local,20/07/2026,30309,33999,32819
+Karnataka,Mandya,Pandavapura APMC,Tender Coconut,Tender Coconut,Local,20/07/2026,22000,24000,23000
+Karnataka,Chikkamagaluru,Tarikere APMC,Coconut,Small,Local,20/07/2026,17500,21750,18068
+Karnataka,Davangere,Davangere APMC,Garlic,Garlic,Local,20/07/2026,10000,13000,12000
+Karnataka,Davangere,Davangere APMC,Mousambi(Sweet Lime),Mousambi,Local,20/07/2026,4000,5000,4500
+Karnataka,Davangere,Davangere APMC,Pomegranate,Pomogranate,Local,20/07/2026,5000,6000,5500
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Tomato,Tomato,Local,20/07/2026,400,1200,800
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Coconut,Small,Local,20/07/2026,13000,25000,25000
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Carrot,Carrot,Local,20/07/2026,1500,2800,2100
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1000,1800,1400
+Karnataka,Chamarajanagar,Chamarajanagar APMC,Tender Coconut,Tender Coconut,Local,20/07/2026,20000,23000,20000
+Karnataka,Kalaburagi,Kalaburagi APMC,Papaya,Papaya,Local,20/07/2026,3000,7000,5000
+Karnataka,Kalaburagi,Kalaburagi APMC,Pomegranate,Pomogranate,Local,20/07/2026,3000,4000,3500
+Karnataka,Kalaburagi,Kalaburagi APMC,Sunflower/Sunflower Seed,Sunflower,Non-FAQ,20/07/2026,4000,5000,4600
+Karnataka,Bagalkot,Bagalkot APMC,Maize,Hybrid/Local,Local,20/07/2026,2000,2610,2594
+Karnataka,Chikkaballapur,Chintamani APMC,Carrot,Carrot,Local,20/07/2026,2000,4000,3000
+Karnataka,Chikkaballapur,Chintamani APMC,Ladies Finger,Ladies Finger,Local,20/07/2026,1500,2500,2000
+Karnataka,Vijayanagara,Hospet APMC,Beetroot,Beetroot,Local,20/07/2026,2600,2600,2600
+Karnataka,Bellary,Ballari APMC,Groundnut,Hybrid,Non-FAQ,20/07/2026,3669,9111,7285
+Karnataka,Kolar,Kolar APMC,Cucumbar(Kheera),Cucumbar,Local,20/07/2026,1500,2500,2000
+Karnataka,Kolar,Kolar APMC,Potato,Local,Local,20/07/2026,1000,2500,2000
+Karnataka,Kolar,Kolar APMC,Cauliflower,Local,Local,20/07/2026,1000,1500,1300
+Karnataka,Kolar,Kolar APMC,Tomato,Tomato,Local,20/07/2026,300,1660,1060
+Karnataka,Koppal,Gangavathi APMC,Paddy(Common),Kaveri Sona,Non-FAQ,20/07/2026,2320,2347,2333
+Karnataka,Koppal,Gangavathi APMC,Groundnut,Big (With Shell),Non-FAQ,20/07/2026,7482,8014,7907
+Karnataka,Raichur,Raichur APMC,Groundnut,Shelled (Bunch),Grade Range-1,20/07/2026,4389,6755,5889
+Karnataka,Chikkaballapur,Gauribidanur APMC,Cauliflower,Local,Local,20/07/2026,1800,2600,2300
+Karnataka,Chikkaballapur,Gauribidanur APMC,Tomato,Tomato,Local,20/07/2026,600,1800,1600
+Karnataka,Chikkaballapur,Gauribidanur APMC,Beans,Beans (Whole),Local,20/07/2026,2000,3000,2500
+Karnataka,Shivamogga,Shikaripura APMC,Maize,Local,FAQ,20/07/2026,2280,2450,2380
+Karnataka,Vijayanagara,Kottur APMC,Ragi(Finger Millet),Feeds (Poultry Quality),Local,20/07/2026,3280,3330,3301
+Karnataka,Dharwad,Dharwar APMC,Bengal Gram(Gram)(Whole),Jawari/Local,FAQ,20/07/2026,6215,7200,6708

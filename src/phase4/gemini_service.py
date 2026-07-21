@@ -75,10 +75,12 @@ def call_gemini_api(prompt_dict: Dict[str, str], api_key: Optional[str] = None) 
         return "[Mode: Rule-Based Advisory Engine (Set GEMINI_API_KEY in .env for Gemini AI)]"
 
     try:
+        import warnings
+        warnings.filterwarnings("ignore", category=FutureWarning)
         import google.generativeai as genai
         genai.configure(api_key=effective_key)
 
-        model_name = "gemini-1.5-flash"
+        model_name = "gemini-2.0-flash"
         system_instruction = prompt_dict.get("system_instruction")
         user_prompt = prompt_dict.get("user_prompt", "")
 

@@ -1,0 +1,4 @@
+state,district,market,commodity_group,commodity,variety,arrivals,unit_of_arrivals,min_price,max_price,modal_price,unit_of_price,arrival_date
+Karnataka,Unknown,Manvi APMC,Cereals,Jowar(Sorghum),Other,18.1,Metric Tonnes,3250.0,3250.0,3250.0,Rs./Quintal,2026-07-21
+Karnataka,Unknown,Manvi APMC,Cereals,Paddy(Common),Sona Masuri (OLD),86.10000000000001,Metric Tonnes,3407.0,3550.0,3474.0,Rs./Quintal,2026-07-21
+Karnataka,Unknown,Manvi APMC,Cereals,Rice,Other,320.0,Metric Tonnes,2800.0,2800.0,2800.0,Rs./Quintal,2026-07-21

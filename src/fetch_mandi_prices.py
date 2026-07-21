@@ -267,6 +267,11 @@ def fetch_all_records() -> pd.DataFrame:
             f"OGD API HTTP error ({e}). "
             "Switching to FALLBACK source: Agmarknet portal ..."
         )
+    except RuntimeError as e:
+        logger.warning(
+            f"OGD API returned no records ({e}). "
+            "Switching to FALLBACK source: Agmarknet portal ..."
+        )
     except ValueError:
         # Missing API key — re-raise immediately, no point trying fallback
         raise
