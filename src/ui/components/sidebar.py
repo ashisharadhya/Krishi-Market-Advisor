@@ -9,6 +9,37 @@ def render_sidebar(data_folder="data"):
     default_idx = available_commodities.index(default_crop) if default_crop in available_commodities else 0
 
     st.sidebar.markdown('<div class="sidebar-section-title">Farmer Profile & Preferences</div>', unsafe_allow_html=True)
+    
+    from streamlit_mic_recorder import mic_recorder
+    from src.phase5.voice_assistant import process_voice_command
+    
+    st.sidebar.markdown("### 🎙️ AI Voice Assistant")
+    st.sidebar.markdown("<small>Speak naturally (e.g. 'I have 20 quintals of Arecanut in Shimoga')</small>", unsafe_allow_html=True)
+    audio = mic_recorder(start_prompt="Record Audio", stop_prompt="Stop Recording", key='sidebar_mic')
+    
+    if audio:
+        with st.sidebar.spinner("Processing Voice..."):
+            entities = process_voice_command(audio['bytes'])
+            if entities:
+                if entities.get("district"):
+                    # Find closest match in DISTANCES_KM
+                    for d in DISTANCES_KM.keys():
+                        if entities["district"].lower() in d.lower():
+                            st.session_state["farmer_district"] = d
+                            break
+                if entities.get("crop"):
+                    # Find closest match
+                    for c in available_commodities:
+                        if entities["crop"].lower() in c.lower():
+                            st.session_state["selected_commodity"] = c
+                            break
+                if entities.get("quantity"):
+                    st.session_state["harvest_qty"] = float(entities["quantity"])
+                if entities.get("language"):
+                    st.session_state["lang_choice"] = "Kannada" if "kannada" in entities["language"].lower() else "English"
+                st.sidebar.success("Updated preferences from voice!")
+                # Force a rerun to reflect the newly populated session state
+                st.rerun()
 
     auth_mode = st.sidebar.radio(
         "Operator Mode",
@@ -36,11 +67,16 @@ def render_sidebar(data_folder="data"):
     st.sidebar.markdown("---")
     st.sidebar.markdown('<div class="sidebar-section-title">Commodity & Transport Target</div>', unsafe_allow_html=True)
 
+    # Read from session state if voice populated them
+    if "selected_commodity" in st.session_state and st.session_state["selected_commodity"] in available_commodities:
+        default_idx = available_commodities.index(st.session_state["selected_commodity"])
+
     selected_commodity = st.sidebar.selectbox(
         "Select Crop / Commodity",
         options=available_commodities,
         index=default_idx
     )
+    st.session_state["selected_commodity"] = selected_commodity
 
     available_varieties = get_available_varieties(data_folder, selected_commodity)
     variety_options = ["Auto-Detect (Best Variety)"] + available_varieties
@@ -52,11 +88,17 @@ def render_sidebar(data_folder="data"):
 
     selected_variety = None if selected_variety_option.startswith("Auto-Detect") else selected_variety_option
 
+    vehicle_options = list(VEHICLE_TYPES.keys())
+    vehicle_idx = 0
+    if "selected_vehicle" in st.session_state and st.session_state["selected_vehicle"] in vehicle_options:
+        vehicle_idx = vehicle_options.index(st.session_state["selected_vehicle"])
+        
     selected_vehicle = st.sidebar.selectbox(
         "Transport Vehicle Fleet",
-        options=list(VEHICLE_TYPES.keys()),
-        index=0
+        options=vehicle_options,
+        index=vehicle_idx
     )
+    st.session_state["selected_vehicle"] = selected_vehicle
 
     threshold = st.sidebar.slider(
         "Data Reliability Threshold (%)",
@@ -66,11 +108,17 @@ def render_sidebar(data_folder="data"):
         step=5
     )
 
+    lang_options = ["English", "Kannada", "Dual Output"]
+    lang_idx = 0
+    if "lang_choice" in st.session_state and st.session_state["lang_choice"] in lang_options:
+        lang_idx = lang_options.index(st.session_state["lang_choice"])
+        
     lang_choice = st.sidebar.radio(
         "Advisory Language",
-        options=["English", "Kannada", "Dual Output"],
-        index=0
+        options=lang_options,
+        index=lang_idx
     )
+    st.session_state["lang_choice"] = lang_choice
 
     st.sidebar.markdown("---")
     if st.sidebar.button("Refresh Government Market Data"):

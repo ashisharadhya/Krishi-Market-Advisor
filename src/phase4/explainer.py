@@ -40,8 +40,19 @@ def generate_market_explanation(
     # Build prompt
     prompt_dict = build_explanation_prompt(recommendation_data, lang=lang)
 
-    # Attempt Gemini API
-    ai_text = call_gemini_api(prompt_dict, api_key=api_key)
+    # Attempt Gemini API for structured explanation
+    ai_text = call_gemini_api({
+        "system_instruction": prompt_dict["system_instruction"],
+        "user_prompt": prompt_dict["user_prompt"]
+    }, api_key=api_key)
+    
+    # Attempt Gemini API for voice script
+    voice_script = ""
+    if "voice_prompt" in prompt_dict:
+        voice_script = call_gemini_api({
+            "system_instruction": prompt_dict["system_instruction"],
+            "user_prompt": prompt_dict["voice_prompt"]
+        }, api_key=api_key)
 
     if ai_text and not ai_text.startswith("[Mode: Rule-Based"):
         mode = "gemini_ai"
@@ -58,6 +69,7 @@ def generate_market_explanation(
         "status": "success",
         "recommendation_data": recommendation_data,
         "explanation": final_explanation,
+        "voice_script": voice_script if voice_script and not voice_script.startswith("[Mode:") else fallback_text,
         "mode": mode,
         "language": lang
     }

@@ -44,11 +44,19 @@ def render_hero(context):
     </div>
     """, unsafe_allow_html=True)
 
+    smart_alerts = context.get('smart_alerts', [])
+    alerts_html = ""
+    for alert in smart_alerts:
+        alerts_html += f"<div><b>{txt['alert_hdr']}</b> {alert}</div>"
+        
+    if not smart_alerts:
+        alerts_html = f"<div><b>{txt['alert_hdr']}</b> {txt['advisory_body']} Expected Net Transport Profit is <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> for {user_qty:.0f} Quintals via {selected_vehicle}.</div>"
+
     st.markdown(f"""
     <div class="smart-alert-banner">
         <span style="display: flex; align-items: center;">{w_data['icon_svg']}</span>
-        <div>
-            <b>{txt['alert_hdr']}</b> {txt['advisory_body']} Expected Net Transport Profit is <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> for {user_qty:.0f} Quintals via {selected_vehicle}.
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+            {alerts_html}
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -192,28 +200,8 @@ def render_hero(context):
         
         with col_exp1:
             st.markdown("#### Key Decision Drivers")
-            st.markdown(f"""
-            <div class="summary-check-card">
-                <span style="color: #6ee7b7; font-size: 1.2rem;">✔</span>
-                <div><b>Highest Market Net Profit:</b> Modal price at <b>{rec['recommended_market']}</b> is highest in Karnataka at <b>₹{rec['highest_price']:,.0f}/Quintal</b>.</div>
-            </div>
-            <div class="summary-check-card">
-                <span style="color: #6ee7b7; font-size: 1.2rem;">✔</span>
-                <div><b>Expected Net Transport Advantage:</b> <b>+₹{transport_calc['net_extra_profit']:,.0f}</b> total net extra revenue after deducting round-trip transport freight.</div>
-            </div>
-            <div class="summary-check-card">
-                <span style="color: #6ee7b7; font-size: 1.2rem;">✔</span>
-                <div><b>Strong Regional Buyer Demand:</b> Controlled APMC arrivals in western Karnataka support sustained wholesale bids.</div>
-            </div>
-            <div class="summary-check-card">
-                <span style="color: #6ee7b7; font-size: 1.2rem;">✔</span>
-                <div><b>Low Rain Risk Window:</b> Safe drying & highway transport weather window open until 4:00 PM today.</div>
-            </div>
-            <div class="summary-check-card">
-                <span style="color: #6ee7b7; font-size: 1.2rem;">✔</span>
-                <div><b>Transport Action Recommended:</b> Round-trip freight costs are fully offset by price premiums.</div>
-            </div>
-            """, unsafe_allow_html=True)
+            explanation_html = context.get('explanation_text', '').replace('\n', '<br>')
+            st.markdown(f'<div style="color: #F8FAFC; font-size: 0.95rem; line-height: 1.6;">{explanation_html}</div>', unsafe_allow_html=True)
         
         with col_exp2:
             st.markdown("#### System Trust Architecture")

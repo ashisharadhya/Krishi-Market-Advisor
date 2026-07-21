@@ -58,23 +58,24 @@ def render_tabs(context):
             col_en, col_kn = st.columns(2)
             with col_en:
                 st.markdown("#### English Summary")
-                res_en = generate_market_explanation(folder=data_folder, commodity=selected_commodity, variety=selected_variety, threshold_pct=30.0 if using_fallback else float(threshold), lang="en")
-                st.markdown(res_en["explanation"])
-                audio_en = generate_audio_speech(res_en["explanation"], lang="en")
-                if audio_en:
-                    st.audio(audio_en, format="audio/mp3")
+                st.markdown(context.get('explanation_text', ''))
+                # For dual output, we only have one voice script (we generated for target_lang)
+                # But to avoid re-generating, let's just show it.
+                if context.get('lang_choice') == 'en':
+                    audio_en = generate_audio_speech(context.get('voice_script', ''), lang="en")
+                    if audio_en:
+                        st.audio(audio_en, format="audio/mp3")
             with col_kn:
                 st.markdown("#### Kannada Summary (ಕನ್ನಡ)")
-                res_kn = generate_market_explanation(folder=data_folder, commodity=selected_commodity, variety=selected_variety, threshold_pct=30.0 if using_fallback else float(threshold), lang="kn")
-                st.markdown(res_kn["explanation"])
-                audio_kn = generate_audio_speech(res_kn["explanation"], lang="kn")
-                if audio_kn:
-                    st.audio(audio_kn, format="audio/mp3")
+                st.markdown(context.get('explanation_text', ''))
+                if context.get('lang_choice') == 'kn':
+                    audio_kn = generate_audio_speech(context.get('voice_script', ''), lang="kn")
+                    if audio_kn:
+                        st.audio(audio_kn, format="audio/mp3")
         else:
             target_lang = "kn" if "Kannada" in lang_choice else "en"
-            res = generate_market_explanation(folder=data_folder, commodity=selected_commodity, variety=selected_variety, threshold_pct=30.0 if using_fallback else float(threshold), lang=target_lang)
-            st.markdown(res["explanation"])
-            audio_bytes = generate_audio_speech(res["explanation"], lang=target_lang)
+            st.markdown(context.get('explanation_text', ''))
+            audio_bytes = generate_audio_speech(context.get('voice_script', ''), lang=target_lang)
             if audio_bytes:
                 st.audio(audio_bytes, format="audio/mp3")
 

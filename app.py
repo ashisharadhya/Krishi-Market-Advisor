@@ -76,7 +76,7 @@ def main():
         st.stop()
 
     rec = rec_result["recommendation"]
-    markets_data = rec_result["all_markets"]
+    markets_data = rec_result["markets"]
 
     w_data = DISTRICT_WEATHER.get(user_district, DISTRICT_WEATHER["Shivamogga (Shimoga)"])
     today_date_str = datetime.now().strftime("%d %B %Y")
@@ -146,6 +146,27 @@ def main():
     )
     net_profit_per_q = rec['highest_price'] - (transport_calc['estimated_freight_cost'] / user_qty if user_qty else 0)
 
+    from src.phase5.outlook_engine import generate_market_outlook
+    from src.phase4.explainer import generate_market_explanation
+    from src.ui.components.outlook import render_outlook_card
+
+    target_lang = "kn" if "Kannada" in lang_choice else "en"
+    
+    with st.spinner("Analyzing Market Data & Generating AI Outlook..."):
+        outlook_data = generate_market_outlook(
+            markets_data=markets_data,
+            weather_data=w_data,
+            commodity=selected_commodity
+        )
+        
+        explanation_res = generate_market_explanation(
+            folder="data",
+            commodity=selected_commodity,
+            variety=selected_variety,
+            threshold_pct=30.0 if using_fallback else float(threshold),
+            lang=target_lang
+        )
+
     context = {
         "txt": txt,
         "is_kn_only": is_kn_only,
@@ -165,10 +186,16 @@ def main():
         "rec_result": rec_result,
         "markets_data": markets_data,
         "threshold": threshold,
-        "data_folder": "data"
+        "data_folder": "data",
+        "outlook_data": outlook_data,
+        "smart_alerts": outlook_data.get("smart_alerts", []),
+        "explanation_text": explanation_res.get("explanation", ""),
+        "voice_script": explanation_res.get("voice_script", "")
     }
 
     render_hero(context)
+    if "outlook_data" in context:
+        render_outlook_card(context["outlook_data"], context["txt"])
     render_tabs(context)
 
     st.markdown("---")
